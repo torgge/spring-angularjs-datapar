@@ -1,0 +1,35 @@
+[
+  {
+    "id":1,"descricao":"mercaderia-01"
+  },
+  {
+    "id":2,"descricao":"mercaderia-02"
+  },
+  {
+    "id":3,"descricao":"mercaderia-03"
+  },
+  {
+    "id":4,"descricao":"mercaderia-04"
+  },
+  {
+    "id":5,"descricao":"mercaderia-05"
+  },
+  {
+    "id":6,"descricao":"mercaderia-06"
+  },
+  {
+    "id":7,"descricao":"mercaderia-07"
+  },
+  {
+    "id":8,"descricao":"mercaderia-08"
+  },
+  {
+    "id":9,"descricao":"mercaderia-09"
+  },
+  {
+    "id":10,"descricao":"mercaderia-10"
+  },
+  {
+    "id":11,"descricao":"mercaderia-11"
+  }
+]

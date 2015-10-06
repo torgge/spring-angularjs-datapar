@@ -1,0 +1,7 @@
+model
+patterns.singleton
+patterns.strategy
+patterns.strategy.service
+patterns.strategy.service.frete
+teste
+testeJunit

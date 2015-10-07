@@ -4,28 +4,31 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Index;
 import javax.persistence.Table;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 @Entity
-@Table(name="tab_participante")
+@Table(name = "tab_participante", indexes = {
+		@Index(name = "idx_participante_nome", columnList = "nome", unique = true),
+		@Index(name = "idx_participante_email", columnList = "email", unique = true) })
 public class Participante {
 
 	@Id
 	@GeneratedValue
 	private long id;
-	
+
+	@Column(nullable = false)
 	private String nome;
-	
+
+	@Column(nullable = false)
 	private String email;
-	
+
 	private boolean ativo;
-	
+
 	private boolean admin;
-	
-	@JsonIgnore
-	@Column(length=20)
+
+	// @JsonIgnore
+	@Column(length = 20)
 	private String senha;
 
 	public String getSenha() {
@@ -43,7 +46,6 @@ public class Participante {
 	public void setId(long id) {
 		this.id = id;
 	}
- 
 
 	public String getNome() {
 		return nome;
@@ -96,10 +98,10 @@ public class Participante {
 		return "Participante [id=" + id + ", nome=" + nome + ", email=" + email + ", ativo=" + ativo + "]";
 	}
 
-	public Participante(){
-		
+	public Participante() {
+
 	}
-	
+
 	public Participante(long id, String nome, String email, boolean ativo, boolean admin) {
 		super();
 		this.id = id;
@@ -107,6 +109,7 @@ public class Participante {
 		this.email = email;
 		this.ativo = ativo;
 		this.admin = admin;
+		this.senha = "123";
 	}
 
 	public boolean isAdmin() {
@@ -116,8 +119,5 @@ public class Participante {
 	public void setAdmin(boolean admin) {
 		this.admin = admin;
 	}
-	
-	
-	
-	
+
 }

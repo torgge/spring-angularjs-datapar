@@ -22,6 +22,17 @@ public class EnqueteParticipante {
 	@ManyToOne
 	@JoinColumn(name="participante_id")
 	private Participante participante;
+	
+	private boolean finalizada;
+	
+
+	public boolean isFinalizada() {
+		return finalizada;
+	}
+
+	public void setFinalizada(boolean finalizada) {
+		this.finalizada = finalizada;
+	}
 
 	public long getId() {
 		return id;

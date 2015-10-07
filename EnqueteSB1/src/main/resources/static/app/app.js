@@ -12,6 +12,11 @@ var app = angular.module(
 	] );
 
 
+app.run(['$http', function($http){
+		$http.defaults.headers.common.Authorization = '@#$%¨&';	
+}]);
+
+
 app.config( ['$stateProvider','$urlRouterProvider',
              function($stateProvider, $urlRouterProvider ) {
 
@@ -89,12 +94,39 @@ app.controller('EnqueteController',['$scope','$http',function($scope,$http){
 
   $scope.enquete = [];
 
-  $http.get('api/qu.json')
+  $http.get('api/enquete/ativa')
   .success( function(data){
       $scope.enquete = data;
   });
 
 
+  $scope.progresso='';
+  $scope.atualizarProgresso = function(){
+	  var marcada=0;
+	  var i;
+	  for (i=0;i<$scope.enquete.length;i++){
+		  if ( $scope.enquete[i].resposta ){
+			  marcada++;
+		  }
+	  };
+	  
+	  var estilo = marcada/$scope.enquete.length*100;
+	  
+	  $scope.progresso = estilo;
+	  
+	  return estilo.toString();
+  };
+  
+  $scope.enviarEnquete = function() {
+	  
+	  var json = angular.fromJson( $scope.enquete );
+	  
+	  $http.post( '/api/enquete/gravar' ,json )
+	  .then( function(response){
+	  });
+  };
+  
+  
 }]);
 
 app.controller('HistoricoController',['$scope','$http',function($scope,$http){

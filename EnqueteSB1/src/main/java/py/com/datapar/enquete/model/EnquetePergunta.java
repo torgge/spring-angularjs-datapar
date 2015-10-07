@@ -23,6 +23,21 @@ public class EnquetePergunta {
 	@JoinColumn(name="pergunta_id")
 	private Pergunta pergunta;
 
+	
+//	@JsonProperty("opcoes")
+//	@OneToMany(mappedBy="enquete", fetch = FetchType.LAZY)
+//	private List<EnquetePergunta> listaEnquetePergunta;
+	
+	
+//	public List<EnquetePergunta> getListaEnquetePergunta() {
+//		return listaEnquetePergunta;
+//	}
+
+//	public void setListaEnquetePergunta(List<EnquetePergunta> listaEnquetePergunta) {
+//		this.listaEnquetePergunta = listaEnquetePergunta;
+//	}
+
+
 	public long getId() {
 		return id;
 	}

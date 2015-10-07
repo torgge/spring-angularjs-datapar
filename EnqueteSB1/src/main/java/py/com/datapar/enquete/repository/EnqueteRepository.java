@@ -8,6 +8,8 @@ import py.com.datapar.enquete.model.Enquete;
 @RepositoryRestResource(collectionResourceRel = "enquete", path = "enquete")
 public interface EnqueteRepository extends PagingAndSortingRepository<Enquete,Long> {
 
+	//select * from tab_enquete where ativa=true
+	Iterable<Enquete> findByAtivaTrue();
 	
 }
 

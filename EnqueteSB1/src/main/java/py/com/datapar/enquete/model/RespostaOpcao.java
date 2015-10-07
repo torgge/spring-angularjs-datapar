@@ -16,12 +16,22 @@ public class RespostaOpcao {
 	private long id;
 	
 	@ManyToOne
-	@JoinColumn(name="pergunta_opcao_id")
-	private PerguntaOpcao perguntaOpcao;
+	@JoinColumn(name="pergunta_id")
+	private Pergunta pergunta;
 	
 	@ManyToOne
 	@JoinColumn(name="participante_id")
 	private Participante participante;
+
+	private String resposta;
+
+	public Pergunta getPergunta() {
+		return pergunta;
+	}
+
+	public void setPergunta(Pergunta pergunta) {
+		this.pergunta = pergunta;
+	}
 
 	public long getId() {
 		return id;
@@ -31,13 +41,6 @@ public class RespostaOpcao {
 		this.id = id;
 	}
 
-	public PerguntaOpcao getPerguntaOpcao() {
-		return perguntaOpcao;
-	}
-
-	public void setPerguntaOpcao(PerguntaOpcao perguntaOpcao) {
-		this.perguntaOpcao = perguntaOpcao;
-	}
 
 	public Participante getParticipante() {
 		return participante;
@@ -49,7 +52,23 @@ public class RespostaOpcao {
 
 	@Override
 	public String toString() {
-		return "RespostaOpcao [id=" + id + ", perguntaOpcao=" + perguntaOpcao + ", participante=" + participante + "]";
+		return "RespostaOpcao [id=" + id + ", perguntaOpcao=" + pergunta + ", participante=" + participante + "]";
+	}
+
+	public String getResposta() {
+		return resposta;
+	}
+
+	public void setResposta(String resposta) {
+		this.resposta = resposta;
+	}
+
+	public RespostaOpcao(long id, Pergunta pergunta, Participante participante, String resposta) {
+		super();
+		this.id = id;
+		this.pergunta = pergunta;
+		this.participante = participante;
+		this.resposta = resposta;
 	}
 	
 	

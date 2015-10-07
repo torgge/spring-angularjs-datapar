@@ -21,6 +21,18 @@ public class PerguntaOpcao {
 	
 	private String descricao;
 
+	public PerguntaOpcao(){
+	}
+	
+	public PerguntaOpcao(long id, Pergunta pergunta, String descricao) {
+		super();
+		this.id = id;
+		this.pergunta = pergunta;
+		this.descricao = descricao;
+	}
+
+
+
 	public long getId() {
 		return id;
 	}

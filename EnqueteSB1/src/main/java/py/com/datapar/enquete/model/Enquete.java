@@ -7,12 +7,15 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * O jointable cria a tabela relação
@@ -47,11 +50,15 @@ public class Enquete {
 	@Enumerated(value=EnumType.STRING)
 	private TipoResultado tipoResultado;
 
-	@OneToMany(mappedBy="enquete")
-	private List<EnqueteParticipante> listaParticipante;
+	//@JsonIgnore
+	//@OneToMany(mappedBy="enquete", fetch = FetchType.LAZY)
+	//private List<EnqueteParticipante> listaParticipante;
 	
-	@OneToMany(mappedBy="enquete")
-	private List<EnquetePergunta> listaPergunta;
+	//@JsonIgnore
+	//@OneToMany(mappedBy="enquete", fetch = FetchType.LAZY)
+	//private List<EnquetePergunta> listaPergunta;
+	
+	private boolean ativa;
 	
 
 	public long getId() {
@@ -95,21 +102,6 @@ public class Enquete {
 		this.dataTermino = dataTermino;
 	}
 
- 	public List<EnqueteParticipante> getListaParticipante() {
-		return listaParticipante;
-	}
-
-	public void setListaParticipante(List<EnqueteParticipante> listaParticipante) {
-		this.listaParticipante = listaParticipante;
-	}
-
-	public List<EnquetePergunta> getListaPergunta() {
-		return listaPergunta;
-	}
-
-	public void setListaPergunta(List<EnquetePergunta> listaPergunta) {
-		this.listaPergunta = listaPergunta;
-	}
 
 	public TipoResultado getTipoResultado() {
 		return tipoResultado;
@@ -126,7 +118,7 @@ public class Enquete {
 	
 
 	public Enquete(long id, String nome, String descriçao, Date dataInicio, Date dataTermino,
-			TipoResultado tipoResultado, List<EnqueteParticipante> listaParticipante, List<EnquetePergunta> listaPergunta) {
+			TipoResultado tipoResultado, List<EnqueteParticipante> listaParticipante, List<EnquetePergunta> listaPergunta, boolean ativa) {
 		super();
 		this.id = id;
 		this.nome = nome;
@@ -134,8 +126,9 @@ public class Enquete {
 		this.dataInicio = dataInicio;
 		this.dataTermino = dataTermino;
 		this.tipoResultado = tipoResultado;
-		this.listaParticipante = listaParticipante;
-		this.listaPergunta = listaPergunta;
+		//this.listaParticipante = listaParticipante;
+		//this.listaPergunta = listaPergunta;
+		this.ativa = ativa;
 	}
 
 	@Override
@@ -164,7 +157,15 @@ public class Enquete {
 	public String toString() {
 		return "Enquete [id=" + id + ", nome=" + nome + ", descriçao=" + descricao + ", dataInicio=" + dataInicio
 				+ ", dataTermino=" + dataTermino + ", tipoResultado=" + tipoResultado + ", listaParticipante="
-				+ listaParticipante + ", listaPergunta=" + listaPergunta + "]";
+				 + "]";
+	}
+
+	public boolean isAtiva() {
+		return ativa;
+	}
+
+	public void setAtiva(boolean ativa) {
+		this.ativa = ativa;
 	}
 
 	

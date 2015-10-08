@@ -88,13 +88,13 @@ public class EnqueteResource {
 		return listaEnquetes;
 	}
 
+	@Transactional
 	@RequestMapping(value = "/enquete/gravar", method = RequestMethod.POST)
 	public void addEnquete(@RequestBody final List<EnqueteJson> enqueteJson) {
-		
+
 		System.out.println(enqueteJson);
-		
 		if (enqueteJson != null) {
-			
+
 			for (EnqueteJson e : enqueteJson) {
 				respostaOpcaoRepository.setResposta(e.getId(), e.getResposta());
 			}
@@ -102,9 +102,6 @@ public class EnqueteResource {
 
 	}
 
-	
-	
-	
 	@RequestMapping("/enquete")
 	public Iterable<Enquete> listaEnquetes() {
 		return repository.findAll();
@@ -114,7 +111,6 @@ public class EnqueteResource {
 	public Enquete findByNome(@PathVariable long id) {
 		return repository.findOne(id);
 	}
-
 
 	@RequestMapping(value = "/enquete", method = RequestMethod.POST)
 	public Enquete addEnquetes(@RequestBody final Enquete enquete) {
@@ -147,11 +143,11 @@ public class EnqueteResource {
 			participante.save(p);
 			Pergunta pe = new Pergunta(x, "Pergunta-" + x, TipoPergunta.ALTERNATIVA);
 			pergunta.save(pe);
-			
+
 			perguntaOpcao.save(new PerguntaOpcao(0, pe, "Verde"));
 			perguntaOpcao.save(new PerguntaOpcao(0, pe, "Amarelo"));
 			perguntaOpcao.save(new PerguntaOpcao(0, pe, "Preto"));
-			
+
 		}
 
 		for (int i = 1; i <= numero; i++) {
@@ -161,15 +157,17 @@ public class EnqueteResource {
 			for (int j = 1; j <= 10; j++) {
 				enqueteParticipante.save(new EnqueteParticipante(0, e, new Participante(j, null, null, true, true)));
 			}
-			for (int k = 1; k <= 10; k++) {
-				Pergunta p = new Pergunta(k, null, TipoPergunta.ALTERNATIVA);
-				EnquetePergunta ep = new EnquetePergunta(k, e, p);
-				enquetePergunta.save(ep);
-				
-				RespostaOpcao ro = new RespostaOpcao( 0 , p , new Participante(k,"","",true,true),"" );
-				respostaOpcaoRepository.save(ro);
-				
-			}
+
+
+			Pergunta p = new Pergunta(i, null, TipoPergunta.ALTERNATIVA);
+			EnquetePergunta ep = new EnquetePergunta(i, e, p);
+            enquetePergunta.save(ep);
+
+			for ( int k = 1; k <= 10; k++) {
+					RespostaOpcao ro = new RespostaOpcao(0, p, new Participante(k, "", "", true, true), "");
+					respostaOpcaoRepository.save(ro);
+					
+				}
 		}
 		return repository.findAll();
 	}

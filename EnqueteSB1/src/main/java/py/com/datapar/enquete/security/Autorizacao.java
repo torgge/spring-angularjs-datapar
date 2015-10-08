@@ -20,6 +20,10 @@ import py.com.datapar.enquete.repository.ParticipanteRepository;
 @RestController
 public class Autorizacao {
 
+	class Usuario{
+		private String nome;
+	}
+	
 	@Autowired
 	private ParticipanteRepository participanteRepository;
 
@@ -32,7 +36,7 @@ public class Autorizacao {
 		return ipAddress;
 	}
 
-	@RequestMapping(value = "/autentica", method = RequestMethod.POST)
+	@RequestMapping(value = "/autenticar", method = RequestMethod.POST)
 	public boolean autenticaUsuario(HttpServletRequest request, @RequestBody Participante participante) {
 
 		String ipAddress = request.getHeader("X-FORWARDED-FOR");
@@ -69,7 +73,7 @@ public class Autorizacao {
 	private boolean usuarioAutorizado(Participante participante) {
 		boolean ret = false;
 		Participante p = participanteRepository.findByNomeIgnoreCase(participante.getNome());
-		if (participante != null) {
+		if (p != null) {
 			ret = participante.getSenha().equals(p.getSenha());
 		}
 		return ret;

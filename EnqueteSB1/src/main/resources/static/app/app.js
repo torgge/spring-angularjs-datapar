@@ -1,23 +1,24 @@
 'use strict';
 
-var app = angular.module(
-	'app',
-	[
+angular.module('app',[
 	 'ui.materialize',
 	 'ui.router',
 	 'ui.grid',
-   'ui.grid.pagination',
-   'ui.grid.cellNav',
+	 'ui.grid.pagination',
+	 'ui.grid.cellNav',
 	 'ngAnimate'
-	] );
+]);
 
 
-app.run(['$http', function($http){
-		$http.defaults.headers.common.Authorization = '@#$%¨&';	
+angular.module('app').run(['$http','$rootScope', function($http,$rootScope){
+	$rootScope.username='';
+	$rootScope.token='@#$%¨&';
+	$http.defaults.headers.common.Authorization = $rootScope.token;
 }]);
 
 
-app.config( ['$stateProvider','$urlRouterProvider',
+
+angular.module('app').config( ['$stateProvider','$urlRouterProvider',
              function($stateProvider, $urlRouterProvider ) {
 
     $urlRouterProvider.otherwise('/home');
@@ -27,7 +28,8 @@ app.config( ['$stateProvider','$urlRouterProvider',
       	// HOME ========================================
         .state('home', {
             url: '/home',
-            templateUrl: 'app/view/home.html'
+            templateUrl: 'app/view/home.html',
+            controller:'HomeController'	
         })
 
 				// ENQUETE =================================
@@ -68,77 +70,9 @@ app.config( ['$stateProvider','$urlRouterProvider',
 }]);
 
 
-app.controller('DashController',['$scope','$state','$http',function ($scope,$state,$http){
-
-	//Show sideNav - Working...
-	//$('.button-collapse').sideNav('show');
-
-	// Hide sideNav - Working...
-	$scope.sobre = function(){
-		$('.button-collapse').sideNav('hide');
-		$state.go('sobre');
-	}
-
-	//esta funcao direcion para ulr especificas e
-	//permite executar código antes de direcionar.
-	//poderia ser usado para executar codigo customizado
-	//de autorizacao do usuario
-	$scope.direciona = function(url){
-		$('.button-collapse').sideNav('hide');
-		$state.go(url);
-	}
-
-}]);
-
-app.controller('EnqueteController',['$scope','$http',function($scope,$http){
-
-  $scope.enquete = [];
-
-  $http.get('api/enquete/ativa')
-  .success( function(data){
-      $scope.enquete = data;
-  });
 
 
-  $scope.progresso='';
-  $scope.atualizarProgresso = function(){
-	  var marcada=0;
-	  var i;
-	  for (i=0;i<$scope.enquete.length;i++){
-		  if ( $scope.enquete[i].resposta ){
-			  marcada++;
-		  }
-	  };
-	  
-	  var estilo = marcada/$scope.enquete.length*100;
-	  
-	  $scope.progresso = estilo;
-	  
-	  return estilo.toString();
-  };
-  
-  $scope.enviarEnquete = function() {
-	  
-	  var json = angular.fromJson( $scope.enquete );
-	  
-	  $http.post( '/api/enquete/gravar' ,json )
-	  .then( function(response){
-	  });
-  };
-  
-  
-}]);
-
-app.controller('HistoricoController',['$scope','$http',function($scope,$http){
-}]);
-
-app.controller('GraficoController',['$scope','$http',function($scope,$http){
-}]);
 
 
-app.controller('EnqueteEnviarController',['$scope','$http',function($scope,$http){
-}]);
 
 
-app.controller('SobreController',['$scope','$http',function($scope,$http){
-}]);

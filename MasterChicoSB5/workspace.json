@@ -1,0 +1,73 @@
+{
+  "_type": "export",
+  "__export_format": 1,
+  "__export_date": "2015-09-25T19:49:54.082Z",
+  "__export_source": "insomnia.chrome.app:v2.1.2",
+  "items": [
+    {
+      "_type": "request_group",
+      "_id": "grp_1443208978525",
+      "name": "MasterChico",
+      "environments": {},
+      "requests": [
+        {
+          "_type": "request",
+          "_id": "req_1443208978528",
+          "url": "http://localhost:5000/api/categoria",
+          "method": "POST",
+          "body": "{\"descricao\":\"categoria-GEORGE\"}",
+          "headers": [],
+          "params": [],
+          "authentication": {
+            "_type": "basic",
+            "username": "",
+            "password": ""
+          },
+          "__insomnia": {
+            "format": "json",
+            "panel_width": 0.5
+          },
+          "name": "Categoria - inserir"
+        },
+        {
+          "_type": "request",
+          "_id": "req_1443210483294",
+          "url": "http://localhost:5000/api/categoria",
+          "method": "PUT",
+          "body": "{\"id\":1,\"descricao\":\"categoria-GEORGE\"}",
+          "headers": [],
+          "params": [],
+          "authentication": {
+            "_type": "basic",
+            "username": "",
+            "password": ""
+          },
+          "__insomnia": {
+            "format": "json",
+            "panel_width": 0.5
+          },
+          "name": "categoria - update"
+        },
+        {
+          "_type": "request",
+          "_id": "req_1443210563892",
+          "url": "http://localhost:5000/api/categoria/1",
+          "method": "DELETE",
+          "body": "",
+          "headers": [],
+          "params": [],
+          "authentication": {
+            "_type": "basic",
+            "username": "",
+            "password": ""
+          },
+          "__insomnia": {
+            "format": "json",
+            "panel_width": 0.5
+          },
+          "name": "categoria - delete"
+        }
+      ]
+    }
+  ]
+}

@@ -4,7 +4,13 @@ import java.util.List;
 
 import MasterChicoSB1.model.Pedido;
 import MasterChicoSB1.model.PedidoItem;
-
+/**
+ * 
+ * Usada para deserializar objetos complexos recebidos por parâmetros de requisões. 
+ * 
+ * @author Lyndon Tavares
+ *
+ */
 public class PedidoWrapper {
 
 	Pedido pedido;

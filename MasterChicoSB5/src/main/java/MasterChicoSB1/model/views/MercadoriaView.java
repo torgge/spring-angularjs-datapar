@@ -1,15 +1,16 @@
 package MasterChicoSB1.model.views;
 
 /**
- * Exemplo de utilização de visõescustomizadas através de serialização de 
+ * Exemplo de utilização de visõe scustomizadas através de serialização de 
  * objetos com @HsonView da Jackson
  * 
  * Explicação:
  * 
- * Neste exemplo são criados 3 views. Detalhado e Gerencial extendem resumo.
- * Implcações:
- * Resumo a view mais restritiva
- * Detalhado e Gerencial são alternativas.
+ * Neste exemplo são criados 3 views. AS views Detalhado e Gerencial extendem  de Resumo.
+ * 
+ * Implicações:
+ * Resumo é a view mais restritiva.
+ * Detalhado e Gerencial são views alternativas.
  * 
  * Utilização:
  * 

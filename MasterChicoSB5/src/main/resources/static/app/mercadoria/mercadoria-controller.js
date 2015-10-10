@@ -2,7 +2,7 @@
 
 angular.module('app').controller('MercaderiaController',['$scope','$http','uiGridConstants', function ($scope,$http,uiGridConstants){
 
-	$http.get('/api/mercaderia')
+	$http.get('/api/mercaderia/geral')
 	.success(function (data) {
 		 $scope.gridOptions.data = data;
 	});

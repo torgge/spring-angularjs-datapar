@@ -12,7 +12,7 @@ angular.module(
 	] );
 
 
-app.config( ['$stateProvider','$urlRouterProvider',
+angular.module('app').config( ['$stateProvider','$urlRouterProvider',
              function($stateProvider, $urlRouterProvider ) {
 
     $urlRouterProvider.otherwise('/home');
@@ -22,34 +22,34 @@ app.config( ['$stateProvider','$urlRouterProvider',
         // HOME ========================================
         .state('home', {
             url: '/home',
-            templateUrl: 'app/view/home.html'
+            templateUrl: 'app/dashboard/home.html'
         })
 
 		// MERCADERIA =================================
         .state('mercaderia', {
 		        url: '/mercaderia',
-		        templateUrl: 'app/view/mercaderia.html',
+		        templateUrl: 'app/mercadoria/mercaderia.html',
 						controller:	'MercaderiaController'
         })
 
         // CATEGORIA =================================
         .state('categoria', {
 		        url: '/categoria',
-		        templateUrl: 'app/view/categoria.html',
+		        templateUrl: 'app/categoria/categoria.html',
 						controller:	'CategoriaController'
         })
 
 				// UNIDADE =================================
         .state('unidade', {
 		        url: '/unidade',
-		        templateUrl: 'app/view/unidade.html',
+		        templateUrl: 'app/unidade/unidade.html',
 						controller:	'UnidadeController'
         })
 
 				// SOBRE =================================
         .state('sobre', {
             url: '/sobre',
-        templateUrl: 'app/view/sobre.html'
+        templateUrl: 'app/dashboard/sobre.html'
         });
 
 }]);

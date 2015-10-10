@@ -7,18 +7,15 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 /**
- * O jointable cria a tabela relação
+ * JOINTABLE cria a tabela relação
+ * 
  * @OneToMany(cascade=CascadeType.ALL, fetch=FetchType.EAGER)
  * @JoinTable(name="tab_enquete_perguntas", joinColumns={@JoinColumn(name="enquete_id", referencedColumnName="id")}, 
  * inverseJoinColumns={@JoinColumn(name="pergunta_id", referencedColumnName="id")})
@@ -49,6 +46,14 @@ public class Enquete {
 	
 	@Enumerated(value=EnumType.STRING)
 	private TipoResultado tipoResultado;
+	
+	private boolean enviarEmail;
+	
+	private long tempoEmail;
+	
+	private TipoEnqueteStatus status;
+	
+	private Participante autor;
 
 	//@JsonIgnore
 	//@OneToMany(mappedBy="enquete", fetch = FetchType.LAZY)
@@ -58,6 +63,22 @@ public class Enquete {
 	//@OneToMany(mappedBy="enquete", fetch = FetchType.LAZY)
 	//private List<EnquetePergunta> listaPergunta;
 	
+	public boolean isEnviarEmail() {
+		return enviarEmail;
+	}
+
+	public void setEnviarEmail(boolean enviarEmail) {
+		this.enviarEmail = enviarEmail;
+	}
+
+	public long getTempoEmail() {
+		return tempoEmail;
+	}
+
+	public void setTempoEmail(long tempoEmail) {
+		this.tempoEmail = tempoEmail;
+	}
+
 	private boolean ativa;
 	
 
@@ -129,6 +150,9 @@ public class Enquete {
 		//this.listaParticipante = listaParticipante;
 		//this.listaPergunta = listaPergunta;
 		this.ativa = ativa;
+		this.enviarEmail=true;
+		this.tempoEmail=1;
+		this.status = TipoEnqueteStatus.AGUARDANDO;
 	}
 
 	@Override
@@ -166,6 +190,22 @@ public class Enquete {
 
 	public void setAtiva(boolean ativa) {
 		this.ativa = ativa;
+	}
+
+	public TipoEnqueteStatus getStatus() {
+		return status;
+	}
+
+	public void setStatus(TipoEnqueteStatus status) {
+		this.status = status;
+	}
+
+	public Participante getAutor() {
+		return autor;
+	}
+
+	public void setAutor(Participante autor) {
+		this.autor = autor;
 	}
 
 	

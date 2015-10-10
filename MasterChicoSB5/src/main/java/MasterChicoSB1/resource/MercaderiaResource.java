@@ -45,7 +45,13 @@ public class MercaderiaResource {
 		}
 		return repository.findAll( );
 	}
-	 
+
+	@RequestMapping("/mercaderia/geral")
+	public Iterable<Mercaderia> listaMercaderiasGeral(){
+		return repository.findAll(  ) ;
+	}
+	
+	
 	@JsonView(MercadoriaView.Detalhado.class)
 	@RequestMapping("/mercaderia/detalhado")
 	public Iterable<Mercaderia> listaMercaderiasDetalhado(){

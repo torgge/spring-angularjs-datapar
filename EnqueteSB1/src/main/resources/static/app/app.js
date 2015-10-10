@@ -28,42 +28,35 @@ angular.module('app').config( ['$stateProvider','$urlRouterProvider',
       	// HOME ========================================
         .state('home', {
             url: '/home',
-            templateUrl: 'app/view/home.html',
+            templateUrl: 'app/dashboard/home.html',
             controller:'HomeController'	
         })
 
 				// ENQUETE =================================
         .state('enquete', {
 		        url: '/enquete',
-		        templateUrl: 'app/view/enquete.html',
+		        templateUrl: 'app/enquete/enquete.html',
 						controller:	'EnqueteController',
         })
 
 				// GRAFICO =================================
         .state('grafico', {
 		        url: '/grafico',
-		        templateUrl: 'app/view/grafico.html',
+		        templateUrl: 'app/grafico/grafico.html',
 						controller:	'GraficoController'
         })
 
         // CATEGORIA =================================
         .state('historico', {
 		        url: '/categoria',
-		        templateUrl: 'app/view/historico.html',
+		        templateUrl: 'app/historico/historico.html',
 						controller:	'HistoricoController'
         })
 
-				// ENVIAR ENQUETE =================================
-        .state('enviar', {
-		        url: '/enviar',
-		        templateUrl: 'app/view/enqueteenviar.html',
-						controller:	'EnqueteEnviarController'
-        })
-
-				// SOBRE =================================
+		// SOBRE =================================
         .state('sobre', {
             url: '/sobre',
-						templateUrl: 'app/view/sobre.html',
+						templateUrl: 'app/dashboard/sobre.html',
 						controller:'SobreController'
         });
 

@@ -12,10 +12,10 @@ import py.com.datapar.enquete.model.RespostaOpcao;
 @RepositoryRestResource(collectionResourceRel = "respostaopcao", path = "respostaopcao")
 public interface RespostaOpcaoRepository extends PagingAndSortingRepository<RespostaOpcao,Long> {
 
-	List<RespostaOpcao> findByPerguntaId(long id);
+	List<RespostaOpcao> findByEnquetePerguntaId(long id);
 	
 	@Modifying
-	@Query("update RespostaOpcao r set r.resposta = ?2 where r.pergunta.id = ?1 and r.participante.id=1")
+	@Query("update RespostaOpcao r set r.resposta = ?2 where r.enquetePergunta.id = ?1 and r.participante.id=1")
 	int setResposta(long id, String resposta);
 	
 	

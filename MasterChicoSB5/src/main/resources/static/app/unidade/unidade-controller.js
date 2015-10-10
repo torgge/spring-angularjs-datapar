@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app').module('app').controller('UnidadeController',['$scope','$http','uiGridConstants', function ($scope,$http,uiGridConstants){
+angular.module('app').controller('UnidadeController',['$scope','$http','uiGridConstants', function ($scope,$http,uiGridConstants){
 
 	$http.get('/api/unidade')
 	.success(function (data) {

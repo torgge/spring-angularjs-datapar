@@ -147,6 +147,7 @@ public class EnqueteResource {
 			perguntaOpcao.save(new PerguntaOpcao(0, pe, "Verde"));
 			perguntaOpcao.save(new PerguntaOpcao(0, pe, "Amarelo"));
 			perguntaOpcao.save(new PerguntaOpcao(0, pe, "Preto"));
+			
 
 		}
 
@@ -162,12 +163,10 @@ public class EnqueteResource {
 			Pergunta p = new Pergunta(i, null, TipoPergunta.ALTERNATIVA);
 			EnquetePergunta ep = new EnquetePergunta(i, e, p);
             enquetePergunta.save(ep);
+            
+            RespostaOpcao ro = new RespostaOpcao(0, ep, new Participante(i, "", "", true, true), "");
+    		respostaOpcaoRepository.save(ro);
 
-			for ( int k = 1; k <= 10; k++) {
-					RespostaOpcao ro = new RespostaOpcao(0, p, new Participante(k, "", "", true, true), "");
-					respostaOpcaoRepository.save(ro);
-					
-				}
 		}
 		return repository.findAll();
 	}

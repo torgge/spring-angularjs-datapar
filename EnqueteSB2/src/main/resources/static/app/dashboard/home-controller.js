@@ -16,12 +16,11 @@ angular.module('app')
 			$root.username = $scope.user.nome;
 			$root.token = data;
 
-			openedToasts.push(
-			toastr.info(
-					 'Bem-vindo!',
-					 'User:'+ $root.username
-					 
-			));
+			//openedToasts.push(
+			//toastr.info(
+			//		 'Bem-vindo!',
+		    //			 'User:'+ $scope.user.nome
+			//));
 
 
 

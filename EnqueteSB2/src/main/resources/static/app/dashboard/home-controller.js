@@ -1,5 +1,7 @@
 angular.module('app')
-.controller('HomeController',['$scope','$http','$rootScope',function($scope,$http,$root){
+.controller('HomeController',
+	['$scope','$http','$rootScope','toastr','toastrConfig',
+	 function($scope,$http,$root,toastr,toastrConfig){
 	
 	
 	$scope.user = {nome:'',senha:''};
@@ -13,7 +15,16 @@ angular.module('app')
 			
 			$root.username = $scope.user.nome;
 			$root.token = data;
-			
+
+			openedToasts.push(
+			toastr.info(
+					 'Bem-vindo!',
+					 'User:'+ $root.username
+					 
+			));
+
+
+
 		})
 		.error(function(data){
 			

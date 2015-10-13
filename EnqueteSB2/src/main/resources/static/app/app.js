@@ -6,7 +6,8 @@ angular.module('app',[
 	 'ui.grid',
 	 'ui.grid.pagination',
 	 'ui.grid.cellNav',
-	 'ngAnimate'
+	 'ngAnimate',
+	 'toastr',
 ]);
 
 

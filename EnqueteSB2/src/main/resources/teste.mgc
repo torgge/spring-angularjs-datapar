@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <Class name="py.com.datapar.enquete.model.TipoPergunta" x="36" y="414">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="py.com.datapar.enquete.model.EnquetePergunta" x="61" y="226">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association
+            destinationClassName="py.com.datapar.enquete.model.Enquete"
+            endpointName="enquete" kind="Simple"/>
+        <Association
+            destinationClassName="py.com.datapar.enquete.model.Pergunta"
+            endpointName="pergunta" kind="Simple"/>
+    </Class>
+    <Class name="py.com.datapar.enquete.model.EnqueteParticipante"
+        x="768" y="38">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association
+            destinationClassName="py.com.datapar.enquete.model.Enquete"
+            endpointName="enquete" kind="Simple"/>
+        <Association
+            destinationClassName="py.com.datapar.enquete.model.Participante"
+            endpointName="participante" kind="Simple"/>
+    </Class>
+    <Class name="py.com.datapar.enquete.model.Participante" x="433" y="484">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="py.com.datapar.enquete.model.TipoEnqueteStatus" x="454" y="18">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="py.com.datapar.enquete.model.Enquete" x="435" y="159">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association
+            destinationClassName="py.com.datapar.enquete.model.Participante"
+            endpointName="autor" kind="Simple"/>
+        <Association
+            destinationClassName="py.com.datapar.enquete.model.TipoResultado"
+            endpointName="tipoResultado" kind="Simple"/>
+        <Association
+            destinationClassName="py.com.datapar.enquete.model.TipoEnqueteStatus"
+            endpointName="status" kind="Simple"/>
+    </Class>
+    <Class name="py.com.datapar.enquete.model.TipoResultado" x="742" y="317">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="py.com.datapar.enquete.model.Pergunta" x="211" y="390">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association
+            destinationClassName="py.com.datapar.enquete.model.TipoPergunta"
+            endpointName="tipoPergunta" kind="Simple"/>
+    </Class>
+    <Class name="py.com.datapar.enquete.model.RespostaOpcao" x="212" y="66">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association
+            destinationClassName="py.com.datapar.enquete.model.Participante"
+            endpointName="participante" kind="Simple"/>
+        <Association
+            destinationClassName="py.com.datapar.enquete.model.EnquetePergunta"
+            endpointName="enquetePergunta" kind="Simple"/>
+    </Class>
+    <Class name="py.com.datapar.enquete.model.PerguntaOpcao" x="90" y="588">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association
+            destinationClassName="py.com.datapar.enquete.model.Pergunta"
+            endpointName="pergunta" kind="Simple"/>
+    </Class>
+</ClassDiagram>

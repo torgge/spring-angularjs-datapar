@@ -1,0 +1,4 @@
+C:\java\spring-angularjs-datapar\.metadata\.plugins\org.eclipse.dltk.mod.core\881340636.index
+C:\java\spring-angularjs-datapar\.metadata\.plugins\org.eclipse.dltk.mod.core\2909611548.index
+C:\java\spring-angularjs-datapar\.metadata\.plugins\org.eclipse.dltk.mod.core\3664385674.index
+C:\java\spring-angularjs-datapar\.metadata\.plugins\org.eclipse.dltk.mod.core\3917697070.index

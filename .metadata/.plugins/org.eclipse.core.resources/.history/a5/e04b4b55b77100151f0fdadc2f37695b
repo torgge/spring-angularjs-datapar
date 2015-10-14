@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Quizzer v0.1</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/ui-grid.css" />
+    <link rel="stylesheet" href="css/grid.css" />
+    <link rel="stylesheet" href="css/toastr.css" />
+
+    <!--Import Google Icon Font-->
+     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<body ng-app="app" ng-controller="DashController" ng-strict-di>
+<header>
+
+  <div class="container"><a href="#" data-activates="nav-mobile" class="button-collapse top-nav hide-on-large-only" data-sidenav="left" data-closeonexit="true"><i
+            class="mdi-navigation-menu"></i></a></div>
+    <ul id="nav-mobile" class="side-nav fixed">
+        <li class="logo" style="margin-top: 20px;"><a id="logo-container" href="#" class="brand-logo"><img src="image/e02.jpg" width="140px"></a></li>
+        <li class="bold"><a href="#" ng-click="direciona('home')" class="waves-effect waves-teal">Home</a></li>
+        <li class="bold"><a href="#" ng-click="direciona('enquete')" class="waves-effect waves-teal">Enquete</a></li>
+        <li class="bold"><a href="#" ng-click="direciona('grafico')" class="waves-effect waves-teal">Grafico</a></li>
+        <li class="bold"><a href="#" ng-click="direciona('historico')" class="waves-effect waves-teal">Histórico</a></li>
+        <li class="bold"><a href="#" ng-click="direciona('sobre')" class="waves-effect waves-teal">Sobre</a></li>
+        <li class="bold"><a href="#" ng-click="direciona('timer')" class="waves-effect waves-teal">Timer</a></li>        
+    </ul>
+</header>
+<main>
+
+    <div class="section" id="index-banner">
+        <div class="container">
+          <div align="center">
+            <h5 style="color: white" class="center-on-small-only">Aplicativo de enquetes</h5>
+          </div>
+        </div>
+    </div>
+
+    <div class="container">
+      <div ui-view></div>
+    </div>
+
+</main>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/angular.min.js"></script>
+<script src="js/angular-animate.js"></script>
+<script src="js/angular-ui-router.min.js"></script>
+<script src="js/materialize.min.js"></script>
+<script src="js/angular-materialize.js"></script>
+<script src="js/ui-grid.js"></script>
+<script src="js/toastr.js"></script>
+<script src="js/toastr.tpl.js"></script>
+
+<script src="app/app.js"></script>
+<script src="app/rotas/rotas.js"></script>
+
+<script src="app/dashboard/dashboard-controller.js"></script>
+<script src="app/dashboard/home-controller.js"></script>
+<script src="app/dashboard/sobre-controller.js"></script>
+<script src="app/enquete/enquete-controller.js"></script>
+<script src="app/historico/historico-controller.js"></script>
+<script src="app/grafico/grafico-controller.js"></script>
+<script src="app/timer/timer-controller.js"></script>
+
+</body>
+</html>

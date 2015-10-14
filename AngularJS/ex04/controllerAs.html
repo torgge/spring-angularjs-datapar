@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+<script   src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+
+</head>
+<body ng-app="app"
+</body>
+
+<div ng-controller="PrimeiroController as pp">
+  <h2>1o.nivel</h2>
+  {{pp.nome}}
+  <div ng-controller="SegundoController as ss">
+    <h2>2o.nivel</h2>
+    {{ss.nome}} <br>
+    parent: {{$parent.nome}}
+    <div ng-controller="TerceiroController as tt">
+      <h2>3o.nivel</h2>
+      {{tt.nome}} <br>
+      $parent: {{$parent.nome}} <br>
+      $parent.$parent: {{$parent.$parent.nome}}
+    </div>
+  </div>
+</div>
+
+
+<script>
+
+angular.module('app',[]);
+
+angular.module('app').controller('PrimeiroController',PrimeiroController);
+angular.module('app').controller('SegundoController',SegundoController);
+angular.module('app').controller('TerceiroController',TerceiroController);
+
+function PrimeiroController(){
+  this.nome="contexto1";
+};
+function SegundoController(){
+  this.nome="contexto2";
+};
+
+function TerceiroController(){
+  this.nome="contexto3";
+};
+
+</script>
+
+</html>

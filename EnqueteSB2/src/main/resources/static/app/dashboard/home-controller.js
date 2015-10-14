@@ -1,7 +1,7 @@
 angular.module('app')
-.controller('HomeController',
-	['$scope','$http','$rootScope','toastr','toastrConfig',
-	 function($scope,$http,$root,toastr,toastrConfig){
+.controller('HomeController', 'toastr', 'toastrConfig',
+	['$scope','$http','$rootScope', toastr, toastrConfig, 
+	 function($scope,$http,$root){
 	
 	
 	$scope.user = {nome:'',senha:''};
@@ -16,17 +16,24 @@ angular.module('app')
 			$root.username = $scope.user.nome;
 			$root.token = data;
 
-			//openedToasts.push(
-			//toastr.info(
-			//		 'Bem-vindo!',
-		    //			 'User:'+ $scope.user.nome
-			//));
+			openedToasts.push(
+			toastr.success(
+					 'Bem-vindo!',
+		    			 'User:'+ $scope.user.nome
+			));
 
 
 
 		})
 		.error(function(data){
 			
+		
+			openedToasts.push(
+						toastr.error(
+								 'Bem-vindo!',
+					    			 'User:'+ $scope.user.nome
+						));
+
 			console.log('error');
 			
 		});
@@ -41,10 +48,10 @@ angular.module('app')
 		
 	};
 	
-	$scope.abrirLogin = function(){
-		$('#login').openModal();
-	};
-	$scope.abrirLogin();
+	//$scope.abrirLogin = function(){
+	//	$('#login').openModal();
+	//};
+	//$scope.abrirLogin();
 	
 	
 }]);

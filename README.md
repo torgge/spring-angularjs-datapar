@@ -1,15 +1,15 @@
 # spring-angularjs-datapar
 Projetos do curso de Spring/AngularJS na Datapar SA - Ciudad del Este - PY - Set/Out/2015
 
-1.EnqueteSBa (desconsiderar)
+1. EnqueteSBa (desconsiderar)
 
-2.EnqueteSB1 (App de enquetes, aprofundando no mapeamento JPA, consumindo API REST )
+2. EnqueteSB1 (App de enquetes, aprofundando no mapeamento JPA, consumindo API REST )
 
-3.MasterChico1  (Pojo,  Singleton, Strategy, JUnit, Javadoc)
+3. MasterChico1  (Pojo,  Singleton, Strategy, JUnit, Javadoc)
 
-4.MasterChico2  (Acrescenta Collections e Factory)
+4. MasterChico2  (Acrescenta Collections e Factory)
 
-5.MasterChicoHB1 (Acrescenta Decorator, JPA Básico com configuração via XML) 
+5. MasterChicoHB1 (Acrescenta Decorator, JPA Básico com configuração via XML) 
 
 6.MasterChicoHB2 (Acrescenta mapeamento JPA, Query, NamedQuery e parâmetros)
 

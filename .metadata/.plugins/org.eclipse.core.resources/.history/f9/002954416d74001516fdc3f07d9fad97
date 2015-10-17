@@ -1,0 +1,30 @@
+'use strict';
+
+angular.module('app')
+    .factory('unidadeService', ['$http', function($http) {
+
+    var urlBase = 'api/categoria';
+    var dataFactory = {};
+
+    dataFactory.getUnidades = function () {
+        return $http.get(urlBase);
+    };
+
+    dataFactory.getUnidade = function (id) {
+        return $http.get(urlBase + '/' + id);
+    };
+
+    dataFactory.insertCategoria = function (merc) {
+        return $http.post(urlBase, merc);
+    };
+
+    dataFactory.updateCategoria = function (merc) {
+        return $http.put(urlBase + '/' + merc.ID, merc)
+    };
+
+    dataFactory.deleteCategoria = function (id) {
+        return $http.delete(urlBase + '/' + id);
+    };
+
+    return dataFactory;
+}]);

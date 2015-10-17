@@ -1,0 +1,55 @@
+<div class="row" id="about">
+
+	<h2 class="header">Cadastro de Mercaderias</h2>
+	<div ui-grid="gridOptions" ui-grid-pagination class="grid"></div>
+	
+	<!-- Modal Trigger -->
+		<div class="col">
+			<button
+			class=" waves-effect waves-light btn" 
+			href='#addMerc' modal>Adicionar</button>
+				
+		</div>
+
+	
+     	<!-- Modal Structure -->
+		<div id="addMerc" class="modal">
+			<div class="modal-content">
+
+			<h5>Adiconar Mercaderia</h5>
+
+				<div input-field>
+				    <input type="text" ng-model="merc.nome">
+				    <label>Mercaderia Nome</label>
+				</div>
+
+				<div input-field>
+				    <input type="text" ng-model="merc.unidade">
+				    <label>Unidade</label>
+				</div>
+
+				<select class="" ng-model="model.categoria.nome" material-select watch>
+				    <option ng-repeat="categoria in model.categorias">{{categoria}}</option>
+				</select>
+
+				<select class="" ng-model="model.unidade.nome" material-select watch>
+				    <option ng-repeat="unidade in model.unidades">{{unidade}}</option>
+				</select>
+
+
+				<div input-field>
+				    <input type="text" ng-model="merc.categoria">
+				    <label>Categoria</label>
+				</div>
+
+
+			</div>
+			<div class="modal-footer">
+				<button class="waves-effect waves-blue btn modal-action modal-close" ng-click="addMerc()" >Entrar</button>
+				<button	class="waves-effect waves-blue btn-flat modal-action modal-close " >Sair</button>
+			</div>
+		</div>
+	
+	
+	
+</div>

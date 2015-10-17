@@ -1,0 +1,44 @@
+<div class="row" id="about">
+
+	<h2 class="header">Cadastro de Mercaderias</h2>
+	<div ui-grid="gridOptions" ui-grid-pagination class="grid"></div>
+	
+	<!-- Modal Trigger -->
+		<div class="col">
+			<button
+			class=" waves-effect waves-light btn" 
+			href='#login' modal><i class="material-icons right">perm_identity</i>{{getLoginLogout()}}</button>
+				
+		</div>
+	
+	
+			
+	
+	
+     	<!-- Modal Structure -->
+		<div id="login" class="modal">
+			<div class="modal-content">
+
+			<h5>Aplicativo de Enquete</h5>
+
+				<div input-field>
+				    <input type="text" ng-model="user.nome">
+				    <label>Nome</label>
+				</div>
+
+				<div input-field>
+				    <input type="password" ng-model="user.senha">
+				    <label>Senha</label>
+				</div>
+
+
+			</div>
+			<div class="modal-footer">
+				<button class="waves-effect waves-blue btn modal-action modal-close" ng-click="autenticar()" >Entrar</button>
+				<button	class="waves-effect waves-blue btn-flat modal-action modal-close " >Sair</button>
+			</div>
+		</div>
+	
+	
+	
+</div>

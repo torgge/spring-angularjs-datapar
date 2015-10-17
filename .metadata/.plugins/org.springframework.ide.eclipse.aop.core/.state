@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aop-reference-model>
-<aop-project name="Demo01"/>
-<aop-project name="curso-spring-data-27"/>
-<aop-project name="EnqueteSB1"/>
+<aop-project name="MasterChicoSB5"/>
 </aop-reference-model>

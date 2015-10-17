@@ -1,4 +1,5 @@
-angular.module('app').controller('EnqueteController',['$scope','$http',function($scope,$http){
+angular.module('app').controller('EnqueteController',['$scope','$http',
+                                                      function($scope,$http){
 
   $scope.enquete = [];
 

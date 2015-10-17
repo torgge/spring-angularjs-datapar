@@ -1,4 +1,5 @@
-angular.module('app').controller('DashController',['$scope','$state','$http',function ($scope,$state,$http){
+angular.module('app').controller('DashController',['$scope','$state','$http',
+                                                   function ($scope,$state,$http){
 
 	//Show sideNav - Working...
 	//$('.button-collapse').sideNav('show');

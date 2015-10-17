@@ -1,2 +1,3 @@
-angular.module('app').controller('SobreController',['$scope','$http',function($scope,$http){
+angular.module('app').controller('SobreController',
+		['$scope','$http',function($scope,$http){
 }]);

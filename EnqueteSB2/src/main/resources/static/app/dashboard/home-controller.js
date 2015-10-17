@@ -1,9 +1,10 @@
 angular.module('app')
-.controller('HomeController', 'toastr', 'toastrConfig',
-	['$scope','$http','$rootScope', toastr, toastrConfig, 
-	 function($scope,$http,$root){
+.controller('HomeController', 
+    	['$scope','$http','$rootScope','toastr', 'toastrConfig',
+ function($scope, $http  , $root      , toastr ,  toastrConfig){
 	
-	
+    var openedToasts = [];
+    
 	$scope.user = {nome:'',senha:''};
 	
 	$scope.autenticar = function(){

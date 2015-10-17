@@ -10,7 +10,7 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 import MasterChicoSB1.model.Mercaderia;
 
-@RepositoryRestResource(collectionResourceRel = "mercaderia", path = "mercaderia")
+@RepositoryRestResource(collectionResourceRel = "mercaderia", path = "mercaderia", exported = false)
 public interface MercaderiaRepository extends 
 
  //crud repository com paginação

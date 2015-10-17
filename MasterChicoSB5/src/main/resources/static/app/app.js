@@ -39,14 +39,14 @@ angular.module('app').config( ['$stateProvider','$urlRouterProvider',
 						controller:	'CategoriaController'
         })
 
-				// UNIDADE =================================
+		// UNIDADE =================================
         .state('unidade', {
 		        url: '/unidade',
 		        templateUrl: 'app/unidade/unidade.html',
 						controller:	'UnidadeController'
         })
 
-				// SOBRE =================================
+		// SOBRE =================================
         .state('sobre', {
             url: '/sobre',
         templateUrl: 'app/dashboard/sobre.html'

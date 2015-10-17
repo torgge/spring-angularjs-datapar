@@ -46,7 +46,7 @@ public class MercaderiaResource {
 		return repository.findAll( );
 	}
 
-	@RequestMapping("/mercaderia/geral")
+	@RequestMapping("/mercaderia")
 	public Iterable<Mercaderia> listaMercaderiasGeral(){
 		return repository.findAll(  ) ;
 	}
@@ -83,6 +83,12 @@ public class MercaderiaResource {
 	
 	@RequestMapping( value="/mercaderia", method = RequestMethod.POST)
 	public Mercaderia addUnidade(@RequestBody final  Mercaderia mercaderia ){
+		
+		
+		System.out.println(mercaderia.getCategoria());
+		System.out.println(mercaderia.getUnidade());
+		System.out.println(mercaderia);
+		
 		Mercaderia uni = repository.save(mercaderia);	
 		return uni;
 	}

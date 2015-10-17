@@ -1,5 +1,6 @@
 package MasterChicoSB1.model;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 import javax.persistence.Column;
@@ -12,8 +13,8 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
-import org.springframework.beans.factory.annotation.Autowired;
-
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonView;
 
@@ -31,7 +32,9 @@ import MasterChicoSB1.model.views.MercadoriaView;
 @NamedQueries({ 
 	@NamedQuery(name = "Mercaderia.findAll", query = "select m from Mercaderia m"),
 	@NamedQuery(name = "Mercaderia.findByQuantidadeMaiorQue", query = "select m from Mercaderia m where m.quantidade > :quantidade") })
-public class Mercaderia implements Comparable<Mercaderia> {
+public class Mercaderia implements Comparable<Mercaderia>,Serializable  {
+
+	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue
@@ -50,14 +53,15 @@ public class Mercaderia implements Comparable<Mercaderia> {
 
 	@ManyToOne
 	@JoinColumn(name = "unidade_id")
-	private Unidade unidade;
+	@JsonProperty("unidade") 
+ 	private Unidade unidade;
 
 	@ManyToOne
 	@JoinColumn(name = "categoria_id")
+	@JsonProperty("categoria") 
 	private Categoria categoria;
 
 	public Mercaderia() {
-
 	}
 
 	public Mercaderia(long id, String nome, BigDecimal quantidade, BigDecimal quantidadeMinima, Unidade unidade,

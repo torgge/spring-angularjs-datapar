@@ -20,7 +20,7 @@ Projetos do curso de Spring/AngularJS na Datapar SA - Ciudad del Este - PY - Set
 
 9. MasterChicoHB5 (Projeto com JOOQ (alternativa ao JPA Criteria)
 
-10.MasterChicoHB6 (Projeto com QueryDSL (alternativa ao JPA Criteria)
+10. MasterChicoHB6 (Projeto com QueryDSL (alternativa ao JPA Criteria)
 
 11. MasterChicoSB1 (Configuração SpringBoot com HSQLBD (bd em memória), Aplicação REST com crud básico)
 

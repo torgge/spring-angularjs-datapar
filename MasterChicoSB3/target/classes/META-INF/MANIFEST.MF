@@ -3,7 +3,7 @@ Implementation-Vendor: Pivotal Software, Inc.
 Implementation-Title: MasterChicoSB1
 Implementation-Version: 0.0.1-SNAPSHOT
 Implementation-Vendor-Id: py.com.datapar
-Build-Jdk: 1.7.0_79
-Built-By: lyndon-pc
+Build-Jdk: 1.7.0_55
+Built-By: Usuario1
 Created-By: Maven Integration for Eclipse
 

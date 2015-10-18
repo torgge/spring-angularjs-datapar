@@ -32,7 +32,16 @@ Projetos do curso de Spring/AngularJS na Datapar SA - Ciudad del Este - PY - Set
 
 15. MasterChicoSB5 (Introduz o Spring Data REST / ALPS / JSON VIEWS)
 
+16. MasterChicoSB6 (Cosumindo web service do tempo)
+
+## Imagens
+
+### App Enquete
+
 ![](http://lyndontavares.github.io/images/2015-10-05_22-32-14.png)
 
+### Diagrama de classe da api do tempo (http://openweathermap.org/)
+
+![](https://github.com/lyndontavares/spring-angularjs-datapar/blob/master/MasterChicoSB6/src/main/resources/static/image/Tempo.png)
 Facilitador: Lyndon Tavares
 contato: integraldominio#gmail.com

@@ -69,7 +69,7 @@ O resumo abaixo mostra as tags mais usuais e os componentes angular.
 
 ## ng-model
 
-´´´html
+```html
 <html ng-app="listaCarros">
     <head>
         <title></title>

@@ -1,4 +1,4 @@
-# AngularJS vs Padrões de Projetos
+# AngularJS: Componentes e Padrões
 
 ### Componentes do Angular
 

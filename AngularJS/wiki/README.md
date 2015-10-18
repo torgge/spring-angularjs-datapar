@@ -3,9 +3,11 @@
 <img src="https://github.com/lyndontavares/spring-angularjs-datapar/blob/master/AngularJS/imgs/image_thumb_3DE5D87B.png" width="300">
 
 
+# Aplicação angular
+O resumo abaixo mostra as tags mais usuais e os componentes angular.
 
-## ngApp
-
+## ng-app
+```html
 <html ng-app="listaCarros">
     <head>
         <title></title>
@@ -15,7 +17,7 @@
         </script>
     </head>
 </html>
- 
+``` 
 
 ngController
 

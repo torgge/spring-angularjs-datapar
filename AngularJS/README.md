@@ -1,8 +1,9 @@
 # AngularJS: Componentes e Padrões
 
 ### Componentes do Angular
-
-![](https://github.com/lyndontavares/spring-angularjs-datapar/blob/master/AngularJS/imgs/image_thumb_63DE1982.png)
+<p align="center">
+<img src="https://github.com/lyndontavares/spring-angularjs-datapar/blob/master/AngularJS/imgs/image_thumb_63DE1982.png" width="300">
+</p>
 
 Tabela de comparação entre os componentes do angular e propriedades dos padrões implementados.
 

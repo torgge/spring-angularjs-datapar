@@ -1,7 +1,7 @@
 # AngularJS
 A figura abaixo mostra a estruturação de uma aplicação angular. Sugere também um caminho para implementação da aplicação. Seguindo esta logica, podemos inferir o seguinte:
 
-.. image:: https://github.com/lyndontavares/spring-angularjs-datapar/blob/master/AngularJS/imgs/image_thumb_3DE5D87B.png
+..image:: https://github.com/lyndontavares/spring-angularjs-datapar/blob/master/AngularJS/imgs/image_thumb_3DE5D87B.png
     :width: 300
     :align: center
     

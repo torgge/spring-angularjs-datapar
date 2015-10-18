@@ -10,7 +10,7 @@ Seguindo esta logica, podemos inferir o seguinte:
 1. A aplicação angular é uma instância de module, a qual precisamos configuar um nome e lista de dependências. Exemplo:
 
 ```js
-angular.module('app',[]);
+angular.module('app',['ngRoute']);
 ```
 
 

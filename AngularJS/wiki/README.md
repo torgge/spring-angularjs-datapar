@@ -13,7 +13,7 @@ Seguindo esta logica, podemos inferir o seguinte:
 angular.module('app',['ngRoute']);
 ```
 
-(II) A configuração de uma aplicação se faz no módulo config. Veja exemplo.
+(II) A configuração de uma aplicação se faz no módulo config. Exemplo.
 
 ```js
 angular.module('app').config(function($routeProvider) {

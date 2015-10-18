@@ -1,5 +1,7 @@
 # Componentes do Angular e Padrões de Projetos
 
+https://github.com/lyndontavares/spring-angularjs-datapar/blob/master/AngularJS/imgs/image_thumb_63DE1982.png
+
 | Provider   | Singleton| Instantiable | Configurable|
 |------------|----------|--------------|-------------|
 | Constant   | Yes      | No           | No          |

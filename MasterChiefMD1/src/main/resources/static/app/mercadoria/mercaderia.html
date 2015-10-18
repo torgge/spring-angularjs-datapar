@@ -1,0 +1,56 @@
+<div class="row" id="about">
+
+	<h2 class="header">Cadastro de Mercaderias</h2>
+	<div ui-grid="gridOptions" ui-grid-pagination class="grid"></div>
+	
+	<!-- Modal Trigger -->
+		<div class="col">
+			<button
+			class=" waves-effect waves-light btn" 
+			href='#addMerc' modal ng-click="loadDados()"  >Adicionar</button>
+				
+		</div>
+
+	
+     	<!-- Modal Structure -->
+		<div id="addMerc" class="modal">
+			<div class="modal-content">
+
+			<h5>Adiconar Mercaderia</h5>
+
+				<div input-field>
+				    <input type="text" ng-model="merc.descricao">
+				    <label>Mercaderia Nome</label>
+				</div>
+
+				<div input-field>
+				    <input type="text" ng-model="merc.quanidade">
+				    <label>Quantidade Atual</label>
+				</div>
+
+				<div input-field>
+				    <input type="text" ng-model="merc.quanidade">
+				    <label>Quantidade Minima</label>
+				</div>
+
+				<select class="" ng-model="model.Categoria.descricao" material-select watch>
+				    <option ng-repeat="categoria in categorias">{{categoria.descricao}}</option>
+				</select>
+				
+
+				<select class="" ng-model="model.Unidade.descricao" material-select watch>
+				    <option ng-repeat="unidade in unidades">{{unidade.descricao}}</option>
+				</select>
+				
+
+
+			</div>
+			<div class="modal-footer">
+				<button class="waves-effect waves-blue btn modal-action modal-close" ng-click="addMerc()" >Salvar</button>
+				<button	class="waves-effect waves-blue btn-flat modal-action modal-close " >Cancelar</button>
+			</div>
+		</div>
+	
+	
+	
+</div>

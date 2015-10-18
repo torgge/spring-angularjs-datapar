@@ -32,6 +32,8 @@ Projetos do curso de Spring/AngularJS na Datapar SA - Ciudad del Este - PY - Set
 
 15. MasterChicoSB5 (Introduz o Spring Data REST / ALPS / JSON VIEWS)
 
+16. MasterChicoSB6 (Cosumindo web service do tempo)
+
 ![](http://lyndontavares.github.io/images/2015-10-05_22-32-14.png)
 
 Facilitador: Lyndon Tavares

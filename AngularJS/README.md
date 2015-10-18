@@ -172,7 +172,8 @@ app.controller('MyController', function (movie) {
 * Um service é um construtor injetável.
 * Um factory é uma função injetável.
 * O decorator pode modificar ou encapsular outros providers, exceto constant.
-* Um provider é um factory configurável.
+* Um provider é um factory configurável. 
+
 
 * All the providers are instantiated only once. That means that they are all singletons.
 * All the providers except constant can be decorated.

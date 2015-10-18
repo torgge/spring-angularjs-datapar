@@ -19,7 +19,7 @@ Tabela de comparação entre os componentes do angular e propriedades dos padrõ
 (*) Deixei os nomes dos componentes angular em ingles para identifica-los. Assim, onde se ler: Um Constant, entende-se que se refere a um componente do tipo constante. 
 
 # Constant
-Um constant pode ser injeto em qualquer parte. Uma constante não pode ser interceptada por um Decorator, siguinifica que o valor de uma constante **nunca deveria ser alterado** (entretanto ainda é possível, programaticamente, no angular 1.x).
+Um constant pode ser injeto em qualquer parte. Uma constante não pode ser interceptada por um Decorator, significa que o valor de uma constante **nunca deveria ser alterado** (entretanto ainda é possível, programaticamente, no angular 1.x).
 
 A constant can be injected everywhere. A constant can not be intercepted by a decorator, that means that the value of a constant **should never be changed** (though it is still possible to change it programmatically in Angular 1.x).
 

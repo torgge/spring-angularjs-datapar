@@ -16,7 +16,7 @@ public class TempoResource {
 	private final String URL_TEMPO = "http://api.openweathermap.org/data/2.5/weather?q=";
 	private final String URL_IMAGE = "http://openweathermap.org/img/w/";
 	private final String API_MODE = "&mode=xml";
-	private final String KEY_TEMPO = "&appid=bd82977b86bf27fb59a04b61b657fb6f";
+	private final String API_KEY = "&appid=bd82977b86bf27fb59a04b61b657fb6f";
 
 	@RequestMapping("tempo/{cidade}")
 	public Tempo tempo(@PathParam(value = "cidade") String cidade) {
@@ -24,7 +24,7 @@ public class TempoResource {
 		RestTemplate restTemplate = new RestTemplate();
 
 		ResponseEntity<OpenWeatherMap> tempo = 
-				restTemplate.getForEntity(URL_TEMPO + cidade + API_MODE + KEY_TEMPO,
+				restTemplate.getForEntity(URL_TEMPO + cidade + API_MODE + API_KEY,
 				OpenWeatherMap.class);
 
 		return new Tempo(

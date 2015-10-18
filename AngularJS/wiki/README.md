@@ -19,8 +19,9 @@ O resumo abaixo mostra as tags mais usuais e os componentes angular.
 </html>
 ``` 
 
-ngController
+## ng-controller
 
+```html
 <html ng-app="listaCarros">
     <head>
         <title></title>
@@ -33,10 +34,11 @@ ngController
     </head>
 <body ng-controller="listaCarrosCtrl">
 </body>
+```
 
+## ng-repeat
 
-ngRepeat
-
+```html
 <html ng-app="listaCarros">
     <head>
         <title></title>
@@ -63,11 +65,11 @@ ngRepeat
     </table>
 </body>
 </html>
+```
 
+## ng-model
 
-
-ngModel
-
+´´´html
 <html ng-app="listaCarros">
     <head>
         <title></title>
@@ -101,10 +103,11 @@ ngModel
     <button ng-click="adicionarCarro(carro)">Adicionar Carro</button>
 </body>
 </html>
+```
 
+## ng-disable
 
-ngDisable
-
+```html
 <html ng-app="listaCarros">
     <head>
         <title></title>
@@ -140,12 +143,11 @@ ngDisable
     </button>
 </body>
 </html>
+```
 
+## ng-class
 
-
-
-ngClass
-
+```html
 <html ng-app="listaCarros">
     <head>
         <title></title>
@@ -189,11 +191,11 @@ ngClass
     </button>
 </body>
 </html>
+```
 
+## ng-options
 
-
-ngOptions
-
+```html
 <html ng-app="listaCarros">
     <head>
         <title></title>
@@ -240,11 +242,11 @@ ngOptions
     </button>
 </body>
 </html>
+```
 
+## ng-show e ng-hide
 
-
-ngShow e ngHide
-
+```html
 <html ng-app="listaCarros">
     <head>
         <title></title>
@@ -291,3 +293,4 @@ ngShow e ngHide
     </button>
 </body>
 </html>
+```

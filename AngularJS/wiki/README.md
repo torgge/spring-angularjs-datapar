@@ -3,55 +3,8 @@
 ![](https://github.com/lyndontavares/spring-angularjs-datapar/blob/master/AngularJS/imgs/image_thumb_3DE5D87B.png)
 
 
-> Interação entre os módulos
 
-```
-teste
-```
-
-```
-npm install clipboard --save
-```
-
-Or bower, too.
-
-```
-bower install clipboard --save
-```
-
-If you're not into package management, just [download a ZIP](https://github.com/zenorocha/clipboard.js/archive/master.zip) file.
-
-## Setup
-
-First, include the script located on the `dist` folder.
-
-```html
-<script src="dist/clipboard.min.js"></script>
-```
-
-Or load it from a CDN.
-
-```html
-<script src="https://cdn.rawgit.com/zenorocha/clipboard.js/master/dist/clipboard.min.js"></script>
-```
-
-Now, you need to instantiate it using a DOM selector. This selector corresponds to the trigger element(s), for example `<button class="btn">`.
-
-```js
-new Clipboard('.btn');
-```
-
-
-
-
-
-
-
-
-
-
-
-ngApp
+## ngApp
 
 <html ng-app="listaCarros">
     <head>

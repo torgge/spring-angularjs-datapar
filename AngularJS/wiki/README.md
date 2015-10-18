@@ -3,19 +3,11 @@
 ![](https://github.com/lyndontavares/spring-angularjs-datapar/blob/master/AngularJS/imgs/image_thumb_3DE5D87B.png)
 
 
-> Modern copy to clipboard. No Flash. Just 2kb
+> Interação entre os módulos
 
-<a href="https://zenorocha.github.io/clipboard.js/"><img width="728" src="https://cloud.githubusercontent.com/assets/398893/9983535/5ab0a950-5fb4-11e5-9602-e73c0b661883.jpg" alt="Demo"></a>
-
-## Why
-
-Copying text to the clipboard shouldn't be hard. It shouldn't require dozens of steps to configure or hundreds of KBs to load. But most of all, it shouldn't depend on Flash or any bloated framework.
-
-That's why clipboard.js exists.
-
-## Install
-
-You can get it on npm.
+```
+teste
+```
 
 ```
 npm install clipboard --save

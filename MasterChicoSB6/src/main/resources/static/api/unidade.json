@@ -1,0 +1,35 @@
+[
+  {
+    "id":1,"descricao":"unidade-01"
+  },
+  {
+    "id":2,"descricao":"unidade-02"
+  },
+  {
+    "id":3,"descricao":"unidade-03"
+  },
+  {
+    "id":4,"descricao":"unidade-04"
+  },
+  {
+    "id":5,"descricao":"unidade-05"
+  },
+  {
+    "id":6,"descricao":"unidade-06"
+  },
+  {
+    "id":7,"descricao":"unidade-07"
+  },
+  {
+    "id":8,"descricao":"unidade-08"
+  },
+  {
+    "id":9,"descricao":"unidade-09"
+  },
+  {
+    "id":10,"descricao":"unidade-10"
+  },
+  {
+    "id":11,"descricao":"unidade-11"
+  }
+]

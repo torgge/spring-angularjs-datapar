@@ -16,6 +16,8 @@ Tabela de comparação entre os componentes do angular e propriedades dos padrõ
 | Provider   | Yes      | Yes          | Yes         |
 
 # Constant
+Uma constante pode ser injeta em qualquer parte. Uma constante não pode ser interceptada por um Decorator, siguinifica que o valor de uma constante **nunca deveria ser alterado** (entretanto ainda é possível, programaticamente, no angular 1.x).
+
 A constant can be injected everywhere. A constant can not be intercepted by a decorator, that means that the value of a constant **should never be changed** (though it is still possible to change it programmatically in Angular 1.x).
 
 ```js
@@ -28,6 +30,8 @@ app.constant('MOVIE_TITLE', 'The Matrix');
 });
 ```
 # Value
+Um value é apenas um valor inhetável. O valor por ser uma string, number e também uma função. Um value difere de constant porque o value não pode ser injetado em configurations, podendo ser injeto por decorators.
+
 A value is nothing more than a simple injectable value. The value can be a string, number but also a function. Value differs from constant in that value can not be injected into configurations, but it can be intercepted by decorators.
 
 ```js
@@ -41,6 +45,8 @@ angular.module('app', []);
 ```
 
 # Service
+Use um service quando precisar de um objeto simples como um hash, por exemplo {foo:1, bar:2}. É fácilde codificar, mas não pode ser instanciado. Um service é um construtor injetável. Se quiser pode especificar as dependências que precisa na função. Um service é singleton e criado somente pelo AngularJS. Services são bons para comunicação entre controladores como compartilhamento de dados.
+
 Use Service when you need just a simple object such as a Hash, for example {foo:1, bar:2} It's easy to code, but you cannot instantiate it. A service is an injectable constructor. If you want you can specify the dependencies that you need in the function. A service is a singleton and will only be created once by AngularJS. Services are a great way for communicating between controllers like sharing data.
 
 ```js
@@ -57,6 +63,7 @@ angular.module('app' ,[]);
 
 
 # Factory
+Um factory é uma função injetável. Um factory é diferente de service pois é um singleton e as dependencias podem ser especificadas numa função. A diferença entre factory e service é que factory injeta uma função que o angular chamará, e service injeta um construtor. Um construtor cria um novo objeto então o new é chamado no service e factory pode deixar a função retornar algo. Como verá a seguir, um factory é provido com um só método $get.
 
 A factory is an injectable function. A factory is a lot like a service in the sense that it is a singleton and dependencies can be specified in the function. The difference between a factory and a service is that a factory injects a plain function so AngularJS will call the function and a service injects a constructor. A constructor creates a new object so new is called on a service and with a factory you can let the function return anything you want. As you will see later on, a factory is a provider with only a $get method.
 
@@ -106,6 +113,8 @@ angular.module('app', []);
 ```
 
 # Decorator
+Um decorator pode modificar outros providers. Existe só um a exceção é que uma constante não pode ser decorada.
+
 A decorator can modify or encapsulate other providers. There is one exception and that a constant cannot be decorated.
 ```js
 var app = angular.module('app', []);

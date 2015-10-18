@@ -17,6 +17,7 @@ angular.module('app',['ngRoute']);
 
 ```js
 angular.module('app').config(function($routeProvider) {
+		
 		$routeProvider
 
 			// rota para home 

@@ -1,0 +1,29 @@
+
+package rest.weather.model.teste;
+ 
+import rest.weather.*;
+import com.sun.jersey.api.client.Client;
+import com.sun.jersey.api.client.WebResource;
+import javax.ws.rs.core.MediaType;
+
+import rest.weather.model.OpenWeatherMap;
+
+
+public class WeatherCliente {
+ 
+    public static void main(String[] args) {
+        Client client = Client.create();
+        WebResource resource = client.resource(
+        "http://localhost:3000/mensagem/txt");
+
+        String s = resource.get(String.class);
+        System.out.println(s);
+
+        resource.type(MediaType.APPLICATION_XML);
+        City c = resource.get(City.class);
+        
+        System.out.println( c.toString() );
+        
+    }
+    
+}

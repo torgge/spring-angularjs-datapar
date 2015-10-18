@@ -15,6 +15,42 @@
             destinationClassName="MasterChicoSB1.weather.model.Sun"
             endpointName="sun" kind="Simple"/>
     </Class>
+    <Class name="MasterChicoSB1.weather.model.Pressure" x="130" y="343">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="MasterChicoSB1.weather.model.Clouds" x="645" y="225">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="MasterChicoSB1.weather.model.Coord" x="337" y="510">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="MasterChicoSB1.weather.model.Visibility" x="653" y="349">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
     <Class name="MasterChicoSB1.weather.model.Precipitation" x="631" y="101">
         <AttributesDisplayFilter public-accepted="true"
             private-accepted="true" protected-accepted="true"
@@ -24,7 +60,16 @@
             default-accepted="false" static-accepted="false"
             accessors-accepted="false" constructors-accepted="false"/>
     </Class>
-    <Class name="MasterChicoSB1.weather.model.Direction" x="635" y="577">
+    <Class name="MasterChicoSB1.weather.model.LastUpdate" x="116" y="234">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="MasterChicoSB1.weather.model.Speed" x="55" y="590">
         <AttributesDisplayFilter public-accepted="true"
             private-accepted="true" protected-accepted="true"
             default-accepted="true" static-accepted="false"/>
@@ -57,22 +102,22 @@
             destinationClassName="MasterChicoSB1.weather.model.Visibility"
             endpointName="visibility" kind="Simple"/>
         <Association
-            destinationClassName="MasterChicoSB1.weather.model.Precipitation"
-            endpointName="precipitation" kind="Simple"/>
-        <Association
             destinationClassName="MasterChicoSB1.weather.model.LastUpdate"
             endpointName="lastUpdate" kind="Simple"/>
+        <Association
+            destinationClassName="MasterChicoSB1.weather.model.Precipitation"
+            endpointName="precipitation" kind="Simple"/>
         <Association
             destinationClassName="MasterChicoSB1.weather.model.Weather"
             endpointName="weather" kind="Simple"/>
         <Association
-            destinationClassName="MasterChicoSB1.weather.model.Temperature"
-            endpointName="temperature" kind="Simple"/>
-        <Association
             destinationClassName="MasterChicoSB1.weather.model.City"
             endpointName="city" kind="Simple"/>
+        <Association
+            destinationClassName="MasterChicoSB1.weather.model.Temperature"
+            endpointName="temperature" kind="Simple"/>
     </Class>
-    <Class name="MasterChicoSB1.weather.model.Speed" x="55" y="590">
+    <Class name="MasterChicoSB1.weather.model.Direction" x="207" y="582">
         <AttributesDisplayFilter public-accepted="true"
             private-accepted="true" protected-accepted="true"
             default-accepted="true" static-accepted="false"/>
@@ -106,51 +151,6 @@
             endpointName="direction" kind="Simple"/>
     </Class>
     <Class name="MasterChicoSB1.weather.model.Temperature" x="665" y="475">
-        <AttributesDisplayFilter public-accepted="true"
-            private-accepted="true" protected-accepted="true"
-            default-accepted="true" static-accepted="false"/>
-        <MethodDisplayFilter public-accepted="true"
-            private-accepted="false" protected-accepted="false"
-            default-accepted="false" static-accepted="false"
-            accessors-accepted="false" constructors-accepted="false"/>
-    </Class>
-    <Class name="MasterChicoSB1.weather.model.Clouds" x="645" y="225">
-        <AttributesDisplayFilter public-accepted="true"
-            private-accepted="true" protected-accepted="true"
-            default-accepted="true" static-accepted="false"/>
-        <MethodDisplayFilter public-accepted="true"
-            private-accepted="false" protected-accepted="false"
-            default-accepted="false" static-accepted="false"
-            accessors-accepted="false" constructors-accepted="false"/>
-    </Class>
-    <Class name="MasterChicoSB1.weather.model.Pressure" x="130" y="343">
-        <AttributesDisplayFilter public-accepted="true"
-            private-accepted="true" protected-accepted="true"
-            default-accepted="true" static-accepted="false"/>
-        <MethodDisplayFilter public-accepted="true"
-            private-accepted="false" protected-accepted="false"
-            default-accepted="false" static-accepted="false"
-            accessors-accepted="false" constructors-accepted="false"/>
-    </Class>
-    <Class name="MasterChicoSB1.weather.model.Visibility" x="653" y="349">
-        <AttributesDisplayFilter public-accepted="true"
-            private-accepted="true" protected-accepted="true"
-            default-accepted="true" static-accepted="false"/>
-        <MethodDisplayFilter public-accepted="true"
-            private-accepted="false" protected-accepted="false"
-            default-accepted="false" static-accepted="false"
-            accessors-accepted="false" constructors-accepted="false"/>
-    </Class>
-    <Class name="MasterChicoSB1.weather.model.Coord" x="337" y="510">
-        <AttributesDisplayFilter public-accepted="true"
-            private-accepted="true" protected-accepted="true"
-            default-accepted="true" static-accepted="false"/>
-        <MethodDisplayFilter public-accepted="true"
-            private-accepted="false" protected-accepted="false"
-            default-accepted="false" static-accepted="false"
-            accessors-accepted="false" constructors-accepted="false"/>
-    </Class>
-    <Class name="MasterChicoSB1.weather.model.LastUpdate" x="116" y="234">
         <AttributesDisplayFilter public-accepted="true"
             private-accepted="true" protected-accepted="true"
             default-accepted="true" static-accepted="false"/>

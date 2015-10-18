@@ -1,0 +1,30 @@
+
+package MasterChicoSB1.weather;
+ 
+//import com.sun.jersey.api.client.Client;
+//import com.sun.jersey.api.client.WebResource;
+
+//import rest.weather.model.OpenWeatherMap;
+
+
+public class WeatherCliente {
+ 
+    public static void main(String[] args) {
+        Client client = Client.create();
+        WebResource resource = client.resource(
+        "http://api.openweathermap.org/data/2.5/weather?q=Londrina&mode=xml");
+
+        OpenWeatherMap tempo = resource.get(OpenWeatherMap.class);
+        
+        System.out.println("Ex.01");
+        System.out.println( tempo.toString() );
+        
+        System.out.println("Ex.02");
+        System.out.println( "Cidade: "+ tempo.getCity().getName() );
+        System.out.println( "Temperatura máx: "+ tempo.getTemperature().getMax()+" "+tempo.getTemperature().getUnit() );
+        
+        
+        
+    }
+    
+}

@@ -1,0 +1,48 @@
+package MasterChicoSB1.resource;
+
+import org.springframework.http.ResponseEntity;
+
+import MasterChicoSB1.weather.model.OpenWeatherMap;
+
+public class TempoResource {
+
+	class Tempo{
+		private String cidade;
+		private double temperatura;
+		private String icon;
+		public String getCidade() {
+			return cidade;
+		}
+		public void setCidade(String cidade) {
+			this.cidade = cidade;
+		}
+		public double getTemperatura() {
+			return temperatura;
+		}
+		public void setTemperatura(double temperatura) {
+			this.temperatura = temperatura;
+		}
+		public String getIcon() {
+			return icon;
+		}
+		public void setIcon(String icon) {
+			this.icon = icon;
+		}
+		
+	}
+
+	public Tempo tempo(){
+	
+		ResponseEntity<OpenWeatherMap> tempo = restTemplate.getForEntity(
+			"http://api.openweathermap.org/data/2.5/weather?q=Foz do Iguacu&mode=xml&appid=bd82977b86bf27fb59a04b61b657fb6f", OpenWeatherMap.class);
+
+	return new Tempo();
+	
+	System.out.println("Ex.01");
+	System.out.println( tempo );
+	System.out.println( tempo.getBody().getCity().getName() );
+	System.out.println( tempo.getBody().getTemperature().getValue() );
+	System.out.println( tempo.getBody().getWeather().getIcon());
+	}
+	
+}

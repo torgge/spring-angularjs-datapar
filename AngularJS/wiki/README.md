@@ -48,7 +48,7 @@ angular.module('app').config(function($routeProvider) {
 
 
 # Aplicação angular
-O resumo abaixo mostra as tags mais usuais e os componentes angular.
+O resumo abaixo mostra as diretivas mais usuais do angular.
 
 ## ng-app
 ```html

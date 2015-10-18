@@ -1,6 +1,6 @@
 # AngularJS
 
-<img src="https://github.com/lyndontavares/spring-angularjs-datapar/blob/master/AngularJS/imgs/image_thumb_3DE5D87B.png" width="500px">
+<img src="https://github.com/lyndontavares/spring-angularjs-datapar/blob/master/AngularJS/imgs/image_thumb_3DE5D87B.png" width="400" align="center">
 
 
 

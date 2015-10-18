@@ -1,10 +1,10 @@
 # AngularJS vs Padrões de Projetos
 
-Componentes do Angular
+### Componentes do Angular
 
 ![](https://github.com/lyndontavares/spring-angularjs-datapar/blob/master/AngularJS/imgs/image_thumb_63DE1982.png)
 
-Tabela de comparação entre os componentes do angular e propriedades dos padrões de projetos implmentados
+### Tabela de comparação entre os componentes do angular e propriedades dos padrões de projetos implmentados
 
 | Provider   | Singleton| Instantiable | Configurable|
 |------------|----------|--------------|-------------|

@@ -1,4 +1,4 @@
-# Componentes AngularJS e Padrões de Projetos
+# Componentes do Angular e Padrões de Projetos
 
 | Provider   | Singleton| Instantiable | Configurable|
 |------------|----------|--------------|-------------|

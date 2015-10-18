@@ -16,7 +16,27 @@ angular.module('app',['ngRoute']);
 2. A configuração de uma aplicação se faz no módulo config. Veja exemplo.
 
 ```js
+angular.module('app').config(function($routeProvider) {
+		$routeProvider
 
+			// rota para home 
+			.when('/', {
+				templateUrl : 'pages/home.html',
+				controller  : 'mainController'
+			})
+
+			// rota para about
+			.when('/about', {
+				templateUrl : 'pages/about.html',
+				controller  : 'aboutController'
+			})
+
+			// rota para contato
+			.when('/contact', {
+				templateUrl : 'pages/contact.html',
+				controller  : 'contactController'
+			});
+	});
 ```
 
 3.

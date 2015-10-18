@@ -135,6 +135,8 @@ app.controller('MyController', function (movieTitle) {
 ```
 
 #Provider
+Um provider é o método mais sofisticados de todos os componentes procedores. Permite criar funções complexas e configurar opções. Um provider é um factory configurável. O provider recebe um objeto ou um construtor. 
+
 A provider is the most sophisticated method of all the providers. It allows you to have a complex creation function and configuration options. A provider is actually a configurable factory. The provider accepts an object or a constructor.
 
 ```js
@@ -163,6 +165,15 @@ app.controller('MyController', function (movie) {
 });
 ```
 ### Summary
+* Todos os providers são instaciados uma única vez. Todos são singleton.
+* Todos os providers, exceto constant, podem ser decorados.
+* Um constant é um valor que pode ser injetado em qualquer lugar. O valor de constant não se altera.
+* Um value é um valor injetável.
+* Um service é um construtor injetável.
+* Um factory é uma função injetável.
+* O decorator pode modificar ou encapsular outros providers, exceto constant.
+* Um provider é um factory configurável.
+
 * All the providers are instantiated only once. That means that they are all singletons.
 * All the providers except constant can be decorated.
 * A constant is a value that can be injected everywhere. The value of a constant can never be changed.

@@ -7,13 +7,13 @@ A figura abaixo mostra a estruturação de uma aplicação angular. Sugere tamb�
 
 Seguindo esta logica, podemos inferir o seguinte:
 
-1. Uma aplicação angular é uma instância de module, a qual precisamos configuar um nome e uma lista de dependências. Exemplo:
+(I) Uma aplicação angular é uma instância de module, a qual precisamos configuar um nome e uma lista de dependências. Exemplo:
 
 ```js
 angular.module('app',['ngRoute']);
 ```
 
-2. A configuração de uma aplicação se faz no módulo config. Veja exemplo.
+(II) A configuração de uma aplicação se faz no módulo config. Veja exemplo.
 
 ```js
 angular.module('app').config(function($routeProvider) {
@@ -40,7 +40,7 @@ angular.module('app').config(function($routeProvider) {
 	});
 ```
 
-3.
+(III)
 
 ```js
 

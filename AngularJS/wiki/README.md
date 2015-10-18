@@ -1,9 +1,11 @@
 # AngularJS
-A figura abaixo mostra a estruturação de uma aplicação angular. Sugere também um caminho para implementação da aplicação. Seguindo esta logica, podemos inferir o seguinte:
+A figura abaixo mostra a estruturação de uma aplicação angular. Sugere também um caminho para implementação da aplicação. 
 
 <p align="center">
 <img src="https://github.com/lyndontavares/spring-angularjs-datapar/blob/master/AngularJS/imgs/image_thumb_3DE5D87B.png" width="300">
 </p>
+
+Seguindo esta logica, podemos inferir o seguinte:
 
 1. A aplicação angular é uma instância de module, a qual precisamos configuar um nome e lista dependências. Exemplo:
 

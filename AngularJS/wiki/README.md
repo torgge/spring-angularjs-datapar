@@ -1,0 +1,346 @@
+# AngularJS
+
+![](https://github.com/lyndontavares/spring-angularjs-datapar/blob/master/AngularJS/imgs/image_thumb_3DE5D87B.png)
+
+
+> Modern copy to clipboard. No Flash. Just 2kb
+
+<a href="https://zenorocha.github.io/clipboard.js/"><img width="728" src="https://cloud.githubusercontent.com/assets/398893/9983535/5ab0a950-5fb4-11e5-9602-e73c0b661883.jpg" alt="Demo"></a>
+
+## Why
+
+Copying text to the clipboard shouldn't be hard. It shouldn't require dozens of steps to configure or hundreds of KBs to load. But most of all, it shouldn't depend on Flash or any bloated framework.
+
+That's why clipboard.js exists.
+
+## Install
+
+You can get it on npm.
+
+```
+npm install clipboard --save
+```
+
+Or bower, too.
+
+```
+bower install clipboard --save
+```
+
+If you're not into package management, just [download a ZIP](https://github.com/zenorocha/clipboard.js/archive/master.zip) file.
+
+## Setup
+
+First, include the script located on the `dist` folder.
+
+```html
+<script src="dist/clipboard.min.js"></script>
+```
+
+Or load it from a CDN.
+
+```html
+<script src="https://cdn.rawgit.com/zenorocha/clipboard.js/master/dist/clipboard.min.js"></script>
+```
+
+Now, you need to instantiate it using a DOM selector. This selector corresponds to the trigger element(s), for example `<button class="btn">`.
+
+```js
+new Clipboard('.btn');
+```
+
+
+
+
+
+
+
+
+
+
+
+ngApp
+
+<html ng-app="listaCarros">
+    <head>
+        <title></title>
+        <script src="angular.min.js"></script>
+        <script>
+            var app = angular.module("listaCarros",[]);
+        </script>
+    </head>
+</html>
+ 
+
+ngController
+
+<html ng-app="listaCarros">
+    <head>
+        <title></title>
+        <script src="angular.min.js"></script>
+        <script>
+            var app = angular.module("listaCarros",[]);
+            app.controller("listaCarrosCtrl",function($scope){ 
+            });
+        </script>
+    </head>
+<body ng-controller="listaCarrosCtrl">
+</body>
+
+
+ngRepeat
+
+<html ng-app="listaCarros">
+    <head>
+        <title></title>
+        <script src="angular.min.js"></script>
+        <script>
+            var app = angular.module("listaCarros",[]);
+            app.controller("listaCarrosCtrl",function($scope){ 
+                $scope.titulo = "Lista de Carros";
+                $scope.carros = [{marca: "Fiat", modelo: "UNO"},
+                                 {marca: "VW", modelo: "GOL"},
+                                 {marca: "Peugeot", modelo: "207 Passion"}];
+            });
+        </script>
+    </head>
+<body ng-controller="listaCarrosCtrl">
+    <h1>{{titulo}}</h1>
+    <table>
+        <tr>
+            <th>Marca</th><th>Modelo</th>
+        </tr>
+        <tr ng-repeat="carro in carros">
+            <td>{{carro.marca}}</td><td>{{carro.modelo}}</td>
+        </tr>
+    </table>
+</body>
+</html>
+
+
+
+ngModel
+
+<html ng-app="listaCarros">
+    <head>
+        <title></title>
+        <script src="angular.min.js"></script>
+        <script>
+            var app = angular.module("listaCarros",[]);
+            app.controller("listaCarrosCtrl",function($scope){ 
+                $scope.titulo = "Lista de Carros";
+                $scope.carros = [{marca: "Fiat", modelo: "UNO"},
+                                 {marca: "VW", modelo: "GOL"},
+                                 {marca: "Peugeot", modelo: "207 Passion"}];
+                $scope.adicionarCarro = function(carro){
+                    $scope.carros.push(angular.copy(carro));
+                    delete $scope.carro;
+                }
+            });
+        </script>
+    </head>
+<body ng-controller="listaCarrosCtrl">
+    <h1>{{titulo}}</h1>
+    <table>
+        <tr>
+            <th>Marca</th><th>Modelo</th>
+        </tr>
+        <tr ng-repeat="carro in carros">
+            <td>{{carro.marca}}</td><td>{{carro.modelo}}</td>
+        </tr>
+    </table>
+    <input type="text" ng-model="carro.marca" placeholder="Digite a marca do carro">
+    <input type="text" ng-model="carro.modelo" placeholder="Digite o modelo do carro">
+    <button ng-click="adicionarCarro(carro)">Adicionar Carro</button>
+</body>
+</html>
+
+
+ngDisable
+
+<html ng-app="listaCarros">
+    <head>
+        <title></title>
+        <script src="angular.min.js"></script>
+        <script>
+            var app = angular.module("listaCarros",[]);
+            app.controller("listaCarrosCtrl",function($scope){ 
+                $scope.titulo = "Lista de Carros";
+                $scope.carros = [{marca: "Fiat", modelo: "UNO"},
+                                 {marca: "VW", modelo: "GOL"},
+                                 {marca: "Peugeot", modelo: "207 Passion"}];
+                $scope.adicionarCarro = function(carro){
+                    $scope.carros.push(angular.copy(carro));
+                    delete $scope.carro;
+                }
+            });
+        </script>
+    </head>
+<body ng-controller="listaCarrosCtrl">
+    <h1>{{titulo}}</h1>
+    <table>
+        <tr>
+            <th>Marca</th><th>Modelo</th>
+        </tr>
+        <tr ng-repeat="carro in carros">
+            <td>{{carro.marca}}</td><td>{{carro.modelo}}</td>
+        </tr>
+    </table>
+    <input type="text" ng-model="carro.marca" placeholder="Digite a marca do carro">
+    <input type="text" ng-model="carro.modelo" placeholder="Digite o modelo do carro">
+    <button ng-click="adicionarCarro(carro)" ng-disable="!(carro.marca && carro.modelo)">
+        Adicionar Carro
+    </button>
+</body>
+</html>
+
+
+
+
+ngClass
+
+<html ng-app="listaCarros">
+    <head>
+        <title></title>
+        <script src="angular.min.js"></script>
+        <script>
+            var app = angular.module("listaCarros",[]);
+            app.controller("listaCarrosCtrl",function($scope){ 
+                $scope.titulo = "Lista de Carros";
+                $scope.carros = [{marca: "Fiat", modelo: "UNO"},
+                                 {marca: "VW", modelo: "GOL"},
+                                 {marca: "Peugeot", modelo: "207 Passion"}];
+                $scope.adicionarCarro = function(carro){
+                    $scope.carros.push(angular.copy(carro));
+                    delete $scope.carro;
+                }
+            });
+        </script>
+        <style>
+            .selecionado{
+                font-weight: bold;
+                color: red;
+            }
+        </style>
+    </head>
+<body ng-controller="listaCarrosCtrl">
+    <h1>{{titulo}}</h1>
+    <table>
+        <tr>
+            <th></th><th>Marca</th><th>Modelo</th>
+        </tr>
+        <tr ng-class="{selecionado: contato.selecionado}" ng-repeat="carro in carros">
+            <td><input type="checkbox" ng-model="contato.selecionado"></td>
+            <td>{{carro.marca}}</td>
+            <td>{{carro.modelo}}</td>
+        </tr>
+    </table>
+    <input type="text" ng-model="carro.marca" placeholder="Digite a marca do carro">
+    <input type="text" ng-model="carro.modelo" placeholder="Digite o modelo do carro">
+    <button ng-click="adicionarCarro(carro)" ng-disable="!(carro.marca && carro.modelo)">
+        Adicionar Carro
+    </button>
+</body>
+</html>
+
+
+
+ngOptions
+
+<html ng-app="listaCarros">
+    <head>
+        <title></title>
+        <script src="js/angular.min.js"></script>
+        <script>
+            var app = angular.module("listaCarros",[]);
+            app.controller("listaCarrosCtrl",function($scope){ 
+                $scope.titulo = "Lista de Carros";
+                $scope.carros = [{marca: "Fiat", modelo: "UNO"},
+                                 {marca: "VW", modelo: "GOL"},
+                                 {marca: "Peugeot", modelo: "207 Passion"}];
+                $scope.adicionarCarro = function(carro){
+                    $scope.carros.push(angular.copy(carro));
+                    delete $scope.carro;
+                }
+                $scope.motores = ["1.0","1.4","1.6", "2.0"];
+            });
+        </script>
+        <style>
+            .selecionado{
+                font-weight: bold;
+                color: red;
+            }
+        </style>
+    </head>
+<body ng-controller="listaCarrosCtrl">
+    <h1>{{titulo}}</h1>
+    <table>
+        <tr>
+            <th></th><th>Marca</th><th>Modelo</th><th>Motor</th>
+        </tr>
+        <tr ng-class="{selecionado: contato.selecionado}" ng-repeat="carro in carros">
+            <td><input type="checkbox" ng-model="contato.selecionado"></td>
+            <td>{{carro.marca}}</td>
+            <td>{{carro.modelo}}</td>
+            <td>{{carro.motor}}</td>
+        </tr>
+    </table>
+    <input type="text" ng-model="carro.marca" placeholder="Digite a marca do carro">
+    <input type="text" ng-model="carro.modelo" placeholder="Digite o modelo do carro">
+    <select ng-model="carro.motor" ng-options="motor for motor in motores"></select>
+    <button ng-click="adicionarCarro(carro)" ng-disable="!(carro.marca && carro.modelo)">
+        Adicionar Carro
+    </button>
+</body>
+</html>
+
+
+
+ngShow e ngHide
+
+<html ng-app="listaCarros">
+    <head>
+        <title></title>
+        <script src="js/angular.min.js"></script>
+        <script>
+            var app = angular.module("listaCarros",[]);
+            app.controller("listaCarrosCtrl",function($scope){ 
+                $scope.titulo = "Lista de Carros";
+                $scope.carros = [{marca: "Fiat", modelo: "UNO"},
+                                 {marca: "VW", modelo: "GOL"},
+                                 {marca: "Peugeot", modelo: "207 Passion"}];
+                $scope.adicionarCarro = function(carro){
+                    $scope.carros.push(angular.copy(carro));
+                    delete $scope.carro;
+                }
+                $scope.motores = ["1.0","1.4","1.6", "2.0"];
+            });
+        </script>
+        <style>
+            .selecionado{
+                font-weight: bold;
+                color: red;
+            }
+        </style>
+    </head>
+<body ng-controller="listaCarrosCtrl">
+    <h1>{{titulo}}</h1>
+    <table ng-show="carros.lenght>0">
+        <tr>
+            <th></th><th>Marca</th><th>Modelo</th><th>Motor</th>
+        </tr>
+        <tr ng-class="{selecionado: contato.selecionado}" ng-repeat="carro in carros">
+            <td><input type="checkbox" ng-model="contato.selecionado"></td>
+            <td>{{carro.marca}}</td>
+            <td>{{carro.modelo}}</td>
+            <td>{{carro.motor}}</td>
+        </tr>
+    </table>
+    <input type="text" ng-model="carro.marca" placeholder="Digite a marca do carro">
+    <input type="text" ng-model="carro.modelo" placeholder="Digite o modelo do carro">
+    <select ng-model="carro.motor" ng-options="motor for motor in motores"></select>
+    <button ng-click="adicionarCarro(carro)" ng-disable="!(carro.marca && carro.modelo)">
+        Adicionar Carro
+    </button>
+</body>
+</html>

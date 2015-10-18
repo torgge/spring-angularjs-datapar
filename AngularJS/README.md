@@ -165,7 +165,7 @@ app.controller('MyController', function (movie) {
 });
 ```
 ### Summary
-* Todos os providers são instaciados uma única vez. Todos são singleton.
+* Todos os providers são instanciados uma única vez. Todos são singleton.
 * Todos os providers, exceto constant, podem ser decorados.
 * Um constant é um valor que pode ser injetado em qualquer lugar. O valor de constant não se altera.
 * Um value é um valor injetável.

@@ -2,7 +2,7 @@
 
 ### Componentes do Angular
 <p align="center">
-<img src="https://github.com/lyndontavares/spring-angularjs-datapar/blob/master/AngularJS/imgs/image_thumb_63DE1982.png" width="300">
+<img src="https://github.com/lyndontavares/spring-angularjs-datapar/blob/master/AngularJS/imgs/image_thumb_63DE1982.png" width="350">
 </p>
 
 Tabela de comparação entre os componentes do angular e propriedades dos padrões implementados.

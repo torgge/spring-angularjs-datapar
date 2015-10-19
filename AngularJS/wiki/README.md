@@ -53,7 +53,7 @@ angular.module('app').('PessoaController',['$http','$scope',function($http,$scop
 }]);
 ```
 
-(IV) A resposabilildae da camada de View fica definidas nos templates html. Exemplo:
+(IV) A resposabilildae da camada de View fica definida em templates html. Exemplo:
 
 ```js
 <body ng-controller="PessoaController">

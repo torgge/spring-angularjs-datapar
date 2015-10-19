@@ -48,7 +48,7 @@ angular.module('app').config(function($routeProvider) {
 
 
 # Aplicação angular
-O resumo abaixo mostra as diretivas mais usuais do angular.
+A aplicação abaixo exemplifica as principais diretivas do angular.
 
 ## ng-app
 ```html

@@ -33,7 +33,7 @@ app.constant('MOVIE_TITLE', 'The Matrix');
 });
 ```
 # Value
-Um value é apenas um valor inhetável. O valor por ser uma string, number e também uma função. Um value difere de constant porque o value não pode ser injetado em configurations, podendo ser injeto por decorators.
+Um value é apenas um valor injetável. O valor por ser uma string, number e também uma função. Um value difere de constant porque o value não pode ser injetado em configurations, podendo ser injeto por decorators.
 
 A value is nothing more than a simple injectable value. The value can be a string, number but also a function. Value differs from constant in that value can not be injected into configurations, but it can be intercepted by decorators.
 

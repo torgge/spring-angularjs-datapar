@@ -13,7 +13,7 @@ Seguindo esta logica, podemos inferir o seguinte:
 angular.module('app',['ngRoute']);
 ```
 
-(II) A configuração de uma aplicação se faz no módulo config. Exemplo.
+(II) A configuração de rotas de uma aplicação se faz no módulo config. Exemplo.
 
 ```js
 angular.module('app').config(function($routeProvider) {
@@ -40,10 +40,36 @@ angular.module('app').config(function($routeProvider) {
 	});
 ```
 
-(III)
+(III) A resposabilidade da camada de Controle fica definida em módulos Controllers. Exemplo:
 
 ```js
+angular.module('app').('PessoaController',['$http','$scope',function($http,$scope){
 
+	$scope.desenvolvedores = [
+	      { id:1, nome:"Lyndon", email:"lyndon.tavares@fatapar.com.py" },
+	      { id:2, nome:"George", email:"george.bonespirito@datapar.com.py"}
+	]};
+	
+}]);
+```
+
+(IV) A resposabilildae da camada de View fica definidas nos templates html. Exemplo:
+
+```js
+<body ng-controller="PessoaController">
+    
+    <h1>Desenvolvedores</h1>
+    
+    <table>
+        <tr>
+            <th>Nome</th><th>E-mail</th>
+        </tr>
+        
+        <tr ng-repeat="desenv in desenvolvedores">
+            <td>{{desenv.nome}}</td>
+            <td>{{desenv.email}}</td>
+        </tr>
+    </table>
 ```
 
 

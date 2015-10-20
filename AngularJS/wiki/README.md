@@ -246,7 +246,7 @@ angular.module('app')
     return dataFactory;
 }]);
 ```
-
+Para saber mais: https://github.com/lyndontavares/traduz-ai/blob/master/angularjs/001-guia-definitivo-para-aprender-angularjs.md
 
 # Aplicação angular
 A aplicação abaixo exemplifica as principais diretivas do angular.

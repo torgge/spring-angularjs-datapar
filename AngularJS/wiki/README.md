@@ -93,14 +93,14 @@ angular.module('app').('FaturaController',['$http','$scope',function($http,$scop
 		
 		itensFatura: [
 			{
-			      	id:0, 
-			      	mercadoria:{ id:0,descricao:'' } 
+				id:0, 
+				mercadoria:{ id:0,descricao:'' } 
 				precoUnitarioMoedaGerencial:0.0,
 				precoUnitarioMoedaContabil:0.0,
 				quantidade: 0.0
 			} 
 		}],
-		
+			
 		frete: { valorFrete:0.0, transportador:{id:0,nome:""} }, 
 
 		situacion:''

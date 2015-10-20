@@ -53,7 +53,8 @@ angular.module('app').('PessoaController',['$http','$scope',function($http,$scop
 }]);
 ```
 
-(IV) A resposabilildae da camada de View fica definida em templates html. Exemplo:
+(IV) A resposabilildae da camada de View fica definida em templates html. 
+(V) As diretivas do angular manipulam a DOM dinamicamente pemitindo ajustes nas views para facilitar o trabalho nesta camada.
 
 ```js
 <body ng-controller="PessoaController">
@@ -72,6 +73,45 @@ angular.module('app').('PessoaController',['$http','$scope',function($http,$scop
     </table>
 
 </body>    
+```
+
+(VI) O objeto $scope serve como cola para transportar o modelo entre view e controller de forma transparente.
+
+```js
+angular.module('app').('FaturaController',['$http','$scope',function($http,$scope){
+
+	$scope.modelo_fatura = { 
+	        
+	        usuarioId  : '',
+		dataFatura : '',
+		planoFinanciacion : { id:'', descricao:''},
+		moeda      : {id:0,descricao:''};
+		tipoFatura :  { id:'', descricao:'',situacion:'' },
+		entidade   :  { id:'', descricao:'',situacion:'' },
+		vendendor  :  { id:'', descricao:'',situacion:'' },
+		pedido     :  { id:'', dataPedido:'',situacion:'');
+		
+		itensFatura: [
+			{
+			      	id:0, 
+			      	mercadoria:{ id:0,descricao:'' } 
+				precoUnitarioMoedaGerencial:0.0,
+				precoUnitarioMoedaContabil:0.0,
+				quantidade: 0.0
+			} 
+		}],
+		
+		frete: { valorFrete:0.0, transportador:{id:0,nome:""} }, 
+
+		situacion:''
+
+	};
+	
+}]);
+```
+
+(VII) Através de services criamos factory,services e providers isolando camadas de códigos e aumentando o reuso dos mesmos  entre os módulos da aplicação.
+```js
 ```
 
 

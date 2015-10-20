@@ -115,6 +115,54 @@ Aplicando uma diretiva:
 
 ```
 
+Outro exemplo de diretira:
+
+```js
+
+angular.module('app').directive('helloWorld', function() {
+
+  return {
+      restrict: 'AECM',
+      replace: 'true',
+      template: '<h3>Hello World!!</h3>'
+  };
+
+});
+
+```
+
+Para criar seu elemento da directiva, no template, podemos utilizar 4 formas diferentes:
+
+- A: via atributo
+- C: via classe
+- M: via comentário
+- E: via elemento
+
+##### A
+
+```html
+<div hello-world></div>
+```
+
+##### C
+
+```html
+<div class="hello-world"></div>
+```
+
+##### M
+
+```html
+<!-- directive:hello-world  -->
+```
+
+##### E
+
+```html
+<hello-world></hello-world>
+```
+
+
 
 (VI) O objeto $scope serve como cola para transportar o modelo entre view e controller de forma transparente.
 

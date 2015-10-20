@@ -77,7 +77,7 @@ angular.module('app').('PessoaController',['$http','$scope',function($http,$scop
 
 (VI) O objeto $scope serve como cola para transportar o modelo entre view e controller de forma transparente.
 
-```js
+```java
 angular.module('app').('FaturaController',['$http','$scope',function($http,$scope){
 
 	$scope.modelo_fatura = { 

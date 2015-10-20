@@ -95,7 +95,7 @@ return {
 });
 ```
 
-Consumindo uma diretiva:
+Aplicando uma diretiva:
 
 ```html
 

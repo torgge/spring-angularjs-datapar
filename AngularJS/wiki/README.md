@@ -212,7 +212,7 @@ angular.module('app').('FaturaController',['$http','$scope','faturaService',func
 }]);
 ```
 
-(VII) Através de services criamos factory,services e providers isolando camadas de códigos e aumentando o reuso dos mesmos  entre os módulos da aplicação.
+(VII) Através de services criamos factory,services e providers isolando camadas de códigos aumentando reuso dos mesmos  entre módulos da aplicação.
 
 ```js
 'use strict';

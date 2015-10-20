@@ -88,7 +88,7 @@ angular.module(‘app.directives.customcontrols’, [])
 
 return {
 
-	template: ‘<h1>Meu primeiro control customizado!</h1>’
+	template: ‘<h1>Meu primeiro control customizado!</h1>’;
 
 };
 

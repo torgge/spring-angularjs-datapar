@@ -78,7 +78,39 @@ angular.module('app').('PessoaController',['$http','$scope',function($http,$scop
 
 ```js
 
+‘use strict’;
+
+angular.module(‘app.directives.customcontrols’, [])
+
+.directive(‘loginControl’, function() {
+
+return {
+
+	template: ‘<h1>Meu primeiro control customizado!</h1>’
+
+};
+
+});
 ```
+
+```html
+
+<body>
+
+<div>
+
+<h1>Custom Control Sample</h1>
+
+<login-control></login-control>
+
+</div>
+
+<script src=”app.js”></script>
+
+<script>
+
+```
+
 
 (VI) O objeto $scope serve como cola para transportar o modelo entre view e controller de forma transparente.
 

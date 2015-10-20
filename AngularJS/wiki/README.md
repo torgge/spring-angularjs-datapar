@@ -103,15 +103,15 @@ Consumindo uma diretiva:
 
 <div>
 
-<h1>Custom Control Sample</h1>
+	<h1>Custom Control Sample</h1>
 
-<login-control></login-control>
+	<login-control></login-control>
 
 </div>
 
-<script src=”app.js”></script>
+<script src=”app.js”></script><script>
 
-<script>
+<body>
 
 ```
 

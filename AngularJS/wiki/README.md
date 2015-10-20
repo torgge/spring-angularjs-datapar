@@ -148,6 +148,19 @@ angular.module('app').('FaturaController',['$http','$scope',function($http,$scop
 
 	};
 	
+	$scope.criarNovaFatura = function(){
+	
+		//envia dados da fatura via JSON
+		faturaService.inserirfatura( $scope.modelo_fatura )
+		.success( function( data ) {
+		
+			$scope.modelo_fatura = data; //recebe dados da nova fatura
+		
+		});
+		
+		
+	};
+	
 }]);
 ```
 

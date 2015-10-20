@@ -579,5 +579,6 @@ Uso no DOM:
 
 Saída: http://jsfiddle.net/toddmotto/pmh4s/light/
 
+Mais sobre filtro> https://github.com/lyndontavares/spring-angularjs-datapar/blob/master/AngularJS/angular-01/exemplo-05.html
 
 

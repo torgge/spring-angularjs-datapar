@@ -81,8 +81,8 @@ angular.module('app').('PessoaController',['$http','$scope',function($http,$scop
 angular.module('app').('FaturaController',['$http','$scope',function($http,$scope){
 
 	$scope.modelo_fatura = { 
-	        
-	        usuarioId  : '',
+			
+		usuarioId  : '',
 		dataFatura : '',
 		planoFinanciacion : { id:'', descricao:''},
 		moeda      : {id:0,descricao:''};

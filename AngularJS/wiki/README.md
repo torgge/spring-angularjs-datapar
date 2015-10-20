@@ -162,8 +162,6 @@ Para criar seu elemento da directiva, no template, podemos utilizar 4 formas dif
 <hello-world></hello-world>
 ```
 
-
-
 (VI) O objeto $scope serve como cola para transportar o modelo entre view e controller de forma transparente.
 
 ```js
@@ -539,3 +537,47 @@ A aplicação abaixo exemplifica as principais diretivas do angular.
 </body>
 </html>
 ```
+
+## Filters
+
+Filtros são usados em conjunto com arrays de dados e também saídas de loops. Se você estiver em um loop de dados e quiser filtrar coisas específicas, você está no lugar certo, você pode também usar os filtros para filtrar o que um usuário escreveu dentro de um input por exemplo. Temos algumas formas de usar os filtros, dentro dos Controladores ou como um método definido. Aqui está a utilização por método, que você pode usar globalmente:
+
+```javascript
+
+myApp.filter('reverse', function () {
+	return function (input, uppercase) {
+		var out = '';
+		for (var i = 0; i < input.length; i += 1) {
+			out = input.charAt(i) + out;
+		}
+		if (uppercase) {
+			out = out.toUpperCase();
+		}
+		return out;
+	}
+});
+
+//Controlador incluso para fornecer dados
+myApp.controller('MainCtrl', ['$scope', function ($scope) {
+	$scope.greeting = 'Todd Motto';
+}]);
+
+```
+
+Uso no DOM:
+
+```html
+
+<div ng-app="myApp">
+	<div ng-controller="MainCtrl">
+		<p>No filter: {{ greeting }}</p>
+		<p>Reverse: {{ greeting | reverse }}</p>
+	</div>
+</div>
+
+```
+
+Saída: http://jsfiddle.net/toddmotto/pmh4s/light/
+
+
+

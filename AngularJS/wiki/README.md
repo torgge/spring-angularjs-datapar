@@ -76,6 +76,8 @@ angular.module('app').('PessoaController',['$http','$scope',function($http,$scop
 
 (V) As diretivas do angular manipulam a DOM dinamicamente pemitindo ajustes nas views para facilitar o trabalho nesta camada.
 
+Criando uma diretiva:
+
 ```js
 
 ‘use strict’;
@@ -92,6 +94,8 @@ return {
 
 });
 ```
+
+Consumindo uma diretiva:
 
 ```html
 

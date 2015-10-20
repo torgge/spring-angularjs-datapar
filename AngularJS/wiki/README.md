@@ -55,8 +55,6 @@ angular.module('app').('PessoaController',['$http','$scope',function($http,$scop
 
 (IV) A resposabilildae da camada de View fica definida em templates html. 
 
-(V) As diretivas do angular manipulam a DOM dinamicamente pemitindo ajustes nas views para facilitar o trabalho nesta camada.
-
 ```js
 <body ng-controller="PessoaController">
     
@@ -74,6 +72,12 @@ angular.module('app').('PessoaController',['$http','$scope',function($http,$scop
     </table>
 
 </body>    
+```
+
+(V) As diretivas do angular manipulam a DOM dinamicamente pemitindo ajustes nas views para facilitar o trabalho nesta camada.
+
+```js
+
 ```
 
 (VI) O objeto $scope serve como cola para transportar o modelo entre view e controller de forma transparente.

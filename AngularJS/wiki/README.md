@@ -111,7 +111,42 @@ angular.module('app').('FaturaController',['$http','$scope',function($http,$scop
 ```
 
 (VII) Através de services criamos factory,services e providers isolando camadas de códigos e aumentando o reuso dos mesmos  entre os módulos da aplicação.
+
 ```js
+'use strict';
+
+angular.module('app')
+    .factory('FaturaService', ['$http', function($http) {
+
+    var urlBase = 'api/fatura';
+    var dataFactory = {};
+
+    dataFactory.getFatura = function () {
+        return $http.get(urlBase);
+    };
+
+    dataFactory.getFatura = function (id) {
+        return $http.get(urlBase + '/' + id);
+    };
+
+    dataFactory.insertFatura = function (merc) {
+        return $http.post(urlBase, merc);
+    };
+
+    dataFactory.updateFatura = function (merc) {
+        return $http.put(urlBase + '/' + merc.ID, merc)
+    };
+
+    dataFactory.deleteFatura = function (id) {
+        return $http.delete(urlBase + '/' + id);
+    };
+
+    dataFactory.cancelarFatura = function (id) {
+        return $http.delete(urlBase + '/' + id);
+    };
+
+    return dataFactory;
+}]);
 ```
 
 

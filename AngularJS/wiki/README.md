@@ -150,7 +150,7 @@ angular.module('app').('FaturaController',['$http','$scope','faturaService',func
 	
 	$scope.criarNovaFatura = function(){
 	
-		//envia dados da fatura via JSON
+		//envia dados da fatura via REST/JSON
 		faturaService.inserirfatura( $scope.modelo_fatura )
 		.success( function( data ) {
 		

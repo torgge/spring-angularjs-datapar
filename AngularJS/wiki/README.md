@@ -119,7 +119,7 @@ Consumindo uma diretiva:
 (VI) O objeto $scope serve como cola para transportar o modelo entre view e controller de forma transparente.
 
 ```js
-angular.module('app').('FaturaController',['$http','$scope',function($http,$scope){
+angular.module('app').('FaturaController',['$http','$scope','faturaService',function($http,$scope,faturaService){
 
 	$scope.modelo_fatura = { 
 			
@@ -170,7 +170,7 @@ angular.module('app').('FaturaController',['$http','$scope',function($http,$scop
 'use strict';
 
 angular.module('app')
-    .factory('FaturaService', ['$http', function($http) {
+    .factory('faturaService', ['$http', function($http) {
 
     var urlBase = 'api/fatura';
     var dataFactory = {};

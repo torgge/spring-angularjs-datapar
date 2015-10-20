@@ -243,10 +243,6 @@ angular.module('app')
         return $http.delete(urlBase + '/' + id);
     };
 
-    dataFactory.cancelarFatura = function (id) {
-        return $http.delete(urlBase + '/' + id);
-    };
-
     return dataFactory;
 }]);
 ```

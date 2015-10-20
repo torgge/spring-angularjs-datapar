@@ -88,7 +88,7 @@ angular.module('app').('FaturaController',['$http','$scope',function($http,$scop
 		moeda      : {id:0,descricao:''};
 		tipoFatura :  { id:'', descricao:'',situacion:'' },
 		entidade   :  { id:'', descricao:'',situacion:'' },
-		vendendor  :  { id:'', descricao:'',situacion:'' },
+		vendedor   :  { id:'', descricao:'',situacion:'' },
 		pedido     :  { id:'', dataPedido:'',situacion:'');
 		
 		itensFatura: [

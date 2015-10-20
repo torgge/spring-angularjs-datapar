@@ -54,6 +54,7 @@ angular.module('app').('PessoaController',['$http','$scope',function($http,$scop
 ```
 
 (IV) A resposabilildae da camada de View fica definida em templates html. 
+
 (V) As diretivas do angular manipulam a DOM dinamicamente pemitindo ajustes nas views para facilitar o trabalho nesta camada.
 
 ```js

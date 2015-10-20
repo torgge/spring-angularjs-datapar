@@ -5,4 +5,4 @@
 http://openweathermap.org/
 
 Facilitador: Lyndon Tavares
-contato: integraldominio#gmail.com
+contato: integraldominio@gmail.com

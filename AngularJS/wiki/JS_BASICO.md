@@ -1,5 +1,7 @@
 ## Dicas de Java Script
 
+### Operador typeof
+
 ```html
 <!DOCTYPE html>
 <html>

@@ -1,6 +1,6 @@
 ## Dicas de Java Script
 
-## (I) Operador typeof
+### (I) Operador typeof
 
 ```html
 <!DOCTYPE html>

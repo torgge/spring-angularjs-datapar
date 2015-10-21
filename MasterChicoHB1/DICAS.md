@@ -2,6 +2,8 @@
 
 Define a separate @Embeddable object with the PK fields and use it as @EmbeddedId in your @Entity class
 
+```java
+
 @Embeddable
 public class MyCompositePK { 
     @Column
@@ -16,8 +18,11 @@ public class MyBean {
     @Column
     private String fieldC;
 }
+
+```
 Define a non-mapped POJO with the PK fields and use it as @IdClass in the @Entity.
 
+```java
 @Entity
 @IdClass(value=ClassAB.ClassABId.class)
 public class ClassAB implements Serializable {
@@ -47,6 +52,8 @@ public class ClassAB implements Serializable {
         // implement equals(), hashcode()
     }
 }
+```
+
 In this example ClassABId is a static inner class just for convenience.
 
 These options are also explained in Pascal Thivent's excellent answer to this question: How to map a composite key with Hibernate?.

@@ -1,4 +1,4 @@
-Using Resolve In AngularJS Routes
+# Using Resolve In AngularJS Routes
 
 In a previous post about testing I mentioned that route resolves can make authoring unit tests for a controller easier. Resolves can also help the user experience.
 

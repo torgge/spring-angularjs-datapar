@@ -1,3 +1,5 @@
+# Operador Ternário
+
 Não é possível utilizar até a presente versão do Angular.js, operadores ternários dentro de expressões. No entanto, é possível com operadores lógicos efetuarmos a mesma lógica e obtermos o mesmo comportamento. Para isto, basta substituir a operação abaixo apresentada pela correspondente com operadores lógicos.
 
 ```js

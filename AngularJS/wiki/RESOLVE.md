@@ -4,7 +4,7 @@ A resolve is a property you can attach to a route in both ngRoute and the more r
 
 As an example, let’s use the following simple service which uses $q to simulate the async work required to fetch some data.
 
-´´´js
+```js
 
 app.factory("messageService", function($q){
     return {

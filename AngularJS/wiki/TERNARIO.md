@@ -17,3 +17,6 @@ Este recurso está {{ recurso.estaAtivado && "Ativado" || "Não ativado" }}.</p>
 ```
 
 O motivo para este funcionamento é que a operação ‘a && b’ é tratada como ‘if(a) return b; return a;’ e ‘a || b’ é tratada como ‘if (!a) return b; return a;’.
+
+
+source: http://devblog.drall.com.br/uso-de-operador-ternario-em-expressoes-no-view-do-angular-js/

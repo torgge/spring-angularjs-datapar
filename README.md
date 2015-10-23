@@ -42,6 +42,6 @@ Projetos do curso de Spring/AngularJS na Datapar SA - Ciudad del Este - PY - Set
 
 ### Diagrama de classe da api do tempo (http://openweathermap.org/)
 
-![](https://github.com/lyndontavares/spring-angularjs-datapar/blob/master/MasterChicoSB6/src/main/resources/static/image/Tempo.png)
+![](https://github.com/lyndontavares/spring-angularjs-datapar/blob/master/app-MasterChico/MasterChicoSB6/src/main/resources/static/image/Tempo.png)
 Facilitador: Lyndon Tavares
 contato: integraldominio#gmail.com

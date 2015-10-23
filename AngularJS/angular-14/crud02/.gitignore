@@ -1,0 +1,20 @@
+# IntelliJ
+backend/java-backend/.idea/workspace.xml
+backend/java-backend/.idea/tasks.xml
+backend/java-backend/*.isw
+
+# Maven
+backend/java-backend/target/**
+backend/java-backend/log/**
+
+# Sublime Text
+*.sublime-workspace
+
+# Misc
+.*~
+/backend/dotnet-backend/WebService/*.suo
+/backend/dotnet-backend/WebService/WebService/*.user
+/backend/dotnet-backend/WebService/WebService/obj/Debug
+/backend/dotnet-backend/WebService/WebService/obj/Release
+/backend/dotnet-backend/WebService/WebService/bin
+

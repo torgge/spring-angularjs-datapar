@@ -6,17 +6,21 @@
 public interface UsuarioModuloRepository extends PagingAndSortingRepository<UsuarioModulo,Long> {
 
 	
-	@Query("select m from UsuarioModulo m where m.id.usuario.id = :id and m.nomeModulo = 'INTEGRACAODOLPHINTESAKAWEB' ")
+	@Query("select m from UsuarioModulo m where m.id.usuario.id = :id and m.nomeModulo = 'NOME_DO_MODULO' ")
 	UsuarioModulo findModulo(@Param("id") long id);
 
 	@Query("select m from UsuarioModulo m where m.id.usuario.id = :id ")
 	List<UsuarioModulo> findModulos(@Param("id") long id);
 	
-	List<UsuarioModulo> findByIdUsuarioLoginAndNomeModulo( @Param("login") String login, @Param("modulo") String modulo );
+	List<UsuarioModulo> findByIdUsuarioLoginAndNomeModulo( 
+		@Param("login") String login, 
+		@Param("modulo") String modulo );
 	
-	List<UsuarioModulo> findByIdUsuarioLogin( @Param("login") String login );
+	List<UsuarioModulo> findByIdUsuarioLogin( 
+		@Param("login") String login );
 	
-	List<UsuarioModulo> findByNomeModulo( @Param("modulo") String modulo );
+	List<UsuarioModulo> findByNomeModulo( 
+		@Param("modulo") String modulo );
 	
 	
 	List<UsuarioModulo> findByIdUsuarioLoginAndIdUsuarioTipoUsuarioAndIdUsuarioSituacaoAndNomeModulo( 

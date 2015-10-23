@@ -12,7 +12,7 @@ public interface UsuarioModuloRepository extends PagingAndSortingRepository<Usua
 	UsuarioModulo findModulo(@Param("id") long id);
 
 	@Query("select m from UsuarioModulo m where m.id.usuario.id = :id ")
-	List<UsuarioModulo> findModulos(@Param("id") long id);
+	List<UsuarioModulo> find'Modulos'(@Param("id") long id);
 	
 	List<UsuarioModulo> findByIdUsuarioLoginAndNomeModulo( 
 		@Param("login") String login, 

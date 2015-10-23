@@ -1,6 +1,6 @@
 # Métodos Query
 
-Exemplo de utilização dos métodos query no Spring JPA. A anotação @Param é usuda para informar parâmetros da URL, que podem ter nomes diferentes dos parâmtros do método. Se omitido, nomes dos parâmetros métodos igual a nomes dos parâmetros da URL.
+Exemplo de utilização dos métodos query no Spring JPA. A anotação @Param é usuda para informar parâmetros da URL, que podem ter nomes diferentes dos parâmtros do método. Se omitido, nomes dos parâmetros de métodos igual a nomes dos parâmetros da URL.
 
 ```java
 

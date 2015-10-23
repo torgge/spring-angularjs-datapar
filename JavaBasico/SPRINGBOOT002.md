@@ -10,6 +10,9 @@ public interface UsuarioModuloRepository extends PagingAndSortingRepository<Usua
 	
 	@Query("select m from UsuarioModulo m where m.id.usuario.id = :id and m.nomeModulo = 'NOME_DO_MODULO' ")
 	UsuarioModulo findModulo(@Param("id") long id);
+	
+	// exemplo: http://localhost:8080/modulo/search/findModulos?id=1
+
 
 	@Query("select m from UsuarioModulo m where m.id.usuario.id = :id ")
 	List<UsuarioModulo> findModulos(@Param("id") long id);

@@ -1,5 +1,7 @@
 # Métodos Query
 
+Exemplo de utilização dos métodos query no Spring JPA.
+
 ```java
 
 @RepositoryRestResource(collectionResourceRel = "modulo", path = "modulo", exported=true)

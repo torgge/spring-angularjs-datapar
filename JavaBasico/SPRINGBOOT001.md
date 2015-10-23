@@ -1,3 +1,5 @@
+```java
+
 @SpringBootApplication
 @Controller
 public class TestApplication {
@@ -13,5 +15,7 @@ public class TestApplication {
 	}
 
 }
+
+```
 
 source: https://spring.io/blog/2015/05/19/testing-an-angular-application-angular-js-and-spring-security-part-viii

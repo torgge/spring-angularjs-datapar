@@ -9,23 +9,23 @@ public interface UsuarioModuloRepository extends PagingAndSortingRepository<Usua
 
 	
 	@Query("select m from UsuarioModulo m where m.id.usuario.id = :id and m.nomeModulo = 'NOME_DO_MODULO' ")
-	UsuarioModulo find*Modulo*(@Param("id") long id);
+	UsuarioModulo findModulo(@Param("id") long id);
 
 	@Query("select m from UsuarioModulo m where m.id.usuario.id = :id ")
 	List<UsuarioModulo> findModulos(@Param("id") long id);
 	
-	List<UsuarioModulo> findBy*IdUsuario*Login*And*NomeModulo( 
+	List<UsuarioModulo> findByIdUsuarioLoginAndNomeModulo( 
 		@Param("login") String login, 
 		@Param("modulo") String modulo );
 	
-	List<UsuarioModulo> findBy*IdUsuario*Login( 
+	List<UsuarioModulo> findByIdUsuarioLogin( 
 		@Param("login") String login );
 	
-	List<UsuarioModulo> findBy*NomeModulo( 
+	List<UsuarioModulo> findByNomeModulo( 
 		@Param("modulo") String modulo );
 	
 	
-	List<UsuarioModulo> findBy*IdUsuario*Login*And*IdUsuario*TipoUsuario*And*IdUsuario*Situacao*And*NomeModulo( 
+	List<UsuarioModulo> findByIdUsuarioLoginAndIdUsuarioTipoUsuarioAndIdUsuarioSituacaoAndNomeModulo( 
 			@Param("login") String login, 
 			@Param("tipo") String tipo, 
 			@Param("situacao") String situacao, 

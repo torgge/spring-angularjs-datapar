@@ -190,7 +190,7 @@ Mais implementações podem ser consultadas no Wiki da JSR 356 no Java.net.
 
 Outro exemplo de implementação existente, neste caso no servidor Jetty, tem abordagem diferente daquela proposta pela JSR para o Java EE. Veja um exemplo de código:
 
-´´´java
+```java
 public class TesteJettyWebSocketServlet extends WebSocketServlet implements Servlet{
    public void doGet(HttpServletRequest req, HttpServletResponse res){}
    public void doPost(HttpServletRequest req, HttpServletResponse res){}

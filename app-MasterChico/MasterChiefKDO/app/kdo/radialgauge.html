@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="styles/kendo.common.min.css" />
+    <link rel="stylesheet" href="styles/kendo.default.min.css" />
+    <link rel="stylesheet" href="styles/exemples.css" />
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/kendo.all.min.js"></script>
+</head>
+<body>
+
+
+  <div id="example-sidebar" data-role="responsivepanel" class="k-rpanel k-rpanel-left _d3495c41-bc14-490c-8f69-6c6eee4f93f8" style="height: 440px;">
+      <div id="example-search-wrapper" class="search-wrapper">
+          <div class="search">
+              <span tabindex="-1" role="presentation" class="k-widget k-autocomplete k-header k-state-default"><input id="example-search" placeholder="Search demos" data-role="examplesearch" type="text" class="k-input" autocomplete="off" role="textbox" aria-haspopup="true" aria-disabled="false" aria-readonly="false" aria-owns="example-search_listbox" aria-autocomplete="list" aria-busy="false" style="width: 100%;"><span class="k-icon k-loading" style="display:none"></span><span class="k-uniE600"></span></span>
+          </div>
+      </div>
+      <div id="example-nav-bar">
+          <a href="#" title="See Radial Gauge demos" id="back-forward" class="forward-nav">Radial Gauge</a>
+      </div>
+      <div id="nav-wrapper" style="height: 339.333px;">
+          <div id="nav" class="root">
+              <div id="root-nav">
+                  <ul class="root-nav-categories">
+                      <li>
+                          <h3>Editors</h3>
+                          <ul class="root-nav-widgets">
+                              <li><a href="/kendo-ui/autocomplete/index">AutoComplete</a></li>
+                              <li><a href="/kendo-ui/colorpicker/index">ColorPicker</a></li>
+                              <li><a href="/kendo-ui/combobox/index">ComboBox</a></li>
+                              <li><a href="/kendo-ui/datepicker/index">DatePicker</a></li>
+                              <li><a href="/kendo-ui/datetimepicker/index">DateTimePicker</a></li>
+                              <li><a href="/kendo-ui/dropdownlist/index">DropDownList</a></li>
+                              <li><a href="/kendo-ui/editor/index">Editor<span title="Available only in Kendo UI Professional" class="pro-widget"></span></a></li>
+                              <li><a href="/kendo-ui/maskedtextbox/index">MaskedTextBox</a></li>
+                              <li><a href="/kendo-ui/multiselect/index">MultiSelect</a></li>
+                              <li><a href="/kendo-ui/numerictextbox/index">NumericTextBox</a></li>
+                              <li><a href="/kendo-ui/slider/index">Slider</a></li>
+                              <li><a href="/kendo-ui/timepicker/index">TimePicker</a></li>
+                              <li><a href="/kendo-ui/upload/index">Upload<span title="Available only in Kendo UI Professional" class="pro-widget"></span></a></li>
+                              <li><a href="/kendo-ui/validator/index">Validator</a></li>
+                              <li><a href="/kendo-ui/switch/index">Switch</a></li>
+                          </ul>
+                      </li>
+                  </ul>
+                  <ul class="root-nav-categories">
+                      <li>
+                          <h3>Navigation</h3>
+                          <ul class="root-nav-widgets">
+                              <li><a href="/kendo-ui/button/index">Button</a></li>
+                              <li><a href="/kendo-ui/buttongroup/index">ButtonGroup</a></li>
+                              <li><a href="/kendo-ui/menu/index">Menu</a></li>
+                              <li><a href="/kendo-ui/panelbar/index">PanelBar</a></li>
+                              <li><a href="/kendo-ui/tabstrip/index">TabStrip</a></li>
+                              <li><a href="/kendo-ui/toolbar/index">ToolBar</a></li>
+                              <li><a href="/kendo-ui/treeview/index">TreeView<span title="Available only in Kendo UI Professional" class="pro-widget"></span></a></li>
+                          </ul>
+                      </li>
+                  </ul>
+                  <ul class="root-nav-categories">
+                      <li>
+                          <h3>Scheduling</h3>
+                          <ul class="root-nav-widgets">
+                              <li><a href="/kendo-ui/calendar/index">Calendar</a></li>
+                              <li><a href="/kendo-ui/gantt/index">Gantt<span title="Available only in Kendo UI Professional" class="pro-widget"></span></a></li>
+                              <li><a href="/kendo-ui/scheduler/index">Scheduler<span title="Available only in Kendo UI Professional" class="pro-widget"></span></a></li>
+                          </ul>
+                      </li>
+                  </ul>
+                  <ul class="root-nav-categories">
+                      <li>
+                          <h3>Data Management</h3>
+                          <ul class="root-nav-widgets">
+                              <li><a href="/kendo-ui/grid/index">Grid<span title="Available only in Kendo UI Professional" class="pro-widget"></span></a></li>
+                              <li><a class="multiple-tags" href="/kendo-ui/spreadsheet/index">Spreadsheet<span title="Available only in Kendo UI Professional" class="pro-widget"></span><span class="beta-widget"></span></a></li>
+                              <li><a href="/kendo-ui/listview/index">ListView</a></li>
+                              <li><a href="/kendo-ui/pivotgrid/index">PivotGrid<span title="Available only in Kendo UI Professional" class="pro-widget"></span></a></li>
+                              <li><a href="/kendo-ui/treelist/index">TreeList<span title="Available only in Kendo UI Professional" class="pro-widget"></span></a></li>
+                              <li><a href="/kendo-ui/scrollview/index">ScrollView</a></li>
+                          </ul>
+                      </li>
+                  </ul>
+                  <ul class="root-nav-categories">
+                      <li>
+                          <h3>Layout</h3>
+                          <ul class="root-nav-widgets">
+                              <li><a href="/kendo-ui/notification/index">Notification</a></li>
+                              <li><a href="/kendo-ui/responsive-panel/index">Responsive Panel</a></li>
+                              <li><a href="/kendo-ui/splitter/index">Splitter</a></li>
+                              <li><a href="/kendo-ui/tooltip/index">Tooltip</a></li>
+                              <li><a href="/kendo-ui/window/index">Window</a></li>
+                          </ul>
+                      </li>
+                  </ul>
+                  <ul class="root-nav-categories">
+                      <li>
+                          <h3>Interactivity &amp; UX</h3>
+                          <ul class="root-nav-widgets">
+                              <li><a href="/kendo-ui/dragdrop/index">Drag and Drop</a></li>
+                              <li><a href="/kendo-ui/fx/expand">Effects</a></li>
+                              <li><a href="/kendo-ui/progressbar/index">ProgressBar</a></li>
+                              <li><a href="/kendo-ui/sortable/index">Sortable</a></li>
+                              <li><a href="/kendo-ui/styling/index">Styling</a></li>
+                          </ul>
+                      </li>
+                  </ul>
+                  <ul class="root-nav-categories">
+                      <li>
+                          <h3>Framework</h3>
+                          <ul class="root-nav-widgets">
+                              <li><a href="/kendo-ui/datasource/index">DataSource</a></li>
+                              <li><a href="/kendo-ui/drawing/index">Drawing API</a></li>
+                              <li><a href="/kendo-ui/pdf-export/index">PDF Export</a></li>
+                              <li><a href="/kendo-ui/globalization/index">Globalization</a></li>
+                              <li><a href="/kendo-ui/integration/index">Integration with JS libraries<span class="new-widget"></span></a></li>
+                              <li><a href="/kendo-ui/mvvm/index">MVVM</a></li>
+                              <li><a href="/kendo-ui/spa/index">Single-Page App</a></li>
+                              <li><a href="/kendo-ui/templates/index">Templates</a></li>
+                              <li><a href="/kendo-ui/touchevents/index">Touch Events</a></li>
+                          </ul>
+                      </li>
+                  </ul>
+                  <ul class="root-nav-categories">
+                      <li>
+                          <h3>Charts</h3>
+                          <ul class="root-nav-widgets">
+                              <li><a href="/kendo-ui/area-charts/index">Area Charts<span title="Available only in Kendo UI Professional" class="pro-widget"></span></a></li>
+                              <li><a href="/kendo-ui/bar-charts/index">Bar Charts<span title="Available only in Kendo UI Professional" class="pro-widget"></span></a></li>
+                              <li><a href="/kendo-ui/box-plot-charts/index">Box Plot Charts<span title="Available only in Kendo UI Professional" class="pro-widget"></span></a></li>
+                              <li><a href="/kendo-ui/bubble-charts/index">Bubble Charts<span title="Available only in Kendo UI Professional" class="pro-widget"></span></a></li>
+                              <li><a href="/kendo-ui/bullet-charts/index">Bullet Charts<span title="Available only in Kendo UI Professional" class="pro-widget"></span></a></li>
+                              <li><a href="/kendo-ui/chart-api/index">Chart API<span title="Available only in Kendo UI Professional" class="pro-widget"></span></a></li>
+                              <li><a href="/kendo-ui/donut-charts/index">Donut Charts<span title="Available only in Kendo UI Professional" class="pro-widget"></span></a></li>
+                              <li><a href="/kendo-ui/funnel-charts/index">Funnel Charts<span title="Available only in Kendo UI Professional" class="pro-widget"></span></a></li>
+                              <li><a href="/kendo-ui/line-charts/index">Line Charts<span title="Available only in Kendo UI Professional" class="pro-widget"></span></a></li>
+                              <li><a href="/kendo-ui/pie-charts/index">Pie Charts<span title="Available only in Kendo UI Professional" class="pro-widget"></span></a></li>
+                              <li><a href="/kendo-ui/polar-charts/index">Polar Charts<span title="Available only in Kendo UI Professional" class="pro-widget"></span></a></li>
+                              <li><a href="/kendo-ui/radar-charts/index">Radar Charts<span title="Available only in Kendo UI Professional" class="pro-widget"></span></a></li>
+                              <li><a href="/kendo-ui/range-bar-charts/index">Range Bar Charts<span title="Available only in Kendo UI Professional" class="pro-widget"></span></a></li>
+                              <li><a href="/kendo-ui/scatter-charts/index">Scatter Charts<span title="Available only in Kendo UI Professional" class="pro-widget"></span></a></li>
+                              <li><a href="/kendo-ui/sparklines/index">Sparklines<span title="Available only in Kendo UI Professional" class="pro-widget"></span></a></li>
+                              <li><a href="/kendo-ui/financial/index">Stock Charts<span title="Available only in Kendo UI Professional" class="pro-widget"></span></a></li>
+                              <li><a href="/kendo-ui/treemap/index">TreeMap<span title="Available only in Kendo UI Professional" class="pro-widget"></span></a></li>
+                              <li><a href="/kendo-ui/waterfall-charts/index">Waterfall Charts<span title="Available only in Kendo UI Professional" class="pro-widget"></span></a></li>
+                          </ul>
+                      </li>
+                  </ul>
+                  <ul class="root-nav-categories">
+                      <li>
+                          <h3>Barcodes</h3>
+                          <ul class="root-nav-widgets">
+                              <li><a href="/kendo-ui/barcode/index">Barcode<span title="Available only in Kendo UI Professional" class="pro-widget"></span></a></li>
+                              <li><a href="/kendo-ui/qrcode/index">QR Code<span title="Available only in Kendo UI Professional" class="pro-widget"></span></a></li>
+                          </ul>
+                      </li>
+                  </ul>
+                  <ul class="root-nav-categories">
+                      <li>
+                          <h3>Gauges</h3>
+                          <ul class="root-nav-widgets">
+                              <li><a href="/kendo-ui/linear-gauge/index">Linear Gauge<span title="Available only in Kendo UI Professional" class="pro-widget"></span></a></li>
+                              <li><a href="/kendo-ui/radial-gauge/index">Radial Gauge<span title="Available only in Kendo UI Professional" class="pro-widget"></span></a></li>
+                          </ul>
+                      </li>
+                  </ul>
+                  <ul class="root-nav-categories">
+                      <li>
+                          <h3>Diagrams &amp; Maps</h3>
+                          <ul class="root-nav-widgets">
+                              <li><a href="/kendo-ui/diagram/index">Diagram<span title="Available only in Kendo UI Professional" class="pro-widget"></span></a></li>
+                              <li><a href="/kendo-ui/map/index">Map<span title="Available only in Kendo UI Professional" class="pro-widget"></span></a></li>
+                          </ul>
+                      </li>
+                  </ul>
+                  <ul class="root-nav-categories">
+                  </ul>
+              </div>
+              <div id="example-nav">
+                  <h3>Radial Gauge</h3>
+                  <ul>
+                          <li><a href="/kendo-ui/radial-gauge/index">Basic usage</a></li>
+                          <li><a href="/kendo-ui/radial-gauge/scale-options">Scale options</a></li>
+                          <li><a href="/kendo-ui/radial-gauge/multiple-pointers">Multiple pointers</a></li>
+                          <li><a href="/kendo-ui/radial-gauge/export">Export to PDF, Image, SVG</a></li>
+                          <li><a href="/kendo-ui/radial-gauge/mvvm">MVVM</a></li>
+                          <li><a class=" active" href="/kendo-ui/radial-gauge/angular">AngularJS</a></li>
+                          <li><a href="/kendo-ui/radial-gauge/car-dashboard">Car Dashboard</a></li>
+                  </ul>
+              </div>
+          </div>
+          <script>
+              $("#back-forward").on("click", function (e) {
+                  if ($(this).hasClass("back-nav")) {
+                      $(this).removeClass("back-nav").addClass("forward-nav").text("Radial Gauge").attr("title", "See Radial Gauge demos");
+                      $("#nav").addClass("root");
+
+                  }
+                  else {
+                      $(this).removeClass("forward-nav").addClass("back-nav").text("All Components").attr("title", "See all components");
+                      $("#nav").removeClass("root");
+                  }
+
+                  e.preventDefault();
+              });
+
+              function setSearchListWidth() {
+                  $("#example-search").data("kendoExampleSearch");
+              }
+
+              $(document).ready(function () {
+                  resizeContainers();
+                  setSearchListWidth();
+              });
+          </script>
+      </div>
+  </div>
+
+
+<div id="example" ng-app="KendoDemos">
+    <div  ng-controller="MyCtrl">
+        <div id="gauge-container">
+            <span kendo-radialgauge
+                k-scale="{ min:0, max: 100}"
+                ng-model="selectedNumber"
+                ></span>
+            <input kendo-slider k-min="0" k-max="100" k-show-buttons="false" k-show-labels="false" k-small-step="10" k-large-step="20" ng-model="selectedNumber">
+        </div>
+    </div>
+<script>
+    angular.module("KendoDemos", [ "kendo.directives" ])
+        .controller("MyCtrl", function($scope){
+            $scope.selectedNumber = 10;
+        })
+</script>
+<style>
+    #gauge-container {
+        background: transparent url("../content/dataviz/gauge/gauge-container-partial.png") no-repeat 50% 50%;
+        width: 386px;
+        height: 386px;
+        text-align: center;
+        margin: 0 auto 30px auto;
+    }
+
+    #gauge-container > span {
+        display: block;
+        width: 350px;
+        height: 300px;
+        margin: 0 auto;
+    }
+
+    #gauge-container .k-slider {
+        margin-top: -15px;
+        width: 140px;
+    }
+</style>
+</div>
+
+
+</body>
+</html>

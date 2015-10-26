@@ -25,6 +25,11 @@
 
 	<dependencies>
 
+		<dependency>
+			<groupId>com.mangofactory</groupId>
+			<artifactId>swagger-springmvc</artifactId>
+			<version>0.8.8</version>
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.social</groupId>
@@ -75,6 +80,26 @@
 	</dependencies>
 
 	<build>
+
+
+		<resources>
+			<resource>
+				<!-- this is relative to the pom.xml directory -->
+				<directory>src/main/resources/static</directory>
+				<!-- there's no default value for this -->
+				<excludes>
+					<exclude>**/node_modules/**</exclude>
+					<exclude>**/build/**</exclude>
+					<exclude>**/json/**</exclude>
+					<exclude>**/readme.txt</exclude>
+					<exclude>**/gulpfile.js</exclude>
+					<exclude>**/package.json</exclude>
+				</excludes>
+			</resource>
+		</resources>
+
+
+
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

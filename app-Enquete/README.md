@@ -28,12 +28,13 @@ Participante: Participar de votações e questionários.
 </p>
 
 
-### (VI) SSE - Serever-side Event
+### (VI) SSE - Server-side Event
 
 Web Sockets não é a única novidade na área de conectividade. Baseado em protocolo HTTP, outra boa novidade são os Server Side Events (SSEs) que quer dizer, em tradução livre, eventos do lado do servidor. Ele cria um canal de comunicação simples e enxuto buscando por informações novas sempre que necessário. Trata-se sim do polling mencionado anteriormente, mas leve e enxuto, pois é controlado nativamente pelo navegador, substituindo linhas e mais linhas de JavaScripts e AJAXs.
 
 Leia mais em: Programando em HTML5 http://www.devmedia.com.br/programando-em-html5/31040#ixzz3pgmsrlv4
 
+Para usar Esta funcionaldade com o Spring Bott é necessário atualizar para o Spring MVC 4.2. Nossa app de enquetes já está atualizada.
 
 
 

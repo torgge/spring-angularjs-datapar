@@ -4,7 +4,7 @@ Applicativo do curso de Spring/AngularJS na Datapar SA em Ciudad del Este, set/o
 
 ### (I) Objetivo
 
-Construir uma aplicação web responsive com Spring Boot/AngularJS e Materialize utilizando RESTFul, WebSocket, SSE e JWT.
+Construir uma aplicação web responsive com Spring Boot, AngularJS e Materialize utilizando RESTFul, WebSocket, SSE e JWT.
 
 ### (II) Diagrama de classe
 

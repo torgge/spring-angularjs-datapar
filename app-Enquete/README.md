@@ -14,7 +14,7 @@ Construir uma aplicação web responsive com Spring Boot, AngularJS e Materializ
 
 ### (III) App Enquetes
 
-Permitir que o grupo desenvolva e gerencie votações e questionários. O ponto central é o controle da votação. Este recurso usará a tecnologia de SSE (Server-Side Event) para manter atualizado o placar da votação. 
+Permitir que o grupo desenvolva e gerencie votações e questionários. O ponto central é o controle da votação. Este recurso usará a tecnologia de SSE (Server-Sent Events) para manter atualizado o placar da votação. 
 
 ### (IV) Papeis
 

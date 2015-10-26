@@ -1,6 +1,6 @@
 ## MongoDB 
 
-### Adicionar 
+### (I) Adicionar 
 
 ```xml
 	<dependency>
@@ -9,7 +9,7 @@
 	</dependency>
 ```
 
-### Mapeamento
+### (II) Mapeamento
 
 Basta adicionar a anotação @Id. Exemplo:
 
@@ -32,13 +32,13 @@ public class Produto {
 
 ```
 
-### Repository
+### (III) Repository
 
 ```java
 
 ```
 
-### Utilizando
+### (IV) Utilizando
 
 ```java
 

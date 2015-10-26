@@ -1,6 +1,6 @@
 ## MongoDB 
 
-### Adiconar 
+### Adicionar 
 
 ```xml
 	<dependency>

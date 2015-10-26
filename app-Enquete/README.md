@@ -11,3 +11,17 @@ Construir uma aplicação web responsive com Spring Boot, AngularJS e Materializ
 <p align="center">
 <img src="https://github.com/lyndontavares/spring-angularjs-datapar/blob/master/app-Enquete/EnqueteSB2/src/main/java/py/com/datapar/enquete/model/diagrama5.png" width="600">
 </p>
+
+## (III) App Enquetes
+
+Permitir que o grupo desenvolva e gerencie votações e questionários. O ponto central é o controle da votação. Este recurso usará a tecnologia de SSE (Server Side Event) para manter atualizado o placar da votação. 
+
+## (IV) Papeis
+
+Administrador: Criar e gerenciar votações e questinários.
+Participante: Participar de votações e questionários.
+
+
+
+
+

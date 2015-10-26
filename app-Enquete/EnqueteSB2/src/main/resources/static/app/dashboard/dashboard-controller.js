@@ -1,5 +1,6 @@
-angular.module('app').controller('DashController',['$scope','$state','$http',
-                                                   function ($scope,$state,$http){
+angular.module('app').controller('DashController',[
+          '$scope','$state','$http','$rootScope',
+ function ($scope,  $state , $http , $rootScope ){
 
 	//Show sideNav - Working...
 	//$('.button-collapse').sideNav('show');
@@ -16,7 +17,14 @@ angular.module('app').controller('DashController',['$scope','$state','$http',
 	//de autorizacao do usuario
 	$scope.direciona = function(url){
 		$('.button-collapse').sideNav('hide');
-		$state.go(url);
+		
+		if ( $rootScope.username == undefined || $rootScope.username == '' ) {
+			$state.go('login');
+		}
+		else
+		{
+			$state.go(url);
+		}
 	}
 
 }]);

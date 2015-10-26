@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
 
 import py.com.datapar.enquete.model.Enquete;
 import py.com.datapar.enquete.model.EnqueteParticipante;
@@ -66,6 +68,7 @@ public class EnqueteResource {
 
 	@RequestMapping("/enquete/ativa")
 	public List<EnqueteJson> listaEnquetesAtivas() {
+
 		// update tab_enquete set ativa = b'1';
 		List<EnqueteJson> listaEnquetes = new ArrayList<>();
 
@@ -171,4 +174,13 @@ public class EnqueteResource {
 		return repository.findAll();
 	}
 
+	
+	@RequestMapping("/event")
+	public SseEmitter getRealTimeMessageAction( HttpServletRequest request) throws Throwable {
+		final SseEmitter emitter = new SseEmitter();
+		emitter.send( listaEnquetesAtivas() );
+		emitter.complete();
+		return emitter;
+	}
+	
 }

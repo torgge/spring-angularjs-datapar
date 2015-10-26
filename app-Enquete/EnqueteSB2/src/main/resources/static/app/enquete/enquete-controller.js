@@ -1,3 +1,11 @@
+ // var source = new EventSource('api/event');
+ // source.onmessage = function(e){
+	//  document.getElementById('xxx').innerHTML = e.data;
+	  //console.log('oi');
+//  };
+
+
+
 angular.module('app').controller('EnqueteController',['$scope','$http',
                                                       function($scope,$http){
 
@@ -36,6 +44,11 @@ angular.module('app').controller('EnqueteController',['$scope','$http',
 	  .then( function(response){
 	  });
   };
+  
+ 
+
+ 
+  
   
   
 }]);

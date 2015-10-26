@@ -1,0 +1,169 @@
+<!doctype html>
+<html>
+<head>
+
+<script src="../../js/angular.js"></script>
+
+</head>
+
+<body ng-app="app" ng-controller="MainController">
+
+<h1> {{msgs}} </h1>
+
+<hr>Time: <span id="foo"></span>
+
+<script>
+
+
+angular.module('app',[]);
+
+angular.module('app').controller('MainController',function($http,$scope){
+	 
+	$scope.msgs=[];
+	
+	/** start listening on messages from selected room */
+	$scope.listen = function () {
+        $scope.chatFeed = new EventSource("api/event");
+        $scope.chatFeed.addEventListener("message", $scope.addMsg, false);
+    };
+    $scope.listen();
+    
+    /** handle incoming messages: add to messages array */
+    $scope.addMsg = function (msg) {
+    	console.log('in:'+msg);
+        $scope.$apply(function () { $scope.msgs.push(JSON.parse(msg.data)); });
+    };
+    
+    /** change current room, restart EventSource connection */
+    $scope.setCurrentRoom = function (room) {
+        $scope.currentRoom = room;
+        $scope.chatFeed.close();
+        $scope.listen();
+    };
+    
+    $scope.chatFeed.addEventListener('error', function(e) {
+		  console.log('erro');
+		  console.log(e);
+	}, false);
+    
+    $scope.chatFeed.addEventListener('open', function(e) {
+	    console.log("connection was opened");
+	}.false);    
+    
+    
+
+    /*
+    chatFeed = new EventSource("api/event");
+    chatFeed.onmessage = function (event) {
+    	console.log($scope.msgs);
+	    console.log("Message: " + event.data);
+	};
+	*/ 
+    
+    
+    /*
+	
+	$scope.msg=[];
+
+	$scope.source = new EventSource('api/event');
+
+	$scope.source.addEventListener('message', function(e){
+		 console.log('in');
+		 console.log(e.data);
+		 $scope.$apply(function () {
+              $scope.msg = e.data;//JSON.parse(e.data)
+    	 });
+		  
+	},false);
+	
+	$scope.source.addEventListener('added', function(e) {
+	    console.log("adicionado");
+	},false);
+
+	$scope.source.addEventListener('open', function(e) {
+	    console.log("connection was opened");
+	}.false);
+	
+	$scope.source.addEventListener('error', function(e) {
+
+		 $scope.$apply(function () {
+             $scope.msg = 'oi';//e.data;//JSON.parse(e.data)
+	   	 });
+
+		  console.log('erro');
+		  console.log(e);
+		  if (e.eventPhase == EventSource.CLOSED) {
+		    // Connection was closed.
+		  }
+	}, false);
+	*/
+	
+	
+	
+	
+	
+	
+	
+	
+	/*
+
+	var source = new EventSource('/my/sse_endpoint');
+	
+	source.addEventListener('message', function(e) {
+	  console.log(e.data);
+	}, false);
+	
+	source.addEventListener('user_login', function(e) {
+	  console.log(e.data);
+	}, false);
+	
+	source.addEventListener('open', function(e) {
+	  // Connection was opened.
+	}, false);
+	
+	source.addEventListener('error', function(e) {
+	  if (e.eventPhase == EventSource.CLOSED) {
+	    // Connection was closed.
+	  }
+	}, false);
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	var source = new EventSource('/alfresco/s/events');
+
+	source.onopen = function () {
+	    console.log("open")
+	};
+
+	source.onerror = function () {
+	    console.log(source.readyState)
+	};
+
+	source.onmessage = function (event) {
+	    console.log("Message: " + event.data)
+	};
+
+	source.addEventListener("delete", function(e){
+	    console.log("Delete event: " + e)
+	});
+	
+	
+	*/
+	
+	
+	});
+
+</script>
+
+</body>
+
+
+</html>

@@ -1,6 +1,41 @@
-angular.module('app').config( ['$stateProvider','$urlRouterProvider',
-             function($stateProvider, $urlRouterProvider ) {
+angular.module('app').config( ['$stateProvider','$urlRouterProvider','toastrConfig',
+             function($stateProvider, $urlRouterProvider ,toastrConfig) {
 
+	
+	
+	angular.extend(toastrConfig, {
+	    allowHtml: false,
+	    closeButton: false,
+	    closeHtml: '<button>&times;</button>',
+	    extendedTimeOut: 1000,
+	    iconClasses: {
+	      error: 'toast-error',
+	      info: 'toast-info',
+	      success: 'toast-success',
+	      warning: 'toast-warning'
+	    },  
+	    messageClass: 'toast-message',
+	    onHidden: null,
+	    onShown: null,
+	    onTap: null,
+	    progressBar: false,
+	    tapToDismiss: true,
+	    templates: {
+	      toast: 'directives/toast/toast.html',
+	      progressbar: 'directives/progressbar/progressbar.html'
+	    },
+	    timeOut: 5000,
+	    titleClass: 'toast-title',
+	    toastClass: 'toast'
+	  });
+	
+	
+	
+	
+	
+	
+	
+	
     $urlRouterProvider.otherwise('/home');
 
     $stateProvider
@@ -32,14 +67,14 @@ angular.module('app').config( ['$stateProvider','$urlRouterProvider',
 
         })
 
-				// ENQUETE =================================
+		// ENQUETE =================================
         .state('enquete', {
 		        url: '/enquete',
 		        templateUrl: 'app/enquete/enquete.html',
 						controller:	'EnqueteController'
         })
 
-				// GRAFICO =================================
+		// GRAFICO =================================
         .state('grafico', {
 		        url: '/grafico',
 		        templateUrl: 'app/grafico/grafico.html',
@@ -60,7 +95,20 @@ angular.module('app').config( ['$stateProvider','$urlRouterProvider',
 						controller:'SobreController'
         })
         
+		// LOGIN =================================
+        .state('login', {
+            url: '/login',
+						templateUrl: 'app/login/login.html',
+						controller:'LoginController'
+        })
         
+		// VOTACAO =================================
+        .state('votacao', {
+            url: '/votacao',
+						templateUrl: 'app/votacao/votacao.html',
+						controller:'VotacaoController'
+        })
+
         .state('timer', {
             url: '/timer',
 						templateUrl: 'app/timer/timer.html',

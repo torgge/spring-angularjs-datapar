@@ -20,10 +20,6 @@ import py.com.datapar.enquete.repository.ParticipanteRepository;
 @RestController
 public class Autorizacao {
 
-	class Usuario{
-		private String nome;
-	}
-	
 	@Autowired
 	private ParticipanteRepository participanteRepository;
 
@@ -60,7 +56,7 @@ public class Autorizacao {
 		if (usuarioAutorizado(participante)) {
 
 			try {
-				final Claims claims = Jwts.parser().setSigningKey("@#$%¨&").parseClaimsJws(token).getBody();
+				final Claims claims = Jwts.parser().setSigningKey("123456").parseClaimsJws(token).getBody();
 				request.setAttribute("claims", claims);
 			} catch (final SignatureException e) {
 				throw new ServletException("Invalid token.");

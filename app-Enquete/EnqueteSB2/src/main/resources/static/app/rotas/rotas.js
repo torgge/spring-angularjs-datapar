@@ -71,21 +71,28 @@ angular.module('app').config( ['$stateProvider','$urlRouterProvider','toastrConf
         .state('enquete', {
 		        url: '/enquete',
 		        templateUrl: 'app/enquete/enquete.html',
-						controller:	'EnqueteController'
+				controller:	'EnqueteController'
         })
 
 		// GRAFICO =================================
         .state('grafico', {
 		        url: '/grafico',
 		        templateUrl: 'app/grafico/grafico.html',
-						controller:	'GraficoController'
+				controller:	'GraficoController'
         })
 
         // CATEGORIA =================================
         .state('historico', {
 		        url: '/categoria',
 		        templateUrl: 'app/historico/historico.html',
-						controller:	'HistoricoController'
+				controller:	'HistoricoController'
+        })
+
+        // AVATAR =================================
+        .state('avatar', {
+		        url: '/avatar',
+		        templateUrl: 'app/avatar/avatar.html',
+				controller:	'AvatarController'
         })
 
 		// SOBRE =================================

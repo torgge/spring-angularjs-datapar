@@ -1,5 +1,11 @@
 ## Sistema de Enquetes
 
+Applicativo do curso de Spring/AngularJS na Datapar SA em Ciudad del Este, set/out/nov de 2015.
+
+### Objetivo
+
+Construir uma aplicação web responsive com AngularJS e Materialize utilizando RESTFul, WebSocket, SSE e JWT.
+
 ### Diagrama de classe
 
 <p align="center">

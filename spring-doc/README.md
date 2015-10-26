@@ -2,7 +2,7 @@
 
 Documentação de API com Spring Swagger.
 
-### (I)  Adicionaa dependência ao projeto.
+### (I)  Adicione a dependência ao projeto.
 
 ```java
 

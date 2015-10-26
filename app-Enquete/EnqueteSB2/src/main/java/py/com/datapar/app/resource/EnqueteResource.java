@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
 
-import com.wordnik.swagger.annotations.ApiOperation;
 
 import py.com.datapar.app.model.Enquete;
 import py.com.datapar.app.model.EnqueteParticipante;
@@ -70,7 +69,7 @@ public class EnqueteResource {
 	private RespostaOpcaoRepository respostaOpcaoRepository;
 
 	@RequestMapping("/enquete/ativa")
-	@ApiOperation(httpMethod = "GET", value = "Lista de enquete ativas")
+//	@ApiOperation(httpMethod = "GET", value = "Lista de enquete ativas")
 	public List<EnqueteJson> listaEnquetesAtivas() {
 
 		// update tab_enquete set ativa = b'1';
@@ -96,7 +95,7 @@ public class EnqueteResource {
 	}
 
 	@Transactional
-	@ApiOperation(httpMethod = "POST", value = "Gravar Enquete")
+//	@ApiOperation(httpMethod = "POST", value = "Gravar Enquete")
 	@RequestMapping(value = "/enquete/gravar", method = RequestMethod.POST)
 	public void addEnquete(@RequestBody final List<EnqueteJson> enqueteJson) {
 
@@ -111,7 +110,7 @@ public class EnqueteResource {
 	}
 
 	@RequestMapping("/enquete")
-	@ApiOperation(httpMethod = "GET", value = "Lista atodas as enquetes")
+	//@ApiOperation(httpMethod = "GET", value = "Lista atodas as enquetes")
 	public Iterable<Enquete> listaEnquetes() {
 		return repository.findAll();
 	}

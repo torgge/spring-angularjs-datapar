@@ -1,0 +1,283 @@
+1.Add swagger-springmvc dependency to your project.
+
+<dependency>
+    <groupId>com.mangofactory</groupId>
+    <artifactId>swagger-springmvc</artifactId>
+    <version>1.0.2</version>
+</dependency>
+
+2. Add a SwaggerConfig class to configure Swagger.
+
+package com.aol.feedback.application;
+ 
+    import static com.google.common.collect.Lists.newArrayList;
+ 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+ 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+ 
+import com.mangofactory.swagger.configuration.JacksonScalaSupport;
+import com.mangofactory.swagger.configuration.SpringSwaggerConfig;
+import com.mangofactory.swagger.configuration.SpringSwaggerModelConfig;
+import com.mangofactory.swagger.configuration.SwaggerGlobalSettings;
+import com.mangofactory.swagger.core.DefaultSwaggerPathProvider;
+import com.mangofactory.swagger.core.SwaggerApiResourceListing;
+import com.mangofactory.swagger.core.SwaggerPathProvider;
+import com.mangofactory.swagger.scanners.ApiListingReferenceScanner;
+import com.wordnik.swagger.model.ApiInfo;
+import com.wordnik.swagger.model.AuthorizationScope;
+import com.wordnik.swagger.model.AuthorizationType;
+import com.wordnik.swagger.model.GrantType;
+import com.wordnik.swagger.model.ImplicitGrant;
+import com.wordnik.swagger.model.LoginEndpoint;
+ 
+    @Configuration
+    @ComponentScan(basePackages = "com.mangofactory.swagger")
+    public class SwaggerConfig {
+ 
+        public static final List<String> DEFAULT_INCLUDE_PATTERNS = Arrays.asList("/feedback","/feedback/.*");
+        public static final String SWAGGER_GROUP = "feedback-api";
+ 
+        @Value("${app.docs}")
+        private String docsLocation;
+ 
+        @Autowired
+        private SpringSwaggerConfig springSwaggerConfig;
+        @Autowired
+        private SpringSwaggerModelConfig springSwaggerModelConfig;
+ 
+        /**
+         * Adds the jackson scala module to the MappingJackson2HttpMessageConverter registered with spring
+         * Swagger core models are scala so we need to be able to convert to JSON
+         * Also registers some custom serializers needed to transform swagger models to swagger-ui required json format
+         */
+        @Bean
+        public JacksonScalaSupport jacksonScalaSupport() {
+            JacksonScalaSupport jacksonScalaSupport = new JacksonScalaSupport();
+            //Set to false to disable
+            jacksonScalaSupport.setRegisterScalaModule(true);
+            return jacksonScalaSupport;
+        }
+ 
+        /**
+         * Global swagger settings
+         */
+        @Bean
+        public SwaggerGlobalSettings swaggerGlobalSettings() {
+            SwaggerGlobalSettings swaggerGlobalSettings = new SwaggerGlobalSettings();
+            swaggerGlobalSettings.setGlobalResponseMessages(springSwaggerConfig.defaultResponseMessages());
+            swaggerGlobalSettings.setIgnorableParameterTypes(springSwaggerConfig.defaultIgnorableParameterTypes());
+            swaggerGlobalSettings.setParameterDataTypes(springSwaggerModelConfig.defaultParameterDataTypes());
+            return swaggerGlobalSettings;
+        }
+ 
+        /**
+         * API Info as it appears on the swagger-ui page
+         */
+        private ApiInfo apiInfo() {
+             ApiInfo apiInfo = new ApiInfo(
+                    "Core Feedback API",
+                    "https://api.feedback.aol.com/",
+                    "",
+                    "",
+                    "",
+                    ""
+            );
+            return apiInfo;
+        }
+ 
+        /**
+         * Configure a SwaggerApiResourceListing for each swagger instance within your app. e.g. 1. private  2. external apis
+         * Required to be a spring bean as spring will call the postConstruct method to bootstrap swagger scanning.
+         *
+         * @return
+         */
+        @Bean
+        public SwaggerApiResourceListing swaggerApiResourceListing() {
+            //The group name is important and should match the group set on ApiListingReferenceScanner
+            //Note that swaggerCache() is by DefaultSwaggerController to serve the swagger json
+            SwaggerApiResourceListing swaggerApiResourceListing = new SwaggerApiResourceListing(springSwaggerConfig.swaggerCache(), SWAGGER_GROUP);
+ 
+            //Set the required swagger settings
+            swaggerApiResourceListing.setSwaggerGlobalSettings(swaggerGlobalSettings());
+ 
+            //Use a custom path provider or springSwaggerConfig.defaultSwaggerPathProvider()
+            swaggerApiResourceListing.setSwaggerPathProvider(apiPathProvider());
+ 
+            //Supply the API Info as it should appear on swagger-ui web page
+            swaggerApiResourceListing.setApiInfo(apiInfo());
+ 
+            //Global authorization - see the swagger documentation
+            swaggerApiResourceListing.setAuthorizationTypes(authorizationTypes());
+ 
+            //Every SwaggerApiResourceListing needs an ApiListingReferenceScanner to scan the spring request mappings
+            swaggerApiResourceListing.setApiListingReferenceScanner(apiListingReferenceScanner());
+            return swaggerApiResourceListing;
+        }
+ 
+        @Bean
+        /**
+         * The ApiListingReferenceScanner does most of the work.
+         * Scans the appropriate spring RequestMappingHandlerMappings
+         * Applies the correct absolute paths to the generated swagger resources
+         */
+        public ApiListingReferenceScanner apiListingReferenceScanner() {
+            ApiListingReferenceScanner apiListingReferenceScanner = new ApiListingReferenceScanner();
+ 
+            //Picks up all of the registered spring RequestMappingHandlerMappings for scanning
+            apiListingReferenceScanner.setRequestMappingHandlerMapping(springSwaggerConfig.swaggerRequestMappingHandlerMappings());
+ 
+            //Excludes any controllers with the supplied annotations
+            apiListingReferenceScanner.setExcludeAnnotations(springSwaggerConfig.defaultExcludeAnnotations());
+ 
+            //
+            apiListingReferenceScanner.setResourceGroupingStrategy(springSwaggerConfig.defaultResourceGroupingStrategy());
+ 
+            //Path provider used to generate the appropriate uri's
+            apiListingReferenceScanner.setSwaggerPathProvider(apiPathProvider());
+ 
+            //Must match the swagger group set on the SwaggerApiResourceListing
+            apiListingReferenceScanner.setSwaggerGroup(SWAGGER_GROUP);
+ 
+            //Only include paths that match the supplied regular expressions
+            apiListingReferenceScanner.setIncludePatterns(DEFAULT_INCLUDE_PATTERNS);
+ 
+            return apiListingReferenceScanner;
+        }
+ 
+        /**
+         * Example of a custom path provider
+         */
+        @Bean
+        public ApiPathProvider apiPathProvider() {
+            ApiPathProvider apiPathProvider = new ApiPathProvider(docsLocation);
+            apiPathProvider.setDefaultSwaggerPathProvider(springSwaggerConfig.defaultSwaggerPathProvider());
+            return apiPathProvider;
+        }
+ 
+        private List<AuthorizationType> authorizationTypes() {
+            ArrayList<AuthorizationType> authorizationTypes = new ArrayList<>();
+ 
+            List<AuthorizationScope> authorizationScopeList = newArrayList();
+            authorizationScopeList.add(new AuthorizationScope("global", "access all"));
+ 
+            List<GrantType> grantTypes = newArrayList();
+ 
+            LoginEndpoint loginEndpoint = new LoginEndpoint(apiPathProvider().getAppBasePath() + "/user/authenticate");
+            grantTypes.add(new ImplicitGrant(loginEndpoint, "access_token"));
+ 
+            return authorizationTypes;
+        }
+ 
+        @Bean
+        public SwaggerPathProvider relativeSwaggerPathProvider() {
+            return new ApiRelativeSwaggerPathProvider();
+        }
+ 
+        private class ApiRelativeSwaggerPathProvider extends DefaultSwaggerPathProvider {
+            @Override
+            public String getAppBasePath() {
+                return "/";
+            }
+ 
+            @Override
+            public String getSwaggerDocumentationBasePath() {
+                return "/api-docs";
+            }
+        }
+    }
+
+
+
+
+
+3. ApiPathProvider class
+
+
+package com.aol.feedback.application;
+ 
+import javax.servlet.ServletContext;
+ 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.util.UriComponentsBuilder;
+ 
+import com.mangofactory.swagger.core.SwaggerPathProvider;
+ 
+public class ApiPathProvider implements SwaggerPathProvider {
+    private SwaggerPathProvider defaultSwaggerPathProvider;
+    @Autowired
+    private ServletContext servletContext;
+ 
+    private final String docsLocation;
+ 
+    public ApiPathProvider(String docsLocation) {
+        this.docsLocation = docsLocation;
+    }
+ 
+    @Override
+    public String getApiResourcePrefix() {
+        return defaultSwaggerPathProvider.getApiResourcePrefix();
+    }
+ 
+    @Override
+    public String getAppBasePath() {
+        return UriComponentsBuilder
+                .fromHttpUrl(docsLocation)
+                .path(servletContext.getContextPath())
+                .build()
+                .toString();
+    }
+ 
+    @Override
+    public String getSwaggerDocumentationBasePath() {
+        return UriComponentsBuilder
+                .fromHttpUrl(getAppBasePath())
+                .pathSegment("api-docs/")
+                .build()
+                .toString();
+    }
+ 
+    @Override
+    public String getRequestMappingEndpoint(String requestMappingPattern) {
+        return defaultSwaggerPathProvider.getRequestMappingEndpoint(requestMappingPattern);
+    }
+ 
+    public void setDefaultSwaggerPathProvider(SwaggerPathProvider defaultSwaggerPathProvider) {
+        this.defaultSwaggerPathProvider = defaultSwaggerPathProvider;
+    }
+}
+
+
+4. In src/main/resources/application.properties, add an “app.docs” property.
+
+
+app.docs=http://localhost:8080
+
+
+5. verify swagger produces JSON Object @http://localhost:8080/api-docs
+
+
+{
+apiVersion: "1",
+swaggerVersion: "1.2",
+apis: [
+{
+path: "http://localhost:8080/api-docs/feedback-api/feedback",
+description: "feedback"
+}
+],
+info: {
+title: "Core Feedback API",
+description: "https://localhost:8080/",
+termsOfServiceUrl: "",
+contact: "",
+license: "",
+licenseUrl: ""
+}
+}

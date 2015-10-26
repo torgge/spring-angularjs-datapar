@@ -59,7 +59,7 @@ public interface ProdutoRepository extends MongoRepository<Produto, String> {
 		repository.save(new Produto("Laranja"));
 		repository.save(new Produto("Uva"));
 
-		// fetch 
+		// fetch 1 
 		System.out.println("Lista de produtos");
 		System.out.println("-----------------");
 		for (Produto produto: repository.findAll()) {
@@ -67,7 +67,7 @@ public interface ProdutoRepository extends MongoRepository<Produto, String> {
 		}
 		System.out.println();
 
-		// list
+		// fetch 2
 		System.out.println("findByNome('Banana'):");
 		System.out.println("--------------------------------");
 		System.out.println(repository.findByNome("Banana"));

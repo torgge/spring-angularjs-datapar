@@ -59,4 +59,20 @@ Observação: Esta classe deve está um nível acima das classes de anotadas com
 @ComponenScan(basePackages = { "py.com.datapar.aplicacao.resource" })
 
 ```
+### (III) Adicione Swagger-UI
+
+Inteface web para acessar a API. Copie os arquivos da pasta /swagger-ui-master/dist/*.* para resources/static/apidoc da aplicação. 
+
+<p align="center">
+<img src="https://github.com/lyndontavares/spring-angularjs-datapar/blob/master/AngularJS/imgs/image_thumb_63DE1982.png" width="500">
+</p>
+
+<p align="center">
+<img src="https://github.com/lyndontavares/spring-angularjs-datapar/blob/master/AngularJS/imgs/image_thumb_63DE1982.png" width="500">
+</p>
+
+<p align="center">
+<img src="https://github.com/lyndontavares/spring-angularjs-datapar/blob/master/AngularJS/imgs/image_thumb_63DE1982.png" width="500">
+</p>
+
 

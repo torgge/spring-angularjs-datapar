@@ -1,6 +1,5 @@
 package py.com.datapar.enquete.security;
 
-
 import java.io.IOException;
 
 import javax.servlet.FilterChain;
@@ -11,6 +10,10 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.web.filter.GenericFilterBean;
 
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.SignatureException;
+
 public class JwtFilter extends GenericFilterBean {
 
     @Override
@@ -20,29 +23,21 @@ public class JwtFilter extends GenericFilterBean {
         final HttpServletRequest request = (HttpServletRequest) req;
 
         final String authHeader = request.getHeader("Authorization");
-        if (authHeader == null ) {  //|| !authHeader.startsWith("Bearer ")
-            throw new ServletException("Missing or invalid Authorization header: "+request.getHeader("Authorization"));
+        if (authHeader == null || !authHeader.startsWith("Bearer ")) {
+            throw new ServletException("Missing or invalid Authorization header.");
         }
 
-        final String token = authHeader; //.substring(7); // The part after "Bearer "
-        
-        System.out.println("token:"+token);
-        
-        if ( ! token.equals("@#$%¨&")) {
-        	throw new ServletException("Invalid token.");
-        }
+        final String token = authHeader.substring(7); // The part after "Bearer "
 
-        /*  Usar quando tiver tela de login   
-     	try {
-            final Claims claims = Jwts.parser().setSigningKey("@#$%¨&")
+        try {
+            final Claims claims = Jwts.parser().setSigningKey("lyndontavares")
                 .parseClaimsJws(token).getBody();
             request.setAttribute("claims", claims);
         }
         catch (final SignatureException e) {
             throw new ServletException("Invalid token.");
         }
-        */
-        
+
         chain.doFilter(req, res);
     }
 

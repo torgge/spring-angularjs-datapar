@@ -36,7 +36,7 @@ public class SwaggerConfig {
         return new SwaggerSpringMvcPlugin(this.springSwaggerConfig)
                 //Root level documentation
                 .apiInfo( new ApiInfo(
-                	              "MasterChico API 0.",
+                	              "MasterChico API 0.1",
                 	              "API REST do Applicativo de Controle de Pedidos",
                 	              "API terms of service",
                 	              "integraldominio@gmail.com",

@@ -14,6 +14,7 @@ Documentação de API REST com Spring e Swagger.
 		</dependency>
 		
 ```
+> Veja exemplo funcionando> *MasterChicoSB5*
 
 ### (II) Acrescente a classe de configuração do Swagger
 

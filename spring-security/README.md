@@ -75,6 +75,8 @@ Em criptografia, HMAC (Hash-based Message Authentication Code) é uma construç�
 
 source: https://pt.wikipedia.org/wiki/HMAC
 
-> Dica: Usar clientes rest como o PostMan ou Insomnia
+
+> Dica: Usar clientes REST como o PostMan, Insomnia ou CURL.
+
 
 Contato: integraldomino@gmail.com

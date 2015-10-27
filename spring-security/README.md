@@ -54,7 +54,7 @@ public LoginResponse autenticaUsuarioRetornaToken(HttpServletRequest request,
 
 Todas as rotas /api/* requerem autenticação.
 
-`` java
+```java
 
 	@Bean
 	public FilterRegistrationBean jwtFilter() {

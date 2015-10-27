@@ -49,6 +49,8 @@ public class Autorizacao {
 		return usuarioAutorizado(participante);
 	}
 
+	
+	
 	@RequestMapping(value = "/autenticaToken", method = RequestMethod.POST)
 	public LoginResponse autenticaUsuarioRetornaToken(HttpServletRequest request,
 			@RequestBody Participante participante) throws IOException, ServletException {
@@ -58,15 +60,19 @@ public class Autorizacao {
 			ipAddress = "R: " + request.getRemoteAddr();
 		}
 
-		Participante participanteEncontrado = participanteRepository.findByNomeIgnoreCase(participante.getNome());
+		Participante participanteEncontrado = 
+						participanteRepository.findByNomeIgnoreCase(participante.getNome());
 		
-		if (participanteEncontrado != null && participante.getSenha().equals(participanteEncontrado.getSenha()) ) {
+		if (participanteEncontrado != null && 
+					participante.getSenha().equals(participanteEncontrado.getSenha()) ) {
 
 			try {
 
-				return new LoginResponse(Jwts.builder().setSubject(participante.getNome())
-						.claim("roles", participante.getAdmin().toString()).setIssuedAt(new Date())
-						.signWith(SignatureAlgorithm.HS256, "lyndontavares").compact());
+				return new LoginResponse( 
+				Jwts.builder()
+				.setSubject(participanteEncontrado.getNome())
+				.claim("roles", participanteEncontrado.getAdmin().toString()).setIssuedAt(new Date())
+				.signWith(SignatureAlgorithm.HS256, "lyndontavares").compact());
 
 			} catch (final SignatureException e) {
 				throw new ServletException("Invalid token.");
@@ -78,6 +84,7 @@ public class Autorizacao {
 	}
 
 
+	
 	@SuppressWarnings("unchecked")
 	@RequestMapping(value = "role/{role}", method = RequestMethod.GET)
 	public Boolean role(@PathVariable final String role,

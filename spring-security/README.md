@@ -1,12 +1,8 @@
 ﻿## Projetos para avaliação de estratégias de segurança de aplicações web
 
-### (I) Spring Security 
+### (I) Spring Token-based 
 
-### (II) Spring Security
-
-### (III) Spring Security 
-
-### (IV) JWT
+### (II) Spring Json-based (JWT)
 
 O projeto EnqueteSB2 utiliza a estratégia do JWT (JSON Web Token). Comparação Token-based e Cookie-based
 
@@ -16,7 +12,7 @@ O projeto EnqueteSB2 utiliza a estratégia do JWT (JSON Web Token). Comparação
 
 Source: https://github.com/auth0/blog/blob/master/_posts/2014-01-07-angularjs-authentication-with-cookies-vs-token.markdown
 
-### (IV-a) End-point de autenticação na app EnqueteSB2
+### (II-a) End-point de autenticação na app EnqueteSB2
 
 ```java
 
@@ -50,7 +46,7 @@ public LoginResponse autenticaUsuarioRetornaToken(HttpServletRequest request,
 }
 
 ```
-### (IV-b) Filtro de rotas.
+### (II-b) Filtro de rotas.
 
 Todas as rotas /api/* requerem autenticação.
 

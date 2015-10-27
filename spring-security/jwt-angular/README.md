@@ -22,6 +22,10 @@ The heavy lifting for JWT signing is done by the more than excellent [Java JWT](
 
 The simple Angular app shows a login page. On successful login it checks with 'the API' which roles are available (of which the 'foo' role doesn't exist for any user).
 
+
 ## Running
 
 It is a standard Maven project and can be imported into your favorite IDE. You run the example by starting the WebApplication class (it has a main) and navigating to http://localhost:8080/. If everything is correct you should see a "Welcome to the JSON Web Token / AngularJR / Spring example!" message and a login form.
+
+
+

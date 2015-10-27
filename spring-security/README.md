@@ -50,5 +50,21 @@ public LoginResponse autenticaUsuarioRetornaToken(HttpServletRequest request,
 }
 
 ```
+### (IV-b) Filtro de rotas.
+
+Todas as rotas /api/* requerem autenticação.
+
+`` java
+
+	@Bean
+	public FilterRegistrationBean jwtFilter() {
+        	final FilterRegistrationBean registrationBean = new FilterRegistrationBean();
+        	registrationBean.setFilter(new JwtFilter());
+        	registrationBean.addUrlPatterns("/api/*");
+        	return registrationBean;
+	}
+
+```
+
 
 Contato: integraldomino@gmail.com

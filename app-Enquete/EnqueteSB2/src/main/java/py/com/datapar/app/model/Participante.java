@@ -93,10 +93,7 @@ public class Participante {
 		return true;
 	}
 
-	@Override
-	public String toString() {
-		return "Participante [id=" + id + ", nome=" + nome + ", email=" + email + ", ativo=" + ativo + "]";
-	}
+ 
 
 	public Participante() {
 
@@ -124,5 +121,14 @@ public class Participante {
 		this.admin = admin;
 	}
 
+	@Override
+	public String toString() {
+		return "Participante [id=" + id + ", nome=" + nome + ", email=" + email + ", ativo=" + ativo + ", admin="
+				+ admin + ", senha=" + senha + "]";
+	}
+
+	
+	
+	
  
 }

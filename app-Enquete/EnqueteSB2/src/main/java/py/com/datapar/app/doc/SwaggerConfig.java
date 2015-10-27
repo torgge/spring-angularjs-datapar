@@ -9,22 +9,22 @@ import com.mangofactory.swagger.plugin.EnableSwagger;
 import com.mangofactory.swagger.plugin.SwaggerSpringMvcPlugin;
 import com.wordnik.swagger.model.ApiInfo;
 
-@Configuration
-@EnableSwagger
+//@Configuration
+//@EnableSwagger
 public class SwaggerConfig {
 	
-	private SpringSwaggerConfig springSwaggerConfig;
+	//private SpringSwaggerConfig springSwaggerConfig;
 
-	@Autowired
-	public void setSpringSwaggerConfig(SpringSwaggerConfig springSwaggerConfig) {
-		this.springSwaggerConfig = springSwaggerConfig;
-	}
+	//@Autowired
+	//public void setSpringSwaggerConfig(SpringSwaggerConfig springSwaggerConfig) {
+//		this.springSwaggerConfig = springSwaggerConfig;
+	//}
 
-//	@Bean
+	//@Bean
 	// Don't forget the @Bean annotation
 //	public SwaggerSpringMvcPlugin customImplementation() {
-	//	return new SwaggerSpringMvcPlugin(this.springSwaggerConfig).apiInfo(apiInfo()).includePatterns("/saurzcode/.*");
-//	}
+	//	//return new SwaggerSpringMvcPlugin(this.springSwaggerConfig).apiInfo(apiInfo()).includePatterns("/saurzcode/.*");
+	//}
 
 	private ApiInfo apiInfo() {
 		ApiInfo apiInfo = new ApiInfo(

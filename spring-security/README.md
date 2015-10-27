@@ -62,5 +62,11 @@ Todas as rotas /api/* requerem autenticação.
 
 ```
 
+### (II-c) Token gerado com Algorithm.HS256
+
+
+<p align="center">
+<img src="https://camo.githubusercontent.com/7a5f442d1c4a49fb1e0a97625be8694aad2026b5/68747470733a2f2f646c2e64726f70626f7875736572636f6e74656e742e636f6d2f752f32313636353130352f636f6f6b69652d746f6b656e2d617574682e706e67" width="700">
+</p>
 
 Contato: integraldomino@gmail.com

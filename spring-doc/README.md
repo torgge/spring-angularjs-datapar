@@ -64,14 +64,14 @@ Observação: Esta classe deve está um nível acima das classes de anotadas com
 Inteface web para acessar a API. Copie os arquivos da pasta /swagger-ui-master/dist/*.* para resources/static/apidoc da aplicação. 
 
 <p align="center">
-<img src="https://github.com/lyndontavares/spring-angularjs-datapar/blob/master/spring-doc/wiki/api-doc.png?raw=true" width="500">
+<img src="https://github.com/lyndontavares/spring-angularjs-datapar/blob/master/spring-doc/wiki/api-doc.png?raw=true" width="600">
 </p>
 
 <p align="center">
-<img src="https://github.com/lyndontavares/spring-angularjs-datapar/blob/master/spring-doc/wiki/api-doc2.png?raw=true" width="500">
+<img src="https://github.com/lyndontavares/spring-angularjs-datapar/blob/master/spring-doc/wiki/api-doc2.png?raw=true" width="600">
 </p>
 
 <p align="center">
-<img src="https://github.com/lyndontavares/spring-angularjs-datapar/blob/master/spring-doc/wiki/api-doc3.png?raw=true" width="500">
+<img src="https://github.com/lyndontavares/spring-angularjs-datapar/blob/master/spring-doc/wiki/api-doc3.png?raw=true" width="600">
 </p>
 

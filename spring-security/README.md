@@ -21,6 +21,7 @@ public LoginResponse autenticaUsuarioRetornaToken(HttpServletRequest request,
 
 	@RequestBody Participante participante) throws IOException, ServletException {
 
+	// Validar IP cliente
 	// String ipAddress = request.getHeader("X-FORWARDED-FOR");
 	// if (ipAddress == null) {
 	// 	ipAddress = request.getRemoteAddr();

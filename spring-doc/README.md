@@ -52,7 +52,7 @@ public class SwaggerConfig {
 
 ```
 
-Observação: Esta classe deve está um nível acima das classes de anotadas com @RestCrotroller. Se não, usar a anotação abaixo no lugar de @EnableAutoConfiguration.
+Observação: Esta classe deve está um nível acima das classes anotadas com @RestCrotroller. Se não, usar a anotação abaixo no lugar de @EnableAutoConfiguration.
 
 ```java
 

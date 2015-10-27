@@ -66,7 +66,7 @@ Todas as rotas /api/* requerem autenticação.
 
 
 <p align="center">
-<img src="https://camo.githubusercontent.com/7a5f442d1c4a49fb1e0a97625be8694aad2026b5/68747470733a2f2f646c2e64726f70626f7875736572636f6e74656e742e636f6d2f752f32313636353130352f636f6f6b69652d746f6b656e2d617574682e706e67" width="700">
+<img src="https://github.com/lyndontavares/spring-angularjs-datapar/blob/master/spring-security/wiki/insomnia.png" width="700">
 </p>
 
 Em criptografia, HMAC (Hash-based Message Authentication Code) é uma construção específica para calcular o código de autenticação de mensagem (MAC) envolvendo uma função hash criptográfica em combinação com uma chave secreta. Da mesma forma que em qualquer MAC, este pode ser usado para simultaneamente verificar tanto a integridade como a autenticidade de uma mensagem. Qualquer função hash criptográfica, tal como MD5 ou SHA-1, pode ser usada no cálculo do HMAC; o algoritmo MAC resultante é denominado HMAC-MD5 ou HMAC-SHA1 em conformidade. A força criptográfica do HMAC depende da força da criptográfica da função hash subjacente, do tamanho do hash produzido como saída em bits, e do tamanho e da qualidade da chave criptográfica.

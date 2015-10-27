@@ -1,8 +1,8 @@
 ﻿## Projetos para avaliação de estratégias de segurança de aplicações web
 
-### (I) Spring Token-based 
+### (I) Token-based 
 
-### (II) Spring Json-based (JWT)
+### (II) Json-based (JWT)
 
 O projeto EnqueteSB2 utiliza a estratégia do JWT (JSON Web Token). Comparação Token-based e Cookie-based
 

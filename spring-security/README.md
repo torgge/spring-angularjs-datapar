@@ -22,7 +22,7 @@ Source: https://github.com/auth0/blog/blob/master/_posts/2014-01-07-angularjs-au
 
 	@RequestMapping(value = "/autenticaToken", method = RequestMethod.POST)
 	public LoginResponse autenticaUsuarioRetornaToken(HttpServletRequest request,
-			@RequestBody Participante participante) throws IOException, ServletException {
+		@RequestBody Participante participante) throws IOException, ServletException {
 
 		String ipAddress = request.getHeader("X-FORWARDED-FOR");
 		if (ipAddress == null) {
@@ -35,9 +35,9 @@ Source: https://github.com/auth0/blog/blob/master/_posts/2014-01-07-angularjs-au
 
 			try {
 
-				return new LoginResponse(Jwts.builder().setSubject(participante.getNome())
-						.claim("roles", participante.getAdmin().toString()).setIssuedAt(new Date())
-						.signWith(SignatureAlgorithm.HS256, "lyndontavares").compact());
+			return new LoginResponse(Jwts.builder().setSubject(participante.getNome())
+				.claim("roles", participante.getAdmin().toString()).setIssuedAt(new Date())
+				.signWith(SignatureAlgorithm.HS256, "lyndontavares").compact());
 
 			} catch (final SignatureException e) {
 				throw new ServletException("Invalid token.");

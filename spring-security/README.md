@@ -22,6 +22,7 @@ Source: https://github.com/auth0/blog/blob/master/_posts/2014-01-07-angularjs-au
 
 @RequestMapping(value = "/autenticaToken", method = RequestMethod.POST)
 public LoginResponse autenticaUsuarioRetornaToken(HttpServletRequest request,
+
 	@RequestBody Participante participante) throws IOException, ServletException {
 
 	String ipAddress = request.getHeader("X-FORWARDED-FOR");
@@ -31,7 +32,7 @@ public LoginResponse autenticaUsuarioRetornaToken(HttpServletRequest request,
 
 	Participante participanteEncontrado = participanteRepository.findByNomeIgnoreCase(participante.getNome());
 		
-	if (participanteEncontrado != null && participante.getSenha().equals(participanteEncontrado.getSenha()) ) {
+	if (participanteEncontrado != null && participante.getSenha().equals(participanteEncontrado.getSenha())) {
 
 		try {
 

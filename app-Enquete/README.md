@@ -37,5 +37,48 @@ Leia mais em: Programando em HTML5 http://www.devmedia.com.br/programando-em-htm
 Para usar essa tecnologia com o Spring Boot é necessário atualizar para o Spring MVC 4.2. Nossa app de enquetes já está atualizada.
 
 
+#### (VI-a) Exemplo de implementação SSE em AngularJS
 
+```js
 
+	$scope.msg="*";
+
+	$scope.addMsg = function(event) {
+		$scope.$apply(function () {
+			console.log(event.data);
+			$scope.msg = event.data;			
+		});
+	};
+
+	$scope.openMsg = function(event) {
+		console.log('open>'+event);
+	};
+	
+	$scope.stop = function(){
+		if ( $scope.eventSource != undefined ){
+			$scope.msg='';
+			$scope.eventSource.close();
+		}	
+	};
+	
+	$scope.start = function(){
+		$scope.eventSource = new EventSource("api/event");
+		$scope.eventSource.addEventListener("message",$scope.addMsg,false);  
+		$scope.eventSource.addEventListener("open",$scope.openMsg,false);  
+	};
+
+```
+
+#### (VI-b) Exemplo de implementação do server com Spring
+
+```java
+
+	@RequestMapping("/event")
+	public SseEmitter getRealTimeMessageAction( HttpServletRequest request) throws Throwable {
+		final SseEmitter emitter = new SseEmitter();
+		emitter.send( listaEnquetesAtivas() );
+		emitter.complete();
+		return emitter;
+	}
+
+```

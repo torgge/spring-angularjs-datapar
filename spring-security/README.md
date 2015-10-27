@@ -47,7 +47,7 @@ public LoginResponse autenticaUsuarioRetornaToken(HttpServletRequest request,
 }
 
 ```
-### (II-b) Filtro de rotas.
+### (II-b) Filtro de segurança com validação do Token.
 
 Todas as rotas /api/* requerem autenticação.
 

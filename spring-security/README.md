@@ -65,7 +65,7 @@ Todas as rotas /api/* requerem autenticação.
 
 ### (II-c) Token gerado com Algorithm.HS256
 
-Algoritmo implementado na app MasterChicoSB5.
+Algoritmo implementado na app *MasterChicoSB5*.
 
 <p align="center">
 <img src="https://github.com/lyndontavares/spring-angularjs-datapar/blob/master/spring-security/wiki/insomnia.png" width="700">

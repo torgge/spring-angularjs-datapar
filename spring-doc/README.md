@@ -1,6 +1,6 @@
-## Spring DOC
+## Spring API DOC
 
-Documentação de API com Spring Swagger.
+Documentação de API REST com Spring e Swagger.
 
 ### (I)  Adicione a dependência ao projeto.
 

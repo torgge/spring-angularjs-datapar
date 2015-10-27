@@ -7,10 +7,10 @@
 	</configSuffixes>
 	<enableImports><![CDATA[false]]></enableImports>
 	<configs>
-		<config>java:MasterChicoSB1.SwaggerConfig</config>
+		<config>java:py.com.datapar.teste.SwaggerConfig</config>
+		<config>java:py.com.datapar.teste.MasterChicoSb1Application</config>
 	</configs>
 	<autoconfigs>
-		<config>java:MasterChicoSB1.MasterChicoSb1Application</config>
 	</autoconfigs>
 	<configSets>
 	</configSets>

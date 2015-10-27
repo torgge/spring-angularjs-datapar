@@ -27,8 +27,8 @@ public class SwaggerConfig {
         return new SwaggerSpringMvcPlugin(this.springSwaggerConfig)
                 //Root level documentation
                 .apiInfo( new ApiInfo(
-                	              "MasterChico API 0.",
-                	              "API REST do Applicativo de Controle de Pedidos",
+                	              "MasterChico API v0.1",
+                	              "API REST do Applicativo Masterchico. Curso de Spring/AngularJS - Datapar SA. Set/Out/Nov 2015. Instrutor: Lyndon Tavares",
                 	              "API terms of service",
                 	              "integraldominio@gmail.com",
                 	              "API Licence Type",

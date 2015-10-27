@@ -6,6 +6,7 @@ import org.springframework.boot.context.embedded.FilterRegistrationBean;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 
+import py.com.datapar.app.resource.EnqueteResource;
 import py.com.datapar.app.security.JwtFilter;
 
 @SpringBootApplication
@@ -30,8 +31,8 @@ public class EnqueteApplication {
     	//PerguntaResource perg = app.getBean(PerguntaResource.class);
     	//perg.gerar100(10);
 
-    	//EnqueteResource e = app.getBean(EnqueteResource.class);
-    	//e.gerar100(2);
+    	EnqueteResource e = app.getBean(EnqueteResource.class);
+    	e.gerar100(10);
     	
        
     }

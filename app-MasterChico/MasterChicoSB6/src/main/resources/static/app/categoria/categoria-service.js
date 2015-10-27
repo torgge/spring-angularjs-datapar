@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('app')
-    .factory('categoriaService', ['$http', function($http) {
+    .factory('CategoriaService', ['$http', function($http) {
 
     var urlBase = 'api/categoria';
     var dataFactory = {};

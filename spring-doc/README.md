@@ -2,7 +2,7 @@
 
 Documentação de API REST com Spring e Swagger.
 
-### (I)  Adicione a dependência ao projeto.
+### (I)  Adicione a dependência do swagger ao projeto.
 
 ```java
 

@@ -16,7 +16,7 @@ O projeto EnqueteSB2 utiliza a estratégia do JWT (JSON Web Token). Comparação
 
 Source: https://github.com/auth0/blog/blob/master/_posts/2014-01-07-angularjs-authentication-with-cookies-vs-token.markdown
 
-### (IV-a) End-point de autentição 
+### (IV-a) End-point de autenticação na app EnqueteSB2
 
 ```java
 

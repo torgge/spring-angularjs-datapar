@@ -21,10 +21,10 @@ public LoginResponse autenticaUsuarioRetornaToken(HttpServletRequest request,
 
 	@RequestBody Participante participante) throws IOException, ServletException {
 
-	String ipAddress = request.getHeader("X-FORWARDED-FOR");
-	if (ipAddress == null) {
-		ipAddress = "R: " + request.getRemoteAddr();
-	}
+	// String ipAddress = request.getHeader("X-FORWARDED-FOR");
+	// if (ipAddress == null) {
+	// 	ipAddress = request.getRemoteAddr();
+	// }
 
 	Participante participanteEncontrado = participanteRepository.findByNomeIgnoreCase(participante.getNome());
 		

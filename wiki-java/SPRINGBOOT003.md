@@ -309,9 +309,13 @@ import java.util.List;
 @Repository
 public interface ProductDetailRepository extends PagingAndSortingRepository {
 }
-Listagem 1.10 - ProductDetailRepository atualizado com suporte a paginação e ordenação.
+
+```
+> Listagem 1.10 - ProductDetailRepository atualizado com suporte a paginação e ordenação.
 
 O código na Listagem 1.11 mostra a ação findAll do controlador usando as novas habilidades de paginação e ordenação do repositório. Uma requisição feita no endpoint /products da API, fornecendo os parâmetros page=0 e count=20 devolverá os primeiros 20 produtos do banco de dados. Nesse exemplo, o código utiliza um padrão do Spring que permite especificar valores padrões para parâmetros de consulta, tornando a maioria deles opcional.
+
+```java
 
 @RequestMapping(method = RequestMethod.GET)
 public Iterable findAll(@RequestParam(value = "page", defaultValue = "0", required = false) int page,

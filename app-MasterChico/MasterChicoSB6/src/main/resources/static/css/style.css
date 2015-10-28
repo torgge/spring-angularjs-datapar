@@ -158,7 +158,7 @@ a.button-collapse.top-nav.full {
     margin: 0 auto; }
 
 #index-banner {
-    background-color: #121147; }
+    background-color: rgba(102, 101, 183, 0.85); }
 #index-banner .container {
     position: relative; }
 #index-banner .header {

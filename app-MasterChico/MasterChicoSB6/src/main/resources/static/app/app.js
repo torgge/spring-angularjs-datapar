@@ -8,7 +8,8 @@ angular.module(
 	 'ui.grid',
 	 'ui.grid.pagination',
 	 'ui.grid.cellNav',
-	 'ngAnimate'
+	 'ngAnimate',
+	 'ngFoobar'
 	] );
 
 
@@ -46,6 +47,7 @@ angular.module('app').config( ['$stateProvider','$urlRouterProvider',
 						controller:	'UnidadeController'
         })
 
+          
 		// SOBRE =================================
         .state('sobre', {
             url: '/sobre',

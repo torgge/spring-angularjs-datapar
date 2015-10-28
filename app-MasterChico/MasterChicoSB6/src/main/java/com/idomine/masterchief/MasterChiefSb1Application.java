@@ -38,6 +38,8 @@ public class MasterChiefSb1Application {
 
     	PedidoItemResource item = app.getBean(PedidoItemResource.class);
     	item.gerar100(100);
+    	
+    	
        
     }
 }

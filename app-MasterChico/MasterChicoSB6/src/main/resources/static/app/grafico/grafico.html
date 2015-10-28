@@ -3,21 +3,29 @@
 	<h2 class="header">Graficos</h2>
 	<br/> 
 	
+	<div ng-controller="GraficoLine1Controller"> 
+	
 	<canvas id="line" class="chart chart-line" chart-data="data"
 	  chart-labels="labels" chart-legend="true" chart-series="series"
-	  chart-click="onClick" ng-controller="GraficoLine1Controller">
+	  chart-click="onClick">
 	</canvas>
+
+	</div>
 
 	<hr>
 
-	<!-- <canvas id="bar" class="chart chart-bar"
-	  chart-data="data" chart-labels="labels" ng-controller="GraficoLine2Controller">
+	<div ng-controller="GraficoLine2Controller"> 
+	<canvas id="bar" class="chart chart-bar"
+	  chart-data="data" chart-labels="labels" >
 	</canvas>
+	</div>
 	
 	<hr>
 	
+	<div ng-controller="GraficoDoughnutController"> 
 	<canvas id="doughnut" class="chart chart-doughnut"
-  		chart-data="data" chart-labels="labels" ng-controller="GraficoDoughnutController">
-	</canvas>  -->
+  		chart-data="data" chart-labels="labels">
+	</canvas> 
+	</div>
 
 </div>

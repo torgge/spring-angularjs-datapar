@@ -9,7 +9,8 @@ angular.module(
 	 'ui.grid.pagination',
 	 'ui.grid.cellNav',
 	 'ngAnimate',
-	 'ngFoobar'
+	 'ngFoobar',
+	 'chart.js'
 	] );
 
 
@@ -45,6 +46,13 @@ angular.module('app').config( ['$stateProvider','$urlRouterProvider',
 		        url: '/unidade',
 		        templateUrl: 'app/unidade/unidade.html',
 						controller:	'UnidadeController'
+        })
+
+        // GRAFICO =================================
+        .state('grafico', {
+		        url: '/grafico',
+		        templateUrl: 'app/grafico/grafico.html',
+				controller:	'GraficoController'
         })
 
           

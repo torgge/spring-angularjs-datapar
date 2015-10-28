@@ -24,4 +24,5 @@ Desenvolvedor: ${desenvolvedor.nome}  ${spring-boot.version}
 
 ```
 
+contato: integraldominio@gmail.com
 

@@ -13,12 +13,12 @@ import com.idomine.masterchief.resource.UnidadeResource;
 import com.mangofactory.swagger.plugin.EnableSwagger;
 
 @SpringBootApplication
-public class MasterChiefSb1Application {
+public class MasterChiefApplication {
 
     public static void main(String[] args) {
     	
     	ConfigurableApplicationContext app =
-    			SpringApplication.run(MasterChiefSb1Application.class, args);
+    			SpringApplication.run(MasterChiefApplication.class, args);
 
     	//pegar contexto e bean para execução de tarefas após iniciar...
     	CategoriaResource catgo = app.getBean(CategoriaResource.class);

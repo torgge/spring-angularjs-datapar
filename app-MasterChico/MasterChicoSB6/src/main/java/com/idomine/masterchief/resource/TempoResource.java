@@ -1,8 +1,7 @@
 package com.idomine.masterchief.resource;
 
-import javax.websocket.server.PathParam;
-
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
@@ -10,7 +9,8 @@ import org.springframework.web.client.RestTemplate;
 import com.idomine.masterchief.weather.Tempo;
 import com.idomine.masterchief.weather.model.OpenWeatherMap;
 
-@RestController("api")
+@RestController
+@RequestMapping("/api")
 public class TempoResource {
 
 	private final String URL_TEMPO = "http://api.openweathermap.org/data/2.5/weather?q=";
@@ -19,7 +19,7 @@ public class TempoResource {
 	private final String API_KEY = "&appid=bd82977b86bf27fb59a04b61b657fb6f";
 
 	@RequestMapping("tempo/{cidade}")
-	public Tempo tempo(@PathParam(value = "cidade") String cidade) {
+	public Tempo tempo( @PathVariable  String  cidade) {
 
 		RestTemplate restTemplate = new RestTemplate();
 

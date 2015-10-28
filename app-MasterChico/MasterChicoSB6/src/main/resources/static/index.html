@@ -51,6 +51,12 @@
 		
      <li class="bold" ng-click="direciona('sobre')"><a href="#" class="waves-effect waves-blue">Sobre</a></li>  
 
+
+	<div style="vertical-align: bottom;height: 100%;" ng-controller="TempoController">
+		<h2 class="header">Foz {{tempo.temperatura}}</h2>
+		<img src="{{tempo.icon}"/> 
+	</div> 
+
     </ul>
 </header>
 <main>
@@ -103,6 +109,7 @@
 <script src="app/unidade/unidade-service.js"></script>
 
 <script src="app/grafico/grafico-controller.js"></script>
+<script src="app/tempo/tempo-controller.js"></script>
 
 </body>
 </html>

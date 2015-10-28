@@ -8,7 +8,7 @@ adicionar um arquivo banner.txt no path da aplicação.
 
 ## (II) Mostrando parâmetros no log
 
-No aplicattion properties definas os parâmetros, incluse os customizados.
+####No aplicattion properties definas os parâmetros, incluse os customizados.
 
 ```
 
@@ -17,7 +17,7 @@ developer.email=integraldominio@gmail.com
 
 ```
 
-No banner.txt adicione ${parametro}. Exemplo: 
+####No banner.txt adicione ${parametro}. Exemplo: 
 
 ```
 Desenvolvedor: ${desenvolvedor.nome}  ${spring-boot.version}

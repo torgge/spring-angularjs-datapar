@@ -501,7 +501,7 @@ O plugin do Gradle para o Spring Boot tem um benefício adicional que é a integ
 
 Embora a instalação de forma autônoma é a forma preferida e geralmente a melhor unidade instalável aceita para um micro serviço, nada especifica estritamente que eles devem ser executados de forma autônoma. As aplicações do Spring Boot também podem ser empacotadas com arquivos WAR e instalados em um contêiner. O script de construção do Gradle precisará ser modificado para usar o plugin 'war', como mostrado na Listagem 1.18. Similar ao anterior, a tarefa 'build' produzirá o artefato web.
 
-`` java
+```java
 
 buildscript {
   repositories {

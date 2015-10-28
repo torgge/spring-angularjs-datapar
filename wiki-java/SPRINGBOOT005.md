@@ -6,3 +6,22 @@ adicionar um arquivo banner.txt no path da aplicação.
 <img src="https://github.com/lyndontavares/spring-angularjs-datapar/blob/master/app-MasterChico/MasterChicoSB6/src/main/resources/static/image/banner.png" width="600">
 </p>
 
+## (II) Mostrando parâmetros no log
+
+No aplicattion properties definas os parâmetros, incluse os customizados.
+
+```
+
+developer.nome=lyndon tavares
+developer.email=integraldominio@gmail.com
+
+```
+
+No banner.txt adicione ${parametro}. Exemplo: 
+
+```
+Desenvolvedor: ${desenvolvedor.nome}  ${spring-boot.version}
+
+```
+
+

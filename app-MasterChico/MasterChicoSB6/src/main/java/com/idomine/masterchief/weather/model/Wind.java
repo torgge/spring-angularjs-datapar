@@ -27,7 +27,9 @@ public class Wind {
         return "Wind{" + "speed=" + speed + ", direction=" + direction + '}';
     }
     
-    
+    public Wind(){
+    	
+    }
     
     
 }

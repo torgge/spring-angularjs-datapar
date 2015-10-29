@@ -3,7 +3,7 @@
 angular.module('app')
     .factory('CategoriaService', ['$http', function($http) {
 
-    var urlBase = 'api/categoria';
+    var urlBase = 'http://localhost:5000/api/categoria';
     var dataFactory = {};
 
     dataFactory.getCategorias = function () {

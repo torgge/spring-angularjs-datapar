@@ -1,9 +1,9 @@
 'use strict';
 
 angular.module('app')
-    .factory('unidadeService', ['$http', function($http) {
+    .factory('UnidadeService', ['$http', function($http) {
 
-    var urlBase = 'api/unidade';
+    var urlBase = 'http://localhost:5000/api/unidade';
     var dataFactory = {};
 
     dataFactory.getUnidades = function () {

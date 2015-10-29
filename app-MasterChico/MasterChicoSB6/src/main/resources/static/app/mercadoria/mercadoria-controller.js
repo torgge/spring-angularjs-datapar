@@ -2,43 +2,20 @@
 
 angular.module('app')
 .controller(
-  'MercaderiaController',
-  [		   '$scope','$http','uiGridConstants','mercadoriaService','categoriaService','unidadeService', 
-  function ($scope	,$http	,uiGridConstants , mercadoriaService , categoriaService , unidadeService){
+  'MercadoriaController',
+  [		   '$scope','$http','uiGridConstants','MercadoriaService','CategoriaService','UnidadeService',
+  function ($scope	,$http	,uiGridConstants , MercadoriaService , CategoriaService , UnidadeService){
 
-	 $scope.loadMerc = function(){ 
-		 mercadoriaService.getMercaderias()  
-			.success(function (data) {
-				 $scope.gridOptions.data = data;
-		 });
-	 };
-	 $scope.loadMerc();
-
-	 $scope.loadDados = function(){
-	 
-			 categoriaService.getCategorias()  
-				.success(function (data) {
-					 $scope.categorias = data;
-			 });
-			 
-			 unidadeService.getUnidades()  
-				.success(function (data) {
-					 $scope.unidades = data;
-			 });
-
-	 };
-	 
-	 $scope.model = {descricao:"",quantidade:777,quantidadeMinima:777,Categoria:{id:1,descricao:""},Unidade:{id:1,descricao:""}};
-	 
-
-	 $scope.addMerc = function() {
-		 
-		 mercadoriaService.insertMercaderia( $scope.model )
-		 $scope.loadMerc();
-		 
-	 }
-	 
-	 
+   $scope.clearMerc = function() {
+   $scope.model = {
+                    id:0,
+                    nome:"",
+			              quantidade:0,
+                    quantidadeMinima:0,
+			              categoria:{id:1,descricao:""},
+			              unidade:{id:1,descricao:""}
+			            };
+   };
 
 	 $scope.gridOptions = {
 			    enableFiltering: true,
@@ -47,11 +24,49 @@ angular.module('app')
 			    paginationPageSize: 10,
 			    paginationPageSizes: [10, 20, 30],
 			    columnDefs: [
-			      { name: 'id'				, field:'id'				 , displayName:'Código'			, width: 80 , enableColumnMenu: false },
-			      { name: 'descricao' , field:'descricao'  , displayName:'Descrición'	, enableColumnMenu: false },
+			    { name: 'id'			, field:'id'				 , displayName:'Código'			, width: 80 , enableColumnMenu: false },
+			    { name: 'nome'    , field:'nome'  , displayName:'Descrición'	, enableColumnMenu: false },
 				  { name: 'unidade'		, field:'unidade.descricao'	 , displayName:'Unidade'   ,  enableColumnMenu: false },
 				  { name: 'categoria'	, field:'categoria.descricao'	 , displayName:'Categoria',  enableColumnMenu: false }
 			    ]
 	};
+
+
+
+	$scope.gridOptions.data=[];
+
+	$scope.loadMerc = function(){
+		 MercadoriaService.getMercadorias()
+			.success(function (data) {
+				 $scope.gridOptions.data = data;
+         console.info(data);
+		 });
+	};
+
+	$scope.loadMerc();
+
+	$scope.loadDados = function(){
+
+       $scope.clearMerc();
+
+		 	 CategoriaService.getCategorias()
+				.success(function (data) {
+					 $scope.categorias = data;
+			 });
+
+		 	 UnidadeService.getUnidades()
+				.success(function (data) {
+					 $scope.unidades = data;
+			 });
+
+	};
+
+	$scope.addMerc = function() {
+		 MercadoriaService.insertMercadoria( $scope.model )
+		 $scope.loadMerc();
+
+	}
+
+
 
 }]);

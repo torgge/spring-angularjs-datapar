@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <script src="http://code.angularjs.org/snapshot/angular.js"></script>
+  <script src="script.js"></script>
+</head>
+<body ng-app="app" ng-controller="ctrl">
+  
+  <h3 ng-hide="delayed">Not yet loaded</h3>
+  <pre>{{delayed | json}}</pre>
+  
+  <div>
+    <img ng-src="http://www.pictures-of-cars.com/{{ delayed.pic }}.jpg" />
+  </div>
+  
+  <h1>Video with $timeout</h1>
+
+  <video id="currVideo1" autoplay="none" preload="none" controls="" tabindex="0">
+    <source type="video/mp4" ng-src="{{ getVideoUrl(delayed.video, '.mv4') }}">
+    <source type="video/webm" ng-src="{{ getVideoUrl(delayed.video, '.webm') }}">
+  </video>
+  
+  {{ showProps('currVideo1') }}
+  
+  <video id="currVideo" autoplay="none" preload="none" controls="" tabindex="0" ng-src="{{ getVideoUrl(delayed.video, '.webm') }}">
+  </video>
+
+  <h1>Video with no delay</h1>
+
+  <video id="currVideo" autoplay="none" preload="none" controls="" tabindex="0">
+    <source type="video/mp4" ng-src="{{ getVideoUrl(immediate.video, '.mv4') }}">
+    <source type="video/webm" ng-src="{{ getVideoUrl(immediate.video, '.webm') }}">
+  </video>
+
+</body>
+</html>

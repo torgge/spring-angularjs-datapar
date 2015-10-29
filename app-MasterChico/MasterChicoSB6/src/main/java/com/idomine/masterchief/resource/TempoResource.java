@@ -14,9 +14,10 @@ import com.idomine.masterchief.weather.model.OpenWeatherMap;
 public class TempoResource {
 
 	private final String URL_TEMPO = "http://api.openweathermap.org/data/2.5/weather?q=";
-	private final String URL_IMAGE = "http://openweathermap.org/img/w/";
-	private final String API_MODE = "&mode=xml";
-	private final String API_KEY = "&appid=bd82977b86bf27fb59a04b61b657fb6f";
+	//private final String URL_IMAGE = "http://openweathermap.org/img/w/";
+	private final String API_MODE  = "&mode=xml";
+	private final String API_KEY   = "&appid=bd82977b86bf27fb59a04b61b657fb6f";
+	private final String API_UNIT  = "&units=metric";
 
 	@RequestMapping("tempo/{cidade}")
 	public Tempo tempo( @PathVariable  String  cidade) {
@@ -24,13 +25,13 @@ public class TempoResource {
 		RestTemplate restTemplate = new RestTemplate();
 
 		ResponseEntity<OpenWeatherMap> tempo = 
-				restTemplate.getForEntity(URL_TEMPO + cidade + API_MODE + API_KEY,
+				restTemplate.getForEntity(URL_TEMPO + cidade + API_MODE + API_UNIT+ API_KEY,
 				OpenWeatherMap.class);
 
 		return new Tempo(
 				tempo.getBody().getCity().getName(),
 				tempo.getBody().getTemperature().getValue(),
-				URL_IMAGE + tempo.getBody().getWeather().getIcon());
+				tempo.getBody().getWeather().getIcon());
 	}
 
 }

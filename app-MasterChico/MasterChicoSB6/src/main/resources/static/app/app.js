@@ -28,10 +28,10 @@ angular.module('app').config( ['$stateProvider','$urlRouterProvider',
         })
 
 		// MERCADERIA =================================
-        .state('mercaderia', {
-		        url: '/mercaderia',
-		        templateUrl: 'app/mercadoria/mercaderia.html',
-						controller:	'MercaderiaController'
+        .state('mercadoria', {
+		        url: '/mercadoria',
+		        templateUrl: 'app/mercadoria/mercadoria.html',
+						controller:	'MercadoriaController'
         })
 
         // CATEGORIA =================================

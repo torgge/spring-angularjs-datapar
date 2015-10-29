@@ -4,16 +4,16 @@ import javax.xml.bind.annotation.XmlAttribute;
 
 public class Clouds {
   
-    private long value;
+    private String value;
     
     private String name;
 
     @XmlAttribute
-    public long getValue() {
+    public String getValue() {
         return value;
     }
 
-    public void setValue(long value) {
+    public void setValue(String value) {
         this.value = value;
     }
 

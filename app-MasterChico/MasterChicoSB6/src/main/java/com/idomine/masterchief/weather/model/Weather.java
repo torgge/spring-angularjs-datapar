@@ -43,7 +43,9 @@ public class Weather {
         return "Weather{" + "number=" + number + ", value=" + value + ", icon=" + icon + '}';
     }
     
-    
+    public Weather(){
+    	
+    }
     
     
 }

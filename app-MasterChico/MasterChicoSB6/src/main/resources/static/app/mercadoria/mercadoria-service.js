@@ -1,28 +1,28 @@
 'use strict';
 
 angular.module('app')
-    .factory('mercadoriaService', ['$http', function($http) {
+    .factory('MercadoriaService', ['$http', function($http) {
 
-    var urlBase = 'api/mercaderia';
+    var urlBase = 'http://localhost:5000/api/mercaderia';
     var dataFactory = {};
 
-    dataFactory.getMercaderias = function () {
+    dataFactory.getMercadorias = function () {
         return $http.get(urlBase);
     };
 
-    dataFactory.getMercaderia = function (id) {
+    dataFactory.getMercadoria = function (id) {
         return $http.get(urlBase + '/' + id);
     };
 
-    dataFactory.insertMercaderia = function (merc) {
+    dataFactory.insertMercadoria = function (merc) {
         return $http.post(urlBase, merc);
     };
 
-    dataFactory.updateMercaderia = function (merc) {
+    dataFactory.updateMercadoria = function (merc) {
         return $http.put(urlBase + '/' + merc.ID, merc)
     };
 
-    dataFactory.deleteMercaderia = function (id) {
+    dataFactory.deleteMercadoria = function (id) {
         return $http.delete(urlBase + '/' + id);
     };
 

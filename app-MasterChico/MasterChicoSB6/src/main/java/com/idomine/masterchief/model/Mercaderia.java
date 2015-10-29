@@ -38,7 +38,7 @@ public class Mercaderia implements Comparable<Mercaderia>,Serializable  {
 	private long id;
 	
 	@JsonView(MercadoriaView.Detalhado.class)
-	@JsonProperty("descricao")
+	@JsonProperty("nome")
 	private String nome;
 
 	@JsonView(MercadoriaView.Resumo.class)

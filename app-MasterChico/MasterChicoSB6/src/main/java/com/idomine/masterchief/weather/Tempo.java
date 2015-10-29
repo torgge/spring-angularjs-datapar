@@ -2,6 +2,9 @@ package com.idomine.masterchief.weather;
 
 public class Tempo{
 	
+	private final String URL_ICON = "http://openweathermap.org/img/w/";
+	private final String URL_ICON_EXT = ".png";
+	
 	private String cidade;
 	private double temperatura;
 	private String icon;
@@ -18,7 +21,8 @@ public class Tempo{
 		this.temperatura = temperatura;
 	}
 	public String getIcon() {
-		return icon;
+		return URL_ICON + icon + URL_ICON_EXT;
+		//return icon;
 	}
 	public void setIcon(String icon) {
 		this.icon = icon;

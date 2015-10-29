@@ -6,18 +6,18 @@ import javax.xml.bind.annotation.XmlAttribute;
 class Direction {
     
  
-    private long value;
+    private String value;
     
     private String code;
     
     private String name;
 
     @XmlAttribute
-    public long getValue() {
+    public String getValue() {
         return value;
     }
 
-    public void setValue(long value) {
+    public void setValue(String value) {
         this.value = value;
     }
 

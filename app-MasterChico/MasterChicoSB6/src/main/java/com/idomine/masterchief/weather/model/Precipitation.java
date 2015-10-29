@@ -4,7 +4,7 @@ import javax.xml.bind.annotation.XmlAttribute;
 
 public class Precipitation {
     
-    private long value;
+    private String value;
     
     private String mode;
     
@@ -18,11 +18,11 @@ public class Precipitation {
     }
 
     @XmlAttribute
-    public long getValue() {
+    public String getValue() {
         return value;
     }
 
-    public void setValue(long value) {
+    public void setValue(String value) {
         this.value = value;
     }
 

@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<script src="../../js/angular.js"></script>
+</head>
+<body ng-app="app" ng-controller="MainController">
+
+	Time: {{msg}} <span id="foo"></span> <hr>
+	<button ng-click="start()">Start</button> <br/>
+	<button ng-click="stop()">Stop</button>
+
+<script>
+
+/*
+function start() {
+   	var eventSource = new EventSource("api/event");
+   	eventSource.onmessage = function(event) {
+       	document.getElementById('foo').innerHTML = event.data;
+   	};
+};
+*/
+ 	
+angular.module('app',[]).controller( 'MainController', function($http,$scope) {
+	
+	$scope.msg="*";
+
+	$scope.addMsg = function(event) {
+		$scope.$apply(function () {
+			console.log(event.data);
+			$scope.msg = event.data;			
+		});
+	};
+
+	$scope.openMsg = function(event) {
+		console.log('open>'+event);
+	};
+	
+	$scope.stop = function(){
+		if ( $scope.eventSource != undefined ){
+			$scope.msg='';
+			$scope.eventSource.close();
+		}	
+	};
+	
+	$scope.start = function(){
+		$scope.eventSource = new EventSource("/api/event");
+
+		$scope.eventSource.addEventListener("message",$scope.addMsg,false);  
+
+		$scope.eventSource.addEventListener("open",$scope.openMsg,false);  
+		
+		/*$scope.eventSource.onmessage = function(event) {
+			$scope.$apply(function () {
+					console.log(event.data);
+					$scope.msg = event.data;			
+			});
+		};*/	
+	};
+	
+	
+	
+});
+	
+</script>
+
+</body>
+</html>

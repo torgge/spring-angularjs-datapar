@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('app').controller( 'LoginController', 
-		['$rootScope','$scope','$http' , 'toastr','toastrConfig', 
- function ($rootScope, $scope,  $http 	, toastr , toastrConfig) {
+		['$rootScope','$scope','$http' , 'toastr','toastrConfig','$state', 
+ function ($rootScope, $scope,  $http 	, toastr , toastrConfig, $state) {
 
     $scope.user = {login:'' , senha:''};
 
@@ -29,10 +29,14 @@ angular.module('app').controller( 'LoginController',
 			$rootScope.username = $scope.user.login;
 			$rootScope.token = data;
 
+			console.log(data);
+			
 			openedToasts.push(
 			toastr.success(
 					 'Bem-vindo!',''
 			));
+			
+			$state.go('home');
 
 		})
 		.error(function(data){

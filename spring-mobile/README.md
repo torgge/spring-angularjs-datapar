@@ -37,6 +37,8 @@ Versão nightly. Adicione:
 ``` 
 ##(II) Utilização
 
+Exemplo 1:
+
 ```java
 
 @Controller
@@ -55,6 +57,32 @@ public class HomeController {
 
 ``` 
 
+Exemplo 2:
+
+```java
+
+@Controller
+public class HomeController {
+
+	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
+
+	@RequestMapping("/")
+	public String home(Device device, Model model) {
+		if (device == null) {
+			logger.info("no device detected");
+		} else if (device.isNormal()) {
+			logger.info("Device is normal");
+		} else if (device.isMobile()) {
+			logger.info("Device is mobile");
+		} else if (device.isTablet()) {
+			logger.info("Device is tablet");
+		}
+		return "home";
+	}
+
+}
+
+```
 
 http://docs.spring.io/autorepo/docs/spring-mobile/1.0.x/reference/htmlsingle/
 

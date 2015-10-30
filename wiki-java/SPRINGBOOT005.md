@@ -20,7 +20,7 @@ developer.email=integraldominio@gmail.com
 No banner.txt adicione *${parametro}*. Exemplo: 
 
 ```
-Desenvolvedor: ${desenvolvedor.nome}  ${spring-boot.version}
+Desenvolvedor: ${developer.nome}  ${spring-boot.version}
 
 ```
 

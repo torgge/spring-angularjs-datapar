@@ -3,13 +3,13 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>py.com.datapar</groupId>
-	<artifactId>MasterChiefSB6</artifactId>
-	<version>0.1</version>
+	<groupId>com.idomine.masterchief</groupId>
+	<artifactId>MasterCheief6b</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>MasterChicoSB6</name>
-	<description>MasterChicoSB6</description>
+	<name>MasterCheief6b</name>
+	<description>MasterCheief6b</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -46,14 +46,7 @@
 			<artifactId>hsqldb</artifactId>
 			<scope>runtime</scope>
 		</dependency>
-
-
-	<!-- 	<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
-		</dependency>
-
- -->
+ 
 		<dependency>
 			<groupId>com.mangofactory</groupId>
 			<artifactId>swagger-springmvc</artifactId>
@@ -76,7 +69,16 @@
 			<version>1.0.2</version>
 			<type>jar</type>
 		</dependency>
-
+		
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-rest-hal-browser</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+		</dependency>
 
 	</dependencies>
 

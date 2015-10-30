@@ -1,17 +1,15 @@
-package MasterChicoSB1;
+package com.idomine.masterchief;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.test.context.web.WebAppConfiguration;
-
-import com.idomine.masterchief.MasterChiefApplication;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(classes = MasterChiefApplication.class)
+@SpringApplicationConfiguration(classes = MasterCheief6bApplication.class)
 @WebAppConfiguration
-public class MasterChicoSb1ApplicationTests {
+public class MasterCheief6bApplicationTests {
 
 	@Test
 	public void contextLoads() {

@@ -1,10 +1,10 @@
 'use strict';
 
-angular.module('app').controller('UnidadeController',
-        ['$scope','$http','uiGridConstants', 'UnidadeService',
-function ($scope,$http,uiGridConstants,UnidadeService){
+angular.module('app').controller('FornecedorController',
+        ['$scope','$http','uiGridConstants', 'FornecedorService',
+function ($scope,$http,uiGridConstants,FornecedorService){
 
-	UnidadeService.getUnidades()
+	FornecedorService.getFornecedores()
 	.success(function (data) {
 		 $scope.gridOptions.data = data;
 	});
@@ -17,9 +17,8 @@ function ($scope,$http,uiGridConstants,UnidadeService){
     paginationPageSizes: [10, 20, 30],
     columnDefs: [
       { name: 'id'				, field:'id'				 , displayName:'Código'			, width: 80 , enableColumnMenu: false },
-      { name: 'descricao' , field:'descricao'  , displayName:'Descrición'	, enableColumnMenu: false }
+      { name: 'nome' , field:'nome'  , displayName:'Nome'	, enableColumnMenu: false }
     ]
   };
 
 }]);
-

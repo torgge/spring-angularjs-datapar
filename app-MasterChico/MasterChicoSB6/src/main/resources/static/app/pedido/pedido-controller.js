@@ -1,10 +1,10 @@
 'use strict';
 
-angular.module('app').controller('UnidadeController',
-        ['$scope','$http','uiGridConstants', 'UnidadeService',
-function ($scope,$http,uiGridConstants,UnidadeService){
+angular.module('app').controller('PedidoController',
+        ['$scope','$http','uiGridConstants', 'PedidoService',
+function ($scope,$http,uiGridConstants,PedidoService){
 
-	UnidadeService.getUnidades()
+	PedidoService.getPedidos()
 	.success(function (data) {
 		 $scope.gridOptions.data = data;
 	});
@@ -22,4 +22,3 @@ function ($scope,$http,uiGridConstants,UnidadeService){
   };
 
 }]);
-

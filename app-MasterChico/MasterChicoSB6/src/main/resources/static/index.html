@@ -25,15 +25,15 @@
 
         <li class="logo" style="margin-left: -15px;"><a id="logo-container" href="#" class="brand-logo"><img src="image/im.jpg" style="position:absolute;left:0px;top:0px;" height="120px" width="100%"></a></li>
 
-        <li class="bold" ng-click="direciona('home')"><a href="#" class="waves-effect waves-deep-purple darken-4"  >Home</a></li>  
+        <li class="bold" ng-click="direciona('home')"><a href="#" class="waves-effect waves-deep-purple darken-4">Home</a></li>  
 		
-        <li class="bold"><a href="#/pedido" class="waves-effect waves-deep-purple darken-3">Pedidos</a></li>
+         <li class="bold" ng-click="direciona('pedido')"><a href="#" class="waves-effect waves-deep-purple darken-4">Pedido</a></li>
 
-        <li class="bold"><a href="#/provedor/" class="waves-effect waves-deep-purple darken-3">Provedores</a></li>
+         <li class="bold" ng-click="direciona('fornecedor')"><a href="#" class="waves-effect waves-deep-purple darken-4">Fornecedores</a></li>
 
-        <li class="bold" ng-click="direciona('grafico')"><a href="#" class="waves-effect waves-deep-purple darken-4"  >Gráficos</a></li>  
+         <li class="bold" ng-click="direciona('grafico')"><a href="#" class="waves-effect waves-deep-purple darken-4">Gráficos</a></li>  
 
-        <li class="no-padding">
+         <li class="no-padding">
             <ul class="collapsible collapsible-accordion">
                 <li class="bold"><a class="collapsible-header waves-effect waves-deep-purple darken-3 active">Cadastros</a>
                     <div class="collapsible-body">
@@ -45,20 +45,12 @@
                     </div>
                 </li>
             </ul>
-        </li>
-
-		 
+         </li>
 		
-     <li class="bold" ng-click="direciona('sobre')"><a href="#" class="waves-effect waves-blue">Sobre</a></li>  
-
-
-	<div style="hozontal-align:center;vertical-align: bottom;height: 100%;" ng-controller="TempoController">
-		<h4 class="header">Foz do Iguaçu</h2>
-		<img ng-src="{{tempo.icon}}" alt="1" />
-		<h4 class="header">{{tempo.temperatura}}°C</h4>
-	</div> 
+         <li class="bold" ng-click="direciona('sobre')"><a href="#" class="waves-effect waves-blue">Sobre</a></li>  
 
     </ul>
+    
 </header>
 <main>
 
@@ -67,8 +59,7 @@
             <div class="row">
                 <div class="col s12">
                     <h1 class="header center-on-small-only"><a href="https://github.com/kresCruz/angular-materialize" style="color:white;">Master Chief</a></h1>
-                    <p style="color: white;" class="center-on-small-only">Aplicativo de controle de suprimentos alimentares</p>
-                    <p style="color: white;" class="center-on-small-only">Curso Spring/AngularJS Out/2015</p>
+                    <p style="color: white;" class="center-on-small-only" ng-controller="TempoController">Foz do Iguaçu {{tempo.temperatura}}°C 	<img ng-src="{{tempo.icon}}" width="30px" alt="tempo" /></p>
                 </div>
             </div>
         </div>
@@ -97,6 +88,7 @@
 <script src="js/ng-foobar.js"></script>
 
 <script src="app/app.js"></script>
+<script src="app/config/config.js"></script>
 
 <script src="app/dashboard/dashboard-controller.js"></script>
 
@@ -108,6 +100,12 @@
 
 <script src="app/unidade/unidade-controller.js"></script>
 <script src="app/unidade/unidade-service.js"></script>
+
+<script src="app/fornecedor/fornecedor-controller.js"></script>
+<script src="app/fornecedor/fornecedor-service.js"></script>
+
+<script src="app/pedido/pedido-controller.js"></script>
+<script src="app/pedido/pedido-service.js"></script>
 
 <script src="app/grafico/grafico-controller.js"></script>
 

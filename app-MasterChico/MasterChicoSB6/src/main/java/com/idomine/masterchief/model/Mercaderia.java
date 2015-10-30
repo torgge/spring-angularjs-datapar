@@ -48,6 +48,9 @@ public class Mercaderia implements Comparable<Mercaderia>,Serializable  {
 	@Column(name="quantidade_minima")
 	private BigDecimal quantidadeMinima;
 
+	@JsonView(MercadoriaView.Resumo.class)
+	private BigDecimal preco;
+	
 	@ManyToOne
 	@JoinColumn(name = "unidade_id")
 	@JsonProperty("unidade") 
@@ -118,6 +121,16 @@ public class Mercaderia implements Comparable<Mercaderia>,Serializable  {
 
 	public void setCategoria(Categoria categoria) {
 		this.categoria = categoria;
+	}
+
+	
+	
+	public BigDecimal getPreco() {
+		return preco;
+	}
+
+	public void setPreco(BigDecimal preco) {
+		this.preco = preco;
 	}
 
 	@Override

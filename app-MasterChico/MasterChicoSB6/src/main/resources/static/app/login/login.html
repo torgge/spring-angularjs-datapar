@@ -1,0 +1,23 @@
+<div class="row" id="login">
+
+	 <h2 class="header"><span class="glyphicon glyphicon-user" aria-hidden="true "> Aplicativo de Enquete</h2>
+     
+     <form ng-submit="login()">
+            
+           <div class=form-group> 
+                <input type=text class="form-control input-underline" placeholder="Nome" ng-model="user.login" required > 
+                <span>Informe nome</span>
+           </div>
+            
+           <div class=form-group> 
+                <input type=password class="form-control input-underline" placeholder="Senha" ng-model="user.senha" required> 
+                <span>Infome senha</span>
+           </div>
+            
+     </form>
+
+	 <br/><br/>	
+	 	 
+     <button class="btn btn-primary" type="button" ng-click="entrar()">Entrar</button>
+     
+</div>

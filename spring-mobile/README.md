@@ -10,12 +10,6 @@
     <version>${org.springframework.mobile-version}</version>
 </dependency>
 
-<repository>
-    <id>springsource-milestone</id>
-    <name>SpringSource Milestone Repository</name>
-    <url>http://repo.springsource.org/milestone</url>
-</repository>
-
 ```
  Versão milestone.Exemlo: 1.0.0.RC2. Adicione:
  

@@ -49,6 +49,11 @@ public interface ProdutoRepository extends MongoRepository<Produto, String> {
 ### (IV) Utilizando
 
 ```java
+
+	
+ @Autowired
+ private ProdutoRepository repository;
+
  public void run(String... args) throws Exception {
 
 		repository.deleteAll();
@@ -73,4 +78,4 @@ public interface ProdutoRepository extends MongoRepository<Produto, String> {
 	}
 ```
 
-
+> Lyndon Tavares

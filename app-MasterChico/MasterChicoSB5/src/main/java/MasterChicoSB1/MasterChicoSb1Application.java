@@ -4,8 +4,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 
-import com.mangofactory.swagger.plugin.EnableSwagger;
-
 import MasterChicoSB1.resource.CategoriaResource;
 import MasterChicoSB1.resource.FornecedorResource;
 import MasterChicoSB1.resource.MercaderiaResource;

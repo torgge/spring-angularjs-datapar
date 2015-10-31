@@ -1,0 +1,59 @@
+<div class="row" id="about">
+
+	<h2 class="header">Categorias</h2>
+
+	<div ui-grid="gridOptions" ui-grid-pagination class="grid"></div>
+<!-- Modal Trigger -->
+<div class="col">
+</div>
+
+
+<br>
+
+
+		<button
+		class=" waves-effect waves-light btn"
+		ng-click="beforeOPen()"
+		href='#demoModal' modal>Adicionar</button>
+		<br/>
+		
+		
+		
+
+
+
+<!-- Modal Structure -->
+<div id="demoModal" class="modal">
+	<div class="modal-content">
+
+	<h4>Categoria</h4>
+
+
+  <form ng-submit="login()">
+
+		<div class=form-group>
+				 <input type=text class="form-control input-underline" placeholder="Descrição" ng-model="model.descricao" required >
+				 <span>Informe descrição</span>
+		</div>
+
+
+ </form>
+
+	</div>
+
+<!-- 					<img class="button button-clear" ng-click="alert(123)" src="https://cdn1.iconfinder.com/data/icons/hawcons/32/700015-icon-27-one-finger-click-32.png" />
+ -->
+
+	<div class="modal-footer">
+
+			<button class=" modal-action modal-close   waves-effect btn btn-primary" type="button" ng-click="gravar()">Gravar</button>
+
+			<button class=" modal-action modal-close   waves-effect  btn btn-flat" type="button" ng-click="fechar()">Cancelar</button>
+
+	</div>
+</div>
+
+
+
+
+</div>

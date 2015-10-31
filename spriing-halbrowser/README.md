@@ -35,8 +35,8 @@ Por padrão, o navegador HAL não pode assumir houver qualquer metadados. Quando
 ```java
        
     <dependency> 
-	 <groupId>org.springframework.data</groupId> 
-	 <artifactId>spring-data-rest-hal-browser</artifactId> 
+	<groupId>org.springframework.data</groupId> 
+	<artifactId>spring-data-rest-hal-browser</artifactId> 
     </dependency> 
 
 ```

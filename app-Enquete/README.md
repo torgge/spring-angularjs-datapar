@@ -150,9 +150,6 @@ Exemplo utilizando AJAX na app angularJS para consumo direto da API do tempo:
 
 Para mais detalhes da API do tempo: 
 
-```
-
 http://openweathermap.org/
-
 ```
 

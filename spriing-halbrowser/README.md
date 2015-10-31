@@ -41,7 +41,7 @@ Por padrão, o navegador HAL não pode assumir houver qualquer metadados. Quando
 
 ```
 ## localhost:8080
-Acessando API do *MAsChief6b*
+Acessando API do **MasChief6b**
 
 <p align="center">
 <img src="https://github.com/lyndontavares/spring-angularjs-datapar/blob/master/app-MasterChico/MasterChicoSB6b/src/main/resources/static/image/raw.png" width="660">

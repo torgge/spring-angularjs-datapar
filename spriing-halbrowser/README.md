@@ -1,4 +1,4 @@
-## Spring Hal-Browser
+## Spring HAL-Browser
 
 Um navegador de API para o tipo de mídia hal + json (Hypertext Application Language)
 

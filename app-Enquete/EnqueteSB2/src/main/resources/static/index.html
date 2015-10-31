@@ -40,6 +40,7 @@
         <div class="container">
           <div align="center">
             <h5 style="color: white" class="center-on-small-only">Aplicativo de enquetes</h5>
+            <p style="color: white;" class="center-on-small-only" ng-controller="TempoController">Foz do Iguaçu {{tempo.temperatura}}°C 	<img ng-src="{{tempo.icon}}" width="30px" alt="tempo" /></p>
           </div>
         </div>
     </div>
@@ -77,6 +78,8 @@
 <script src="app/grafico/grafico-controller.js"></script>
 <script src="app/timer/timer-controller.js"></script>
 <script src="app/login/login-controller.js"></script>
+
+<script src="app/tempo/tempo-controller.js"></script>
 
 </body>
 </html>

@@ -1,4 +1,4 @@
-package com.idomine.masterchief.resource.grafico;
+package com.idomine.appquizzer.resource.grafico;
 
 
 import java.math.BigDecimal;
@@ -11,7 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.idomine.masterchief.model.grafico.GraficoJson;
+import com.idomine.appquizzer.model.grafico.GraficoJson;
 
 @RestController
 @RequestMapping("/api")
@@ -29,9 +29,10 @@ public class GraficosResource {
 		List<BigDecimal> data = new ArrayList<>();
 		GraficoJson dadosJson = new GraficoJson();
 		labels.add("2015");
-		List<Object[]> dadosObj = em.createNativeQuery
-				   ("select c.id, c.descricao, sum( m.quantidade * m.preco ) from tab_mercaderia m left join tab_categoria c on ( m.categoria_id = c.id) group by c.id,c.descricao")
-				   .getResultList();
+		
+		List<Object[]> dadosObj = 
+				em.createNativeQuery("***elabora a consulta aqui***").getResultList();
+		
 		for (Object[] d : dadosObj) {
 			series.add( (String) "(" + d[0] + ") "+d[1]+ " R$ " + d[2] );
 			data.add((BigDecimal) d[2]);

@@ -28,4 +28,33 @@ http://stateless.co/hal_specification.html[http://stateless.co/hal_specification
 
 Por padrão, o navegador HAL não pode assumir houver qualquer metadados. Quando você clica no botão pedido não-GET (para criar um novo recurso), o usuário deve entrar o documento JSON a apresentar. Se o seu serviço inclui metadados que você pode acessar, é possível plugin uma exibição personalizada que faz uso dele.
 
-> https://github.com/mikekelly/hal-browser
+> Source: https://github.com/mikekelly/hal-browser
+
+## Adicione dependência Dependêna
+
+```java
+       
+    <dependency> 
+			 <groupId>org.springframework.data</groupId> 
+			 <artifactId>spring-data-rest-hal-browser</artifactId> 
+    	</dependency> 
+
+```
+## localhost:8080
+Acessando API do *MAsChief6b*
+
+<p align="center">
+<img src="https://github.com/lyndontavares/spring-angularjs-datapar/blob/master/app-MasterChico/MasterChicoSB6b/src/main/resources/static/image/raw.png" width="660">
+</p>
+
+<p align="center">
+<img src="https://github.com/lyndontavares/spring-angularjs-datapar/blob/master/app-MasterChico/MasterChicoSB6b/src/main/resources/static/image/raw2.png" width="660">
+</p>
+
+<p align="center">
+<img src="https://github.com/lyndontavares/spring-angularjs-datapar/blob/master/app-MasterChico/MasterChicoSB6b/src/main/resources/static/image/raw3.png" width="660">
+</p>
+
+<p align="center">
+<img src="https://github.com/lyndontavares/spring-angularjs-datapar/blob/master/app-MasterChico/MasterChicoSB6b/src/main/resources/static/image/raw4.png" width="660">
+</p>

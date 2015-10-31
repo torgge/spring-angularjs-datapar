@@ -32,7 +32,7 @@ tem o mais alto nível de prioridade. Exemplo:
 
 ## (III) Configuração do pom.xml
 
-Removendo arquivos e pastas 
+####Removendo arquivos e pastas 
 Para remover arquivos e pastas durante geração do artefato (jar ou war) acrescente conforme exemplo abaixo.
 
 ```xml

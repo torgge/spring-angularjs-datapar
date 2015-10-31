@@ -35,7 +35,7 @@ tem o mais alto nível de prioridade. Exemplo:
 Removendo arquivos e pastas 
 Para remover arquivos e pastas durante geração do artefato (jar ou war) acrescente conforme exemplo abaixo.
 
-```java
+```xml
 
 	<build>
 

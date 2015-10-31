@@ -1,6 +1,6 @@
 ## Spring Hal-Browser
 
-Um navegador de API para o tipo de mídia hal + json
+Um navegador de API para o tipo de mídia hal + json (Hypertext Application Language)
 
 ## Exemplo de Uso
 

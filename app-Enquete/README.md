@@ -85,3 +85,71 @@ Para usar essa tecnologia com o Spring Boot é necessário atualizar para o Spri
 	}
 
 ```
+
+### (VII) API do tempo
+Nesse app é demostrado como consumir uma api do tempo via REST a partir do servidor e também diretamente via AJAX com o angularJS.
+
+Exemplo de end-point no server:
+
+```java
+
+@RestController
+@RequestMapping("/api")
+public class TempoResource {
+
+	private final String URL_TEMPO = "http://api.openweathermap.org/data/2.5/weather?q=";
+	//private final String URL_IMAGE = "http://openweathermap.org/img/w/";
+	private final String API_MODE  = "&mode=xml";
+	private final String API_KEY   = "&appid=bd82977b86bf27fb59a04b61b657fb6f";
+	private final String API_UNIT  = "&units=metric";
+
+	@RequestMapping("tempo/{cidade}")
+	public Tempo tempo( @PathVariable  String  cidade) {
+
+		RestTemplate restTemplate = new RestTemplate();
+
+		ResponseEntity<OpenWeatherMap> tempo = 
+				restTemplate.getForEntity(URL_TEMPO + cidade + API_MODE + API_UNIT+ API_KEY,
+				OpenWeatherMap.class);
+
+		return new Tempo(
+				tempo.getBody().getCity().getName(),
+				tempo.getBody().getTemperature().getValue(),
+				tempo.getBody().getWeather().getIcon());
+	}
+
+}
+
+```
+
+Consumindo na app angularJS
+
+```js
+
+  	/* end-point do server java */
+	$scope.tempo = $http.get( urlBase+'/api/tempo/foz')
+	.success( function(data){
+		$scope.tempo = data;
+	});
+
+```
+
+Exemplo utilizando AJAX na app angularJS para consumo direto da API do tempo:
+
+```js
+
+	//direto via ajax
+	$scope.tempo = $http.get( 
+	'http://api.openweathermap.org/data/2.5/weather?'+
+	'q=Foz do Iguacu&mode=json&units=metric&appid=bd82977b86bf27fb59a04b61b657fb6f')
+	.success( function(data){
+		$scope.tempo.temperatura = data.main.temp;
+		$scope.tempo.icon = 'http://openweathermap.org/img/w/'+data.weather[0].icon+'.png';
+	});
+
+```
+
+## (VIII) API do tempo
+
+Para mais detalhes da API do tempo: http://openweathermap.org/
+

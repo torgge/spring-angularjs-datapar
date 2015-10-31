@@ -1,4 +1,4 @@
-## (I) http://blog.caelum.com.br/bye-bye-grunt-js-hello-gulp-js/
+## (I) Instalando os módulos
 
 Essa parte é a mais fácil. Baseada nas tarefas que você gostaria de automatizar, será necessário instalar os módulos do Gulp. No nosso exemplo, faremos um procedimento simples, de minificação de arquivos em JavaScript utilizando o Uglify. Então além dos módulos que farão o gulp funcionar (gulp e gulp-util), você precisará instalar o módulo da minificação (gulp-uglify) e de quebra instalaremos também um módulo para monitorar alterações nos arquivos .js e rodará a tarefa da minificação (gulp-watch)
 

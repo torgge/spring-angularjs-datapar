@@ -87,7 +87,7 @@ Para usar essa tecnologia com o Spring Boot é necessário atualizar para o Spri
 ```
 
 ### (VII) API do tempo
-Nesse app é demostrado como consumir uma api do tempo via REST a partir do servidor e também diretamente via AJAX com o angularJS.
+Nesse app é demonstrado como consumir uma api do tempo via REST a partir do servidor e também diretamente via AJAX com o angularJS.
 
 Exemplo de end-point no server:
 

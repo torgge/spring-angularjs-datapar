@@ -30,7 +30,13 @@ Por padrão, o navegador HAL não pode assumir houver qualquer metadados. Quando
 
 > Source: https://github.com/mikekelly/hal-browser
 
-## Adicione a dependência 
+## angular-HY-res 
+
+Cliente hipermídia / biblioteca para angularjs. HAL, Siren, e cabeçalho link extensões são incluídos por padrão, mas o suporte para outros tipos de mídia podem ser adicionados. angular-HY-res é uma camada em torno do núcleo da biblioteca HY-res.
+
+https://github.com/petejohanson/angular-hy-res
+
+## Adicione a dependência HAL-Browser
 
 ```java
        

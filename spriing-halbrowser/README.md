@@ -30,7 +30,7 @@ Por padrão, o navegador HAL não pode assumir houver qualquer metadados. Quando
 
 > Source: https://github.com/mikekelly/hal-browser
 
-## Adicione dependência Dependêna
+## Adicione a dependência 
 
 ```java
        

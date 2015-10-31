@@ -34,10 +34,10 @@ Por padrão, o navegador HAL não pode assumir houver qualquer metadados. Quando
 
 ```java
        
-    <dependency> 
+<dependency> 
 	<groupId>org.springframework.data</groupId> 
 	<artifactId>spring-data-rest-hal-browser</artifactId> 
-    </dependency> 
+</dependency> 
 
 ```
 ## localhost:8080

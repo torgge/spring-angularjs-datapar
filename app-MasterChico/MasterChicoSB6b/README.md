@@ -29,3 +29,37 @@ tem o mais alto nível de prioridade. Exemplo:
 		 --spring.datasource.url=jdbc:oracle:thin:@[ip-server]:1521:[seed]
 		 
 ```
+
+## (III) Configuração do pom.xml
+
+Removendo arquivos e pastas 
+Para remover arquivos e pastas durante geração do artefato (jar ou war) acrescente conforme exemplo abaixo.
+
+```xml
+
+	<build>
+
+		<resources>
+			<resource>
+				<!-- this is relative to the pom.xml directory -->
+				<directory>src/main/resources/static</directory>
+				<!-- there's no default value for this -->
+				<excludes>
+					<exclude>**/node_modules/**</exclude>
+					<exclude>**/build/**</exclude>
+					<exclude>**/json/**</exclude>
+					<exclude>**/README.md</exclude>
+					<exclude>**/gulpfile.js</exclude>
+					<exclude>**/package.json</exclude>
+					<exclude>**/apidoc/**</exclude>
+					<exclude>**/api/**</exclude>
+				</excludes>
+			</resource>
+		</resources>
+		
+		...
+		...
+
+	</build>
+	
+```

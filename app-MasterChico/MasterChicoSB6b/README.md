@@ -17,7 +17,7 @@ copy MYAPP.war c:\tomcat\webapps
 
 ## (II) Configuração pela linha de comando
 
-Por padrão a Aplicação Spring Boot irá converter os argumentos da linha comando
+Por padrão a Aplicação Spring Boot irá converter os argumentos da linha de comando
 em propriedaeds de configuração da aplicação. Esse modo de ajustar propriedades
 tem o mais alto nível de prioridade. Exemplo:
 

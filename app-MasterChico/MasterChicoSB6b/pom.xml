@@ -80,12 +80,12 @@
 			<type>jar</type>
 		</dependency>
 
-        <dependency> 
+   <!--     <dependency> 
 			 <groupId>org.springframework.data</groupId> 
 			 <artifactId>spring-data-rest-hal-browser</artifactId> 
     	</dependency> 
 			
-<!--		<dependency> 
+		<dependency> 
 			<groupId>org.springframework.boot</groupId> 
 			<artifactId>spring-boot-devtools</artifactId> 
 		</dependency> -->

@@ -12,7 +12,7 @@ Construir uma aplicação web responsive com Spring Boot, AngularJS e Materializ
 <img src="https://github.com/lyndontavares/spring-angularjs-datapar/blob/master/app-Enquete/EnqueteSB2/src/main/java/com/idomine/appquizzer/model/uml/diagrama5.png" width="600">
 
 http://www.objectaid.com/installation
-
+<br>
 Revião JPA: https://github.com/lyndontavares/spring-angularjs-datapar/blob/master/wiki-java/JPA001.md
 </p>
 

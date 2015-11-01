@@ -16,7 +16,7 @@ import com.idomine.masterchief.resource.MercaderiaResource;
 import com.idomine.masterchief.resource.PedidoItemResource;
 import com.idomine.masterchief.resource.PedidoResource;
 import com.idomine.masterchief.resource.UnidadeResource;
-import com.idomine.materchief.security.JwtFilter;
+import com.idomine.masterchief.security.JwtFilter;
 
 @SpringBootApplication
 public class MasterCheief6bApplication {

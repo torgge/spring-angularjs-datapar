@@ -1,4 +1,4 @@
-package com.idomine.materchief.security;
+package com.idomine.masterchief.security;
 
 import java.io.IOException;
 import java.util.Date;

@@ -52,13 +52,6 @@ public class SwaggerConfig {
 
 ```
 
-Observação: Esta classe deve está em um nível acima das classes anotadas com @RestController. Se não, usar a anotação abaixo no lugar de @EnableAutoConfiguration.
-
-```java
-
-@ComponenScan(basePackages = { "py.com.datapar.aplicacao.resource" })
-
-```
 ### (III) Adicione Swagger-UI
 
 Inteface web para acessar a API. Copie os arquivos da pasta /swagger-ui-master/dist/*.* para resources/static/apidoc da aplicação. 

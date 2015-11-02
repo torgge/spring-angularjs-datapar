@@ -22,7 +22,6 @@ Documentação de API REST com Spring e Swagger.
 
 @Configuration
 @EnableSwagger
-@EnableAutoConfiguration
 public class SwaggerConfig {
     
     private SpringSwaggerConfig springSwaggerConfig;

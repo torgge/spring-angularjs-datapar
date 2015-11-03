@@ -2,18 +2,20 @@
 
 Criando repositório local para pacotes customizados.
 
-execute o comando pelo bash:
+execute o comando pelo bash, Ajustando os parâmetros para suas necessidade:
 
 ```xml
 
 mvn deploy:deploy-file 
     -Durl=file:repo/ 
     -Dfile=c:/idomine/lib/security.jar 
-    -DgroupId=com.idmonie 
+    -DgroupId=com.idomine 
     -DartifactId=security 
-    -Dpackaging=jar -Dversion=1.0
+    -Dpackaging=jar 
+    -Dversion=1.0
 
 ```
+
 Adicione dependência no pom.xml:
 
 ```xml

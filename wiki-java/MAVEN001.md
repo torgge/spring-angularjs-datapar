@@ -26,10 +26,10 @@ Adicione dependência no pom.xml:
         <url>file:${project.basedir}/repo</url>
     </repository>
 
-<dependency>
-    <groupId>con.idomine</groupId>
-    <artifactId>security</artifactId>
-    <version>1.0</version>
-</dependency>
+    <dependency>
+        <groupId>con.idomine</groupId>
+        <artifactId>security</artifactId>
+        <version>1.0</version>
+    </dependency>
 
 ```

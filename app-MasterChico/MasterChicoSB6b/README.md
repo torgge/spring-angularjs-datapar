@@ -63,6 +63,6 @@ Para remover arquivos e pastas durante geração do artefato (jar ou war) acresc
 	</build>
 	
 ```
-## (VI) Adicionado pacotes customizados
+## (IV) Adicionado repositório local
 
 https://github.com/lyndontavares/spring-angularjs-datapar/blob/master/wiki-java/MAVEN001.md

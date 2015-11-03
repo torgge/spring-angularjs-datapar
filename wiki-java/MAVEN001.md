@@ -25,7 +25,7 @@ Adicione dependência no pom.xml:
     </repository>
 
 <dependency>
-    <groupId>py.com.datapar</groupId>
+    <groupId>con.idomine</groupId>
     <artifactId>security</artifactId>
     <version>1.0</version>
 </dependency>
